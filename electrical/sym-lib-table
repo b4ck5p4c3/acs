@@ -1,0 +1,9 @@
+(sym_lib_table
+  (lib (name connector)(type Legacy)(uri ${KIPRJMOD}/symbols/Connector.lib)(options "")(descr ""))
+  (lib (name sw)(type Legacy)(uri ${KIPRJMOD}/symbols/Switch.lib)(options "")(descr ""))
+  (lib (name graphic)(type Legacy)(uri ${KIPRJMOD}/symbols/Graphic.lib)(options "")(descr ""))
+  (lib (name device)(type Legacy)(uri ${KIPRJMOD}/symbols/Device.lib)(options "")(descr ""))
+  (lib (name mech)(type Legacy)(uri ${KIPRJMOD}/symbols/Mechanical.lib)(options "")(descr ""))
+  (lib (name relay)(type Legacy)(uri ${KIPRJMOD}/symbols/Relay.lib)(options "")(descr ""))
+  (lib (name conn_generic)(type Legacy)(uri ${KIPRJMOD}/symbols/Connector_Generic.lib)(options "")(descr ""))
+)
