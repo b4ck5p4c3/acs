@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 11
+Sheet 9 11
 Title ""
 Date ""
 Rev ""
@@ -14,12 +14,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 4400 1800 0    50   Input ~ 0
-ibutton_0
-Text HLabel 4400 1950 0    50   Input ~ 0
-ibutton_1
-Text HLabel 4400 2100 0    50   Input ~ 0
-led_0
-Text HLabel 4400 2250 0    50   Input ~ 0
-led_1
+Text HLabel 5300 2650 0    50   Output ~ 0
++12
+Text HLabel 5300 2800 0    50   UnSpc ~ 0
+GND
+Text HLabel 5900 2650 0    50   Input ~ 0
+L
+Text HLabel 5900 2800 0    50   Input ~ 0
+N
 $EndSCHEMATC
