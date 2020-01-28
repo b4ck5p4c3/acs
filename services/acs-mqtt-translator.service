@@ -1,0 +1,14 @@
+[Unit]
+Description=mqtt translator
+After=mosquitto.service
+After=acs-endpoint-provisioning.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /home/pi/imcatwhocode/asc-mqtt-translator/src/index.js
+WorkingDirectory=/home/pi/imcatwhocode/asc-mqtt-translator
+User=pi
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

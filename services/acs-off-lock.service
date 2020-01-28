@@ -1,0 +1,14 @@
+[Unit]
+Description=ACS automation service
+After=mosquitto.service
+After=modbus2mqtt.service
+
+[Service]
+Type=simple
+ExecStart=/home/pi/aa13q/modbus2mqtt/off-lock.sh
+WorkingDirectory=/home/pi/aa13q/modbus2mqtt
+User=pi
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
