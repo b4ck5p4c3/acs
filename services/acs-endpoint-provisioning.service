@@ -1,0 +1,12 @@
+[Unit]
+Description=ACS controller provisioning service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/pi/modbus/provision/provision.py
+WorkingDirectory=/home/pi/modbus/provision
+User=pi
+Restart=never
+
+[Install]
+WantedBy=multi-user.target
