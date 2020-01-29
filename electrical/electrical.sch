@@ -1081,11 +1081,9 @@ F 3 "~" H 8900 8750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6950 7300 12000 7300
+	6900 7350 11250 7350
 Wire Wire Line
-	6900 7350 12000 7350
-Wire Wire Line
-	6850 7400 12000 7400
+	6850 7400 8250 7400
 Wire Wire Line
 	7050 7500 8050 7500
 Wire Wire Line
@@ -1290,7 +1288,7 @@ N
 Text Label 11000 10450 0    50   ~ 0
 PE
 Wire Wire Line
-	11250 8100 11250 10450
+	11250 8100 11250 8150
 Wire Wire Line
 	11150 10450 11150 10200
 Wire Wire Line
@@ -1844,10 +1842,51 @@ Text Notes 9800 14250 0    50   ~ 0
 Железная дверь
 Text Notes 9800 14500 0    50   ~ 0
 Тамбурная дверь
-Wire Bus Line
-	6200 750  6200 1700
+Text Label 16750 1750 0    50   ~ 0
+yellow
+Text Label 16750 1850 0    50   ~ 0
+green
+Text Label 19300 4200 0    50   ~ 0
+yellow
+Text Label 19300 4300 0    50   ~ 0
+green
+Wire Wire Line
+	10650 7500 10650 7300
+Connection ~ 10650 7300
+Wire Wire Line
+	10650 7300 12000 7300
+Wire Wire Line
+	9850 7500 9850 7300
+Connection ~ 9850 7300
+Wire Wire Line
+	9850 7300 10650 7300
+Wire Wire Line
+	11250 7500 11250 7350
+Connection ~ 11250 7350
+Wire Wire Line
+	11250 7350 12000 7350
+Wire Wire Line
+	8250 7500 8250 7400
+Connection ~ 8250 7400
+Wire Wire Line
+	8250 7400 9400 7400
+Wire Wire Line
+	11900 7500 11650 7500
+Wire Wire Line
+	11650 7500 11650 8150
+Wire Wire Line
+	11650 8150 11250 8150
+Connection ~ 11250 8150
+Wire Wire Line
+	11250 8150 11250 10450
+Wire Wire Line
+	6950 7300 9850 7300
+Wire Wire Line
+	9400 7500 9400 7400
 Wire Bus Line
 	9500 1400 9500 5550
+Wire Bus Line
+	6200 750  6200 1700
 Wire Bus Line
 	2600 1450 2600 2300
 Wire Bus Line
@@ -1914,12 +1953,7 @@ Wire Bus Line
 	4500 1200 4500 6000
 Wire Bus Line
 	7600 1200 7600 5950
-Text Label 16750 1750 0    50   ~ 0
-yellow
-Text Label 16750 1850 0    50   ~ 0
-green
-Text Label 19300 4200 0    50   ~ 0
-yellow
-Text Label 19300 4300 0    50   ~ 0
-green
+Connection ~ 9400 7400
+Wire Wire Line
+	9400 7400 12000 7400
 $EndSCHEMATC
