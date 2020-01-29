@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
-Sheet 1 13
+Sheet 1 14
 Title ""
 Date ""
 Rev ""
@@ -265,12 +265,12 @@ Text Notes 13100 15200 0    100  ~ 0
 $Comp
 L sw:SW_Reed SW?
 U 1 1 5E17D356
-P 5450 6200
-F 0 "SW?" H 5450 6300 50  0000 C CNN
-F 1 "Концевик железной двери" H 5500 6100 50  0000 C CNN
-F 2 "" H 5450 6200 50  0001 C CNN
-F 3 "~" H 5450 6200 50  0001 C CNN
-	1    5450 6200
+P 7950 6700
+F 0 "SW?" H 7950 6800 50  0000 C CNN
+F 1 "Концевик железной двери" H 8000 6600 50  0000 C CNN
+F 2 "" H 7950 6700 50  0001 C CNN
+F 3 "~" H 7950 6700 50  0001 C CNN
+	1    7950 6700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1883,6 +1883,31 @@ Wire Wire Line
 	6950 7300 9850 7300
 Wire Wire Line
 	9400 7500 9400 7400
+Connection ~ 9400 7400
+Wire Wire Line
+	9400 7400 12000 7400
+Entry Wire Line
+	7300 6050 7400 6150
+Entry Wire Line
+	7300 6150 7400 6250
+Entry Wire Line
+	7400 6600 7500 6700
+Entry Wire Line
+	7400 6400 7500 6500
+Wire Wire Line
+	7500 6500 8150 6500
+Wire Wire Line
+	8150 6500 8150 6700
+Wire Wire Line
+	7750 6700 7500 6700
+Text Label 7500 6500 0    50   ~ 0
+yellow
+Text Label 7500 6700 0    50   ~ 0
+blue
+Wire Wire Line
+	7300 6050 6900 6050
+Wire Wire Line
+	7300 6150 6900 6150
 Wire Bus Line
 	9500 1400 9500 5550
 Wire Bus Line
@@ -1942,6 +1967,8 @@ Wire Bus Line
 Wire Bus Line
 	19200 3600 19200 4350
 Wire Bus Line
+	7400 6050 7400 6850
+Wire Bus Line
 	16600 3850 16600 4950
 Wire Bus Line
 	4750 7300 5850 7300
@@ -1953,7 +1980,22 @@ Wire Bus Line
 	4500 1200 4500 6000
 Wire Bus Line
 	7600 1200 7600 5950
-Connection ~ 9400 7400
-Wire Wire Line
-	9400 7400 12000 7400
+Text Label 7050 6050 0    50   ~ 0
+yellow
+Text Label 7050 6150 0    50   ~ 0
+blue
+$Sheet
+S 5400 5050 1050 1200
+U 5E5861A6
+F0 "Sheet5E5861A5" 50
+F1 "intercom_controller.sch" 50
+F2 "gnd_1" I L 5400 5150 50 
+F3 "12V" I L 5400 5250 50 
+F4 "doorlock" I L 5400 5350 50 
+F5 "ext_led" I L 5400 5450 50 
+F6 "button" I L 5400 5550 50 
+F7 "gnd_2" I L 5400 5650 50 
+F8 "dallas" I L 5400 5750 50 
+F9 "buzzer" I L 5400 5850 50 
+$EndSheet
 $EndSCHEMATC
