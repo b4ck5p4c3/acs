@@ -705,13 +705,9 @@ Wire Wire Line
 Wire Bus Line
 	16650 700  9400 700 
 Entry Wire Line
-	5850 4600 5950 4700
-Entry Wire Line
 	5850 4700 5950 4800
 Entry Wire Line
 	5850 4800 5950 4900
-Wire Wire Line
-	5850 4600 5250 4600
 Wire Wire Line
 	5250 4700 5850 4700
 Wire Wire Line
@@ -725,11 +721,7 @@ Entry Wire Line
 Entry Wire Line
 	5850 4200 5950 4300
 Entry Wire Line
-	5850 5100 5950 5200
-Entry Wire Line
 	8300 2450 8400 2550
-Wire Wire Line
-	5250 5100 5850 5100
 Wire Wire Line
 	8300 2450 7700 2450
 Entry Wire Line
@@ -1873,13 +1865,9 @@ L
 Text Label 13000 10550 0    50   ~ 0
 N
 Wire Wire Line
-	11900 12750 12500 12750
-Wire Wire Line
 	12500 12850 11900 12850
 Wire Wire Line
 	11900 12950 12500 12950
-Wire Wire Line
-	12500 13250 11900 13250
 Wire Wire Line
 	11900 13050 12500 13050
 Wire Wire Line
@@ -1995,9 +1983,9 @@ red
 Text Label 10450 13300 0    50   ~ 0
 black
 Text Notes 10800 13750 0    50   ~ 0
-Кнопка панели (?)
+Кнопка панели
 Text Notes 10800 14050 0    50   ~ 0
-Кнопка панели (?)
+Ключ панели
 Text Notes 10800 13350 0    50   ~ 0
 Индикатор панели
 Text Label 9500 14850 2    50   ~ 0
@@ -2036,8 +2024,6 @@ Connection ~ 12600 11550
 Wire Bus Line
 	12600 11550 9650 11550
 Entry Wire Line
-	12500 12750 12600 12850
-Entry Wire Line
 	12500 12850 12600 12950
 Entry Wire Line
 	12500 12950 12600 13050
@@ -2045,14 +2031,10 @@ Entry Wire Line
 	12500 13050 12600 13150
 Entry Wire Line
 	12500 13150 12600 13250
-Entry Wire Line
-	12500 13250 12600 13350
-NoConn ~ 11900 12750
 NoConn ~ 11900 12850
 NoConn ~ 11900 12950
 NoConn ~ 11900 13050
 NoConn ~ 11900 13150
-NoConn ~ 11900 13250
 Entry Wire Line
 	5850 3100 5750 3000
 Entry Wire Line
@@ -2103,12 +2085,10 @@ Entry Wire Line
 	5850 4300 5950 4400
 Entry Wire Line
 	5850 4400 5950 4500
-NoConn ~ 5250 4600
 NoConn ~ 5250 4700
 NoConn ~ 5250 4800
 NoConn ~ 5250 4900
 NoConn ~ 5250 5000
-NoConn ~ 5250 5100
 Entry Wire Line
 	6250 2800 6150 2900
 Entry Wire Line
@@ -2307,9 +2287,9 @@ Text Label 9750 2500 0    50   ~ 0
 black
 Text Label 9750 2400 0    50   ~ 0
 red
-Text Label 9750 2050 0    50   ~ 0
+Text Label 9750 2200 0    50   ~ 0
 green
-Text Label 9750 2150 0    50   ~ 0
+Text Label 9750 2300 0    50   ~ 0
 yellow
 $Sheet
 S 10300 2150 600  700 
