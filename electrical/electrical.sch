@@ -259,7 +259,7 @@ Wire Bus Line
 Text Notes 3400 5050 0    100  ~ 0
 Аквариум
 Wire Notes Line
-	4250 1100 13700 1100
+	4250 1100 14450 1100
 Text Notes 13100 15200 0    100  ~ 0
 Тамбур
 $Comp
@@ -424,7 +424,7 @@ pink
 Wire Bus Line
 	2400 1200 4500 1200
 Wire Notes Line
-	4250 1100 4250 15250
+	4250 1100 4250 15850
 Wire Notes Line
 	16350 1200 21550 1200
 Wire Notes Line
@@ -1217,9 +1217,9 @@ Wire Wire Line
 	4950 10250 8000 10250
 Connection ~ 8000 10250
 Wire Notes Line
-	4250 15850 13700 15850
+	4250 15850 14450 15850
 Wire Notes Line
-	14450 1600 14450 15750
+	14450 1100 14450 15850
 Wire Bus Line
 	7200 11100 5450 11100
 Wire Bus Line
@@ -1431,9 +1431,9 @@ Wire Bus Line
 Wire Bus Line
 	14100 5550 14100 11600
 Wire Notes Line
-	4550 7050 13600 7050
+	4550 7050 14300 7050
 Wire Notes Line
-	4550 10950 13600 10950
+	4550 10950 14300 10950
 Connection ~ 11000 10250
 Wire Wire Line
 	11000 10250 11650 10250
