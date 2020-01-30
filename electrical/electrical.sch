@@ -374,13 +374,13 @@ Entry Wire Line
 Entry Wire Line
 	4600 2700 4500 2800
 Entry Wire Line
-	6250 2500 6150 2600
+	6150 3200 6250 3300
 Entry Wire Line
-	6250 2600 6150 2700
+	6250 2500 6150 2600
 Entry Wire Line
 	6250 2200 6150 2300
 Entry Wire Line
-	6250 2300 6150 2400
+	6250 2400 6150 2500
 Text Label 5050 3550 2    50   ~ 0
 yellow+red
 Text Label 5100 3650 2    50   ~ 0
@@ -389,7 +389,7 @@ Text Label 6750 2800 2    50   ~ 0
 green+brown
 Text Label 6700 2900 2    50   ~ 0
 green+white
-Text Label 6450 2000 2    50   ~ 0
+Text Label 6500 2400 2    50   ~ 0
 green
 Text Label 6450 2100 2    50   ~ 0
 white
@@ -405,9 +405,9 @@ Text Label 6700 2200 2    50   ~ 0
 white+brown
 Text Label 6650 2300 2    50   ~ 0
 white+blue
-Text Label 6600 2500 2    50   ~ 0
+Text Label 6650 3300 2    50   ~ 0
 white+red
-Text Label 6700 2600 2    50   ~ 0
+Text Label 6700 2500 2    50   ~ 0
 white+black
 Text Label 4600 3900 0    50   ~ 0
 blue+red
@@ -713,19 +713,19 @@ Wire Wire Line
 Wire Wire Line
 	5850 4800 5250 4800
 Entry Wire Line
-	8300 2300 8400 2400
+	8300 2100 8400 2200
 Entry Wire Line
-	8300 2200 8400 2300
+	8300 2000 8400 2100
 Entry Wire Line
 	5850 4100 5950 4200
 Entry Wire Line
 	5850 4200 5950 4300
 Entry Wire Line
-	8300 2450 8400 2550
+	8300 2250 8400 2350
 Wire Wire Line
-	8300 2450 7700 2450
+	8300 2250 7700 2250
 Entry Wire Line
-	8300 2550 8400 2650
+	8300 2350 8400 2450
 Entry Wire Line
 	5850 5000 5950 5100
 Wire Wire Line
@@ -740,19 +740,19 @@ Text Label 5400 4400 0    50   ~ 0
 green+white
 Text Label 5650 3550 0    50   ~ 0
 green
-Text Label 8100 2200 0    50   ~ 0
+Text Label 8100 2100 0    50   ~ 0
 white
 Text Label 5700 5300 0    50   ~ 0
 red
-Text Label 8100 2300 0    50   ~ 0
+Text Label 8100 2000 0    50   ~ 0
 black
 Text Label 5650 3800 0    50   ~ 0
 blue
 Text Label 5600 3900 0    50   ~ 0
 yellow
-Text Label 7850 2450 0    50   ~ 0
+Text Label 7850 2250 0    50   ~ 0
 white+brown
-Text Label 7900 2550 0    50   ~ 0
+Text Label 7900 2350 0    50   ~ 0
 white+blue
 Text Label 5500 4100 0    50   ~ 0
 white+red
@@ -1604,28 +1604,28 @@ N
 Text Notes 6000 13250 0    50   ~ 0
 Свет в аквариуме
 Wire Bus Line
-	14100 11600 9700 11600
+	14100 11600 9800 11600
 Entry Wire Line
-	9700 15250 9600 15350
+	9800 15250 9700 15350
 Entry Wire Line
-	9700 15350 9600 15450
+	9800 15350 9700 15450
 Wire Wire Line
-	9600 15350 9050 15350
+	9700 15350 9050 15350
 Wire Wire Line
-	9050 15450 9600 15450
+	9050 15450 9700 15450
 Text Label 9350 15350 0    50   ~ 0
 yellow
 Text Label 9400 15450 0    50   ~ 0
 green
-Text Notes 9750 11750 0    50   ~ 0
+Text Notes 9850 11750 0    50   ~ 0
 Управление электромагнитным замком
-Text Notes 9750 12750 0    50   ~ 0
+Text Notes 9850 12750 0    50   ~ 0
 Управление вывеской
-Text Notes 9750 14900 0    50   ~ 0
+Text Notes 9850 14900 0    50   ~ 0
 Дверь в аквариум
-Text Notes 9750 15100 0    50   ~ 0
+Text Notes 9850 15100 0    50   ~ 0
 Железная дверь
-Text Notes 9750 15400 0    50   ~ 0
+Text Notes 9850 15400 0    50   ~ 0
 Тамбурная дверь
 Text Label 16750 1750 0    50   ~ 0
 yellow
@@ -1694,18 +1694,18 @@ yellow
 Text Label 4600 5400 0    50   ~ 0
 blue
 $Sheet
-S 7350 3500 1050 1200
+S 7400 2600 1050 1200
 U 5E5861A6
 F0 "Sheet5E5861A5" 50
 F1 "intercom_controller.sch" 50
-F2 "gnd_1" I L 7350 3600 50 
-F3 "12V" I L 7350 3700 50 
-F4 "doorlock" I L 7350 3800 50 
-F5 "ext_led" I L 7350 3900 50 
-F6 "button" I L 7350 4000 50 
-F7 "gnd_2" I L 7350 4100 50 
-F8 "dallas" I L 7350 4200 50 
-F9 "buzzer" I L 7350 4300 50 
+F2 "gnd_1" I L 7400 2700 50 
+F3 "12V" I L 7400 2800 50 
+F4 "doorlock" I L 7400 2900 50 
+F5 "ext_led" I L 7400 3000 50 
+F6 "button" I L 7400 3100 50 
+F7 "gnd_2" I L 7400 3200 50 
+F8 "dallas" I L 7400 3300 50 
+F9 "buzzer" I L 7400 3400 50 
 $EndSheet
 Wire Bus Line
 	9650 11400 6650 11400
@@ -1890,9 +1890,9 @@ Text Label 9550 12700 2    50   ~ 0
 blue
 Text Label 9550 12800 2    50   ~ 0
 yellow
-Text Label 9550 12050 2    50   ~ 0
+Text Label 10350 12050 2    50   ~ 0
 white+brown
-Text Label 9550 12150 2    50   ~ 0
+Text Label 10300 12150 2    50   ~ 0
 white+blue
 Text Label 7150 12650 2    50   ~ 0
 white+red
@@ -1906,7 +1906,7 @@ Text Label 9500 15100 2    50   ~ 0
 brown
 Text Label 6950 12850 2    50   ~ 0
 violet
-Text Label 9500 13550 2    50   ~ 0
+Text Label 9550 13550 2    50   ~ 0
 black+red
 Entry Wire Line
 	9400 14600 9500 14500
@@ -1934,7 +1934,7 @@ Wire Bus Line
 	9500 14450 11550 14450
 Entry Wire Line
 	10650 13300 10750 13400
-Text Notes 9750 14650 0    50   ~ 0
+Text Notes 9850 14650 0    50   ~ 0
 Presence switch
 Wire Wire Line
 	10650 13200 9050 13200
@@ -1945,35 +1945,22 @@ Entry Wire Line
 Entry Wire Line
 	10650 13950 10750 14050
 $Comp
-L device:R R1
-U 1 1 5EFB21E1
-P 10100 13700
-F 0 "R1" V 10150 13900 50  0000 C CNN
-F 1 "10k" V 10050 13900 50  0000 C CNN
-F 2 "" V 10030 13700 50  0001 C CNN
-F 3 "~" H 10100 13700 50  0001 C CNN
-	1    10100 13700
-	0    1    1    0   
-$EndComp
-$Comp
 L device:R R2
 U 1 1 5EFB2F94
-P 10100 13950
-F 0 "R2" V 10150 14150 50  0000 C CNN
-F 1 "10k" V 10050 14150 50  0000 C CNN
-F 2 "" V 10030 13950 50  0001 C CNN
-F 3 "~" H 10100 13950 50  0001 C CNN
-	1    10100 13950
+P 10250 13950
+F 0 "R2" V 10150 14100 50  0000 C CNN
+F 1 "10k" V 10350 13950 50  0000 C CNN
+F 2 "" V 10180 13950 50  0001 C CNN
+F 3 "~" H 10250 13950 50  0001 C CNN
+	1    10250 13950
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	10650 13700 10250 13700
+	9050 13700 10100 13700
 Wire Wire Line
-	9050 13700 9950 13700
+	9050 13950 10100 13950
 Wire Wire Line
-	9050 13950 9950 13950
-Wire Wire Line
-	10250 13950 10650 13950
+	10400 13950 10650 13950
 Text Label 10450 13700 0    50   ~ 0
 green
 Text Label 10400 13950 0    50   ~ 0
@@ -1998,11 +1985,7 @@ Entry Wire Line
 	9550 13550 9650 13450
 Entry Wire Line
 	9550 13450 9650 13350
-Wire Wire Line
-	9550 13550 9050 13550
-Wire Wire Line
-	9050 13450 9550 13450
-Text Notes 9800 13500 0    50   ~ 0
+Text Notes 10150 13500 0    50   ~ 0
 ЭМ замок
 Text Label 6050 11600 0    50   ~ 0
 C3(серверная)
@@ -2016,7 +1999,7 @@ Text Label 6850 12350 0    50   ~ 0
 yellow
 Text Label 6850 12450 0    50   ~ 0
 green
-Text Notes 9750 12100 0    50   ~ 0
+Text Notes 10600 12150 0    50   ~ 0
 Кнопка звонка
 Text Label 12500 12950 2    50   ~ 0
 green+brown
@@ -2052,15 +2035,11 @@ Entry Wire Line
 Entry Wire Line
 	5850 3650 5950 3750
 Entry Wire Line
-	9650 11950 9550 12050
+	9650 11950 9750 12050
 Entry Wire Line
-	9650 12050 9550 12150
-Wire Wire Line
-	9550 12150 9100 12150
-Wire Wire Line
-	9550 12050 9100 12050
-NoConn ~ 9100 12150
-NoConn ~ 9100 12050
+	9650 12050 9750 12150
+NoConn ~ 10500 12150
+NoConn ~ 10500 12050
 Entry Wire Line
 	5850 3800 5950 3900
 Entry Wire Line
@@ -2134,123 +2113,62 @@ Wire Bus Line
 	4500 1200 4500 2400
 Connection ~ 4500 2400
 Wire Wire Line
-	7350 4100 6950 4100
+	7400 3200 7300 3200
 Wire Wire Line
-	6950 4100 6950 4050
+	7300 2700 7400 2700
 Wire Wire Line
-	6950 3600 7350 3600
+	6250 2500 6900 2500
 Wire Wire Line
-	6950 3600 6950 2600
+	6250 2800 6850 2800
 Wire Wire Line
-	6250 2600 6950 2600
-Connection ~ 6950 3600
+	7400 3400 7200 3400
+NoConn ~ 7200 3400
 Wire Wire Line
-	7000 2500 7000 4200
+	7400 3000 7200 3000
+NoConn ~ 7200 3000
 Wire Wire Line
-	7000 4200 7350 4200
+	6250 2300 6900 2300
 Wire Wire Line
-	6250 2500 7000 2500
-Wire Wire Line
-	7150 2800 7150 3400
-Wire Wire Line
-	7150 3700 7350 3700
-Wire Wire Line
-	6250 2800 7150 2800
-Wire Wire Line
-	7350 3800 7100 3800
-Wire Wire Line
-	7100 3800 7100 2900
-Wire Wire Line
-	6250 2900 7100 2900
-Wire Wire Line
-	7350 4300 7250 4300
-NoConn ~ 7250 4300
-Wire Wire Line
-	7350 3900 7250 3900
-NoConn ~ 7250 3900
-Wire Wire Line
-	6950 2300 7700 2300
-Connection ~ 6950 2600
-Wire Wire Line
-	6250 2300 6950 2300
-Connection ~ 6950 2300
-Wire Wire Line
-	6950 2300 6950 2600
+	6900 2300 6900 2400
 Wire Wire Line
 	6250 2200 7050 2200
 Wire Wire Line
-	7350 4000 7050 4000
+	7400 3100 7050 3100
 Wire Wire Line
-	7050 4000 7050 2200
+	7050 3100 7050 2200
 Connection ~ 7050 2200
 Wire Wire Line
-	7050 2200 7650 2200
-Wire Wire Line
-	7700 2450 7700 2300
-Connection ~ 7700 2300
-Wire Wire Line
-	7700 2300 8300 2300
-Wire Wire Line
-	7650 2550 7650 2200
-Wire Wire Line
-	7650 2550 8300 2550
-Connection ~ 7650 2200
-Wire Wire Line
-	7650 2200 8300 2200
+	7650 2350 8300 2350
 Text Notes 6200 6300 0    50   ~ 0
 К блоку питания домофона
 Entry Wire Line
-	6150 3400 6250 3500
+	6150 3700 6250 3800
 Entry Wire Line
-	6150 3300 6250 3400
+	6150 3600 6250 3700
 Entry Wire Line
 	6150 3850 6250 3950
 Entry Wire Line
 	6150 3950 6250 4050
-Wire Wire Line
-	6250 4050 6950 4050
-Connection ~ 6950 4050
-Wire Wire Line
-	6950 4050 6950 3950
-Wire Wire Line
-	6250 3950 6950 3950
-Connection ~ 6950 3950
-Wire Wire Line
-	6950 3950 6950 3600
-Wire Wire Line
-	6250 3400 7150 3400
-Connection ~ 7150 3400
-Wire Wire Line
-	7150 3400 7150 3500
-Wire Wire Line
-	6250 3500 7150 3500
-Connection ~ 7150 3500
-Wire Wire Line
-	7150 3500 7150 3700
-Text Label 6250 3400 0    50   ~ 0
+Text Label 6250 3700 0    50   ~ 0
 red
-Text Label 6250 3500 0    50   ~ 0
+Text Label 6250 3800 0    50   ~ 0
 yellow
 Text Label 6250 3950 0    50   ~ 0
 blue
 Text Label 6250 4050 0    50   ~ 0
 black
 Wire Bus Line
-	6150 1950 6100 1950
+	6150 2100 6100 2100
 Wire Bus Line
-	6100 1950 6100 2400
+	6100 2100 6100 2400
 Entry Wire Line
 	6250 2100 6150 2200
 Entry Wire Line
-	6250 2000 6150 2100
+	6250 2300 6150 2400
 Wire Wire Line
 	7050 2100 7050 2200
 Wire Wire Line
 	6250 2100 7050 2100
-Wire Wire Line
-	6250 2000 6950 2000
-Wire Wire Line
-	6950 2000 6950 2300
 Text Label 5700 2700 2    50   ~ 0
 red
 Text Label 5700 2800 2    50   ~ 0
@@ -2318,10 +2236,10 @@ Entry Wire Line
 Entry Wire Line
 	4500 6150 4600 6250
 $Comp
-L device:Electromagnetic_Actor L?
+L device:Electromagnetic_Actor L2
 U 1 1 61C1A7F6
 P 4950 6250
-F 0 "L?" V 4800 6300 50  0000 C CNN
+F 0 "L2" V 4800 6300 50  0000 C CNN
 F 1 "Электромеханический замок двери" V 5100 6550 50  0000 C CNN
 F 2 "" V 4925 6350 50  0001 C CNN
 F 3 "~" V 4925 6350 50  0001 C CNN
@@ -2344,6 +2262,117 @@ Text Label 4600 5500 0    50   ~ 0
 red
 Text Label 4600 5600 0    50   ~ 0
 black
+Wire Wire Line
+	9550 13550 9150 13550
+Wire Wire Line
+	9050 13450 9100 13450
+Wire Wire Line
+	9150 13550 9150 13600
+Connection ~ 9150 13550
+Wire Wire Line
+	9150 13550 9050 13550
+Wire Wire Line
+	9100 13450 9100 13650
+Wire Wire Line
+	9100 13650 9950 13650
+Connection ~ 9100 13450
+Wire Wire Line
+	9100 13450 9550 13450
+$Comp
+L device:D D6
+U 1 1 621A1D75
+P 9950 13500
+F 0 "D6" V 9900 13600 50  0000 C CNN
+F 1 "D" V 10050 13600 50  0000 C CNN
+F 2 "" H 9950 13500 50  0001 C CNN
+F 3 "~" H 9950 13500 50  0001 C CNN
+	1    9950 13500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9150 13600 9850 13600
+Wire Wire Line
+	10650 13700 10400 13700
+$Comp
+L device:R R1
+U 1 1 5EFB21E1
+P 10250 13700
+F 0 "R1" V 10150 13850 50  0000 C CNN
+F 1 "10k" V 10350 13700 50  0000 C CNN
+F 2 "" V 10180 13700 50  0001 C CNN
+F 3 "~" H 10250 13700 50  0001 C CNN
+	1    10250 13700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9850 13350 9950 13350
+Wire Wire Line
+	9850 13350 9850 13600
+Wire Wire Line
+	9750 12050 10500 12050
+Wire Wire Line
+	10500 12150 9750 12150
+Wire Wire Line
+	7300 2700 7300 3200
+Wire Wire Line
+	6250 3950 6500 3950
+Wire Wire Line
+	6500 3950 6500 4050
+Wire Wire Line
+	6500 4050 6250 4050
+Connection ~ 6500 3950
+Connection ~ 7300 3200
+Wire Wire Line
+	6900 2300 6900 2000
+Connection ~ 6900 2300
+Wire Wire Line
+	6250 3800 6550 3800
+Wire Wire Line
+	6550 3800 6550 3700
+Wire Wire Line
+	6550 3700 6250 3700
+Connection ~ 6550 3700
+Wire Wire Line
+	6850 2800 7400 2800
+Wire Wire Line
+	6550 3700 6850 3700
+Connection ~ 6850 2800
+Wire Wire Line
+	6250 2900 7400 2900
+Wire Wire Line
+	6900 3950 6900 3200
+Wire Wire Line
+	6500 3950 6900 3950
+Wire Wire Line
+	7300 3200 6900 3200
+Connection ~ 6900 3200
+Wire Wire Line
+	6900 2000 7700 2000
+Wire Wire Line
+	7650 2100 8300 2100
+Wire Wire Line
+	7700 2250 7700 2000
+Connection ~ 7700 2000
+Wire Wire Line
+	7700 2000 8300 2000
+Wire Wire Line
+	7650 2100 7650 2350
+Wire Wire Line
+	7650 2100 7050 2100
+Connection ~ 7650 2100
+Connection ~ 7050 2100
+Wire Wire Line
+	6850 2800 6850 3700
+Wire Wire Line
+	6250 3300 7400 3300
+Wire Wire Line
+	6250 2400 6900 2400
+Connection ~ 6900 2400
+Wire Wire Line
+	6900 2400 6900 2500
+Connection ~ 6900 2500
+Wire Wire Line
+	6900 2500 6900 3200
 Wire Bus Line
 	9500 1400 9500 5550
 Wire Bus Line
@@ -2391,7 +2420,7 @@ Wire Bus Line
 Wire Bus Line
 	6750 13100 6750 13300
 Wire Bus Line
-	9700 11600 9700 15450
+	9800 11600 9800 15450
 Wire Bus Line
 	13150 9900 13150 11250
 Wire Bus Line
@@ -2399,7 +2428,9 @@ Wire Bus Line
 Wire Bus Line
 	9650 2100 9650 5450
 Wire Bus Line
-	6150 3250 6150 6300
+	6150 3550 6150 6300
+Wire Bus Line
+	12600 11550 12600 13350
 Wire Bus Line
 	10750 13150 10750 14100
 Wire Bus Line
@@ -2411,7 +2442,7 @@ Wire Bus Line
 Wire Bus Line
 	19800 2300 19800 3100
 Wire Bus Line
-	8400 1850 8400 2700
+	8400 1850 8400 2500
 Wire Bus Line
 	16650 700  16650 1900
 Wire Bus Line
@@ -2421,11 +2452,9 @@ Wire Bus Line
 Wire Bus Line
 	4750 7300 5850 7300
 Wire Bus Line
-	12600 11550 12600 13350
-Wire Bus Line
 	5850 1750 5850 3400
 Wire Bus Line
-	6150 1950 6150 3050
+	6150 2100 6150 3350
 Wire Bus Line
 	4500 5400 4500 6900
 Wire Bus Line
