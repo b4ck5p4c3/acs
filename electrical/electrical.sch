@@ -214,8 +214,8 @@ Wire Wire Line
 	2500 3150 3100 3150
 Wire Wire Line
 	2500 3250 3100 3250
-Text Label 1750 1250 0    50   ~ 0
-yellow+orange
+Text Label 1850 1250 0    50   ~ 0
+yellow+red
 Text Label 1800 1350 0    50   ~ 0
 violet+green
 Text Label 1800 1600 0    50   ~ 0
@@ -265,12 +265,12 @@ Text Notes 13100 15200 0    100  ~ 0
 $Comp
 L sw:SW_Reed SW4
 U 1 1 5E17D356
-P 5050 6600
-F 0 "SW4" H 5050 6700 50  0000 C CNN
-F 1 "Концевик железной двери" H 5100 6500 50  0000 C CNN
-F 2 "" H 5050 6600 50  0001 C CNN
-F 3 "~" H 5050 6600 50  0001 C CNN
-	1    5050 6600
+P 5050 6750
+F 0 "SW4" H 5050 6850 50  0000 C CNN
+F 1 "Концевик железной двери" H 5100 6650 50  0000 C CNN
+F 2 "" H 5050 6750 50  0001 C CNN
+F 3 "~" H 5050 6750 50  0001 C CNN
+	1    5050 6750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -381,8 +381,8 @@ Entry Wire Line
 	6250 2200 6150 2300
 Entry Wire Line
 	6250 2300 6150 2400
-Text Label 5150 3550 2    50   ~ 0
-yellow+orange
+Text Label 5050 3550 2    50   ~ 0
+yellow+red
 Text Label 5100 3650 2    50   ~ 0
 violet+green
 Text Label 6750 2800 2    50   ~ 0
@@ -738,8 +738,8 @@ Entry Wire Line
 	5850 5000 5950 5100
 Wire Wire Line
 	5850 4900 5250 4900
-Text Label 5300 4600 0    50   ~ 0
-yellow+orange
+Text Label 5450 5500 0    50   ~ 0
+yellow+red
 Text Label 5350 4700 0    50   ~ 0
 violet+green
 Text Label 5350 4800 0    50   ~ 0
@@ -750,7 +750,7 @@ Text Label 5650 3550 0    50   ~ 0
 green
 Text Label 8100 2200 0    50   ~ 0
 white
-Text Label 5700 5750 0    50   ~ 0
+Text Label 5700 5300 0    50   ~ 0
 red
 Text Label 8100 2300 0    50   ~ 0
 black
@@ -768,7 +768,7 @@ Text Label 5400 4200 0    50   ~ 0
 white+black
 Text Label 5600 4300 0    50   ~ 0
 violet
-Text Label 5450 5100 0    50   ~ 0
+Text Label 5450 5600 0    50   ~ 0
 black+red
 Text Label 5700 3650 0    50   ~ 0
 pink
@@ -1680,26 +1680,26 @@ Connection ~ 9400 7400
 Wire Wire Line
 	9400 7400 12000 7400
 Entry Wire Line
-	4500 5850 4600 5750
+	4500 5400 4600 5300
 Entry Wire Line
-	4500 5950 4600 5850
+	4500 5500 4600 5400
 Entry Wire Line
-	4500 6500 4600 6600
+	4500 6650 4600 6750
 Entry Wire Line
-	4500 6300 4600 6400
+	4500 6450 4600 6550
 Wire Wire Line
-	4600 6400 5250 6400
+	4600 6550 5250 6550
 Wire Wire Line
-	5250 6400 5250 6600
+	5250 6550 5250 6750
 Wire Wire Line
-	4850 6600 4600 6600
-Text Label 4600 6400 0    50   ~ 0
+	4850 6750 4600 6750
+Text Label 4600 6550 0    50   ~ 0
 yellow
-Text Label 4600 6600 0    50   ~ 0
+Text Label 4600 6750 0    50   ~ 0
 blue
-Text Label 4600 5750 0    50   ~ 0
+Text Label 4600 5300 0    50   ~ 0
 yellow
-Text Label 4600 5850 0    50   ~ 0
+Text Label 4600 5400 0    50   ~ 0
 blue
 $Sheet
 S 7350 3500 1050 1200
@@ -1884,8 +1884,8 @@ Wire Wire Line
 	11900 13050 12500 13050
 Wire Wire Line
 	11900 13150 12500 13150
-Text Label 12500 12750 2    50   ~ 0
-yellow+orange
+Text Label 9550 13450 2    50   ~ 0
+yellow+red
 Text Label 12500 12850 2    50   ~ 0
 violet+green
 Text Label 7200 12950 2    50   ~ 0
@@ -1918,7 +1918,7 @@ Text Label 9500 15100 2    50   ~ 0
 brown
 Text Label 6950 12850 2    50   ~ 0
 violet
-Text Label 12500 13250 2    50   ~ 0
+Text Label 9500 13550 2    50   ~ 0
 black+red
 Entry Wire Line
 	9400 14600 9500 14500
@@ -2006,28 +2006,14 @@ Wire Wire Line
 	9400 14700 9050 14700
 Wire Bus Line
 	11550 11250 11550 14450
-Wire Bus Line
-	9850 5350 14300 5350
-Wire Bus Line
-	14300 5350 14300 11800
-Wire Bus Line
-	14300 11800 11700 11800
-Wire Bus Line
-	11700 11800 11700 13100
-Wire Bus Line
-	11700 13100 9550 13100
 Entry Wire Line
-	9450 13550 9550 13450
+	9550 13550 9650 13450
 Entry Wire Line
-	9450 13450 9550 13350
+	9550 13450 9650 13350
 Wire Wire Line
-	9450 13550 9050 13550
+	9550 13550 9050 13550
 Wire Wire Line
-	9050 13450 9450 13450
-Text Label 9300 13450 0    50   ~ 0
-red
-Text Label 9250 13550 0    50   ~ 0
-black
+	9050 13450 9550 13450
 Text Notes 9800 13500 0    50   ~ 0
 ЭМ замок
 Text Label 6050 11600 0    50   ~ 0
@@ -2067,33 +2053,6 @@ NoConn ~ 11900 12950
 NoConn ~ 11900 13050
 NoConn ~ 11900 13150
 NoConn ~ 11900 13250
-$Comp
-L device:Electromagnetic_Actor L2
-U 1 1 5F61DF74
-P 10300 3300
-F 0 "L2" V 10150 3350 50  0000 C CNN
-F 1 "Электромеханический замок двери" V 10450 3600 50  0000 C CNN
-F 2 "" V 10275 3400 50  0001 C CNN
-F 3 "~" V 10275 3400 50  0001 C CNN
-	1    10300 3300
-	0    1    1    0   
-$EndComp
-Entry Wire Line
-	9950 3300 9850 3400
-Entry Wire Line
-	9950 3050 9850 3150
-Wire Wire Line
-	9950 3050 10550 3050
-Wire Wire Line
-	10550 3050 10550 3300
-Wire Wire Line
-	10550 3300 10500 3300
-Wire Wire Line
-	10200 3300 9950 3300
-Text Label 9950 3050 0    50   ~ 0
-red
-Text Label 9950 3300 0    50   ~ 0
-black
 Entry Wire Line
 	5850 3100 5750 3000
 Entry Wire Line
@@ -2103,9 +2062,9 @@ Entry Wire Line
 Entry Wire Line
 	5850 2800 5750 2700
 Entry Wire Line
-	5950 5650 5850 5750
+	5850 5300 5950 5400
 Entry Wire Line
-	5850 5850 5950 5750
+	5950 5500 5850 5400
 Entry Wire Line
 	5850 3550 5950 3650
 Entry Wire Line
@@ -2180,12 +2139,12 @@ Wire Wire Line
 	4600 4400 5850 4400
 Wire Bus Line
 	5950 1850 8400 1850
-Text Label 5600 5850 0    50   ~ 0
+Text Label 5600 5400 0    50   ~ 0
 brown
 Wire Wire Line
-	5850 5750 4600 5750
+	5850 5300 4600 5300
 Wire Wire Line
-	4600 5850 5850 5850
+	4600 5400 5850 5400
 Connection ~ 8400 1850
 Wire Bus Line
 	8400 1850 9200 1850
@@ -2328,16 +2287,6 @@ Text Label 16700 4500 0    50   ~ 0
 yellow
 Text Label 16700 4600 0    50   ~ 0
 blue
-$Sheet
-S 10300 2150 600  700 
-U 61A4A270
-F0 "Sheet61A4A26F" 50
-F1 "intro_panel.sch" 50
-F2 "button" I L 10300 2200 50 
-F3 "key" I L 10300 2300 50 
-F4 "led" I L 10300 2400 50 
-F5 "com" I L 10300 2500 50 
-$EndSheet
 Entry Wire Line
 	9650 2200 9750 2300
 Entry Wire Line
@@ -2354,8 +2303,67 @@ Wire Wire Line
 	9750 2400 10300 2400
 Wire Wire Line
 	10300 2500 9750 2500
-Wire Bus Line
-	9850 3150 9850 5350
+Text Label 9750 2500 0    50   ~ 0
+black
+Text Label 9750 2400 0    50   ~ 0
+red
+Text Label 9750 2050 0    50   ~ 0
+green
+Text Label 9750 2150 0    50   ~ 0
+yellow
+$Sheet
+S 10300 2150 600  700 
+U 61A4A270
+F0 "Sheet61A4A26F" 50
+F1 "intro_panel.sch" 50
+F2 "button" I L 10300 2200 50 
+F3 "key" I L 10300 2300 50 
+F4 "led" I L 10300 2400 50 
+F5 "com" I L 10300 2500 50 
+$EndSheet
+Text Label 4600 6250 0    50   ~ 0
+black
+Text Label 4600 6000 0    50   ~ 0
+red
+Wire Wire Line
+	4850 6250 4600 6250
+Wire Wire Line
+	5200 6250 5150 6250
+Wire Wire Line
+	5200 6000 5200 6250
+Wire Wire Line
+	4600 6000 5200 6000
+Entry Wire Line
+	4600 6000 4500 5900
+Entry Wire Line
+	4500 6150 4600 6250
+$Comp
+L device:Electromagnetic_Actor L?
+U 1 1 61C1A7F6
+P 4950 6250
+F 0 "L?" V 4800 6300 50  0000 C CNN
+F 1 "Электромеханический замок двери" V 5100 6550 50  0000 C CNN
+F 2 "" V 4925 6350 50  0001 C CNN
+F 3 "~" V 4925 6350 50  0001 C CNN
+	1    4950 6250
+	0    1    1    0   
+$EndComp
+Entry Wire Line
+	4500 5600 4600 5500
+Entry Wire Line
+	4500 5700 4600 5600
+Entry Wire Line
+	5850 5500 5950 5600
+Entry Wire Line
+	5950 5700 5850 5600
+Wire Wire Line
+	5850 5500 4600 5500
+Wire Wire Line
+	4600 5600 5850 5600
+Text Label 4600 5500 0    50   ~ 0
+red
+Text Label 4600 5600 0    50   ~ 0
+black
 Wire Bus Line
 	9500 1400 9500 5550
 Wire Bus Line
@@ -2409,9 +2417,9 @@ Wire Bus Line
 Wire Bus Line
 	9500 14450 9500 14700
 Wire Bus Line
-	9550 13100 9550 13550
-Wire Bus Line
 	9650 2100 9650 5450
+Wire Bus Line
+	6150 3250 6150 6300
 Wire Bus Line
 	10750 13150 10750 14100
 Wire Bus Line
@@ -2423,15 +2431,11 @@ Wire Bus Line
 Wire Bus Line
 	19800 2300 19800 3100
 Wire Bus Line
+	8400 1850 8400 2700
+Wire Bus Line
 	16650 700  16650 1900
 Wire Bus Line
 	19200 3600 19200 4350
-Wire Bus Line
-	4500 5750 4500 6750
-Wire Bus Line
-	8400 1850 8400 2700
-Wire Bus Line
-	6150 3250 6150 6300
 Wire Bus Line
 	16600 3850 16600 4950
 Wire Bus Line
@@ -2443,6 +2447,8 @@ Wire Bus Line
 Wire Bus Line
 	6150 1950 6150 3050
 Wire Bus Line
+	4500 5400 4500 6900
+Wire Bus Line
 	9650 11550 9650 15150
 Wire Bus Line
 	4500 2400 4500 4550
@@ -2450,12 +2456,4 @@ Wire Bus Line
 	5950 1850 5950 5950
 Wire Bus Line
 	2400 1200 2400 4950
-Text Label 9750 2500 0    50   ~ 0
-black
-Text Label 9750 2400 0    50   ~ 0
-red
-Text Label 9750 2050 0    50   ~ 0
-green
-Text Label 9750 2150 0    50   ~ 0
-yellow
 $EndSCHEMATC
