@@ -263,10 +263,10 @@ Wire Notes Line
 Text Notes 13100 15200 0    100  ~ 0
 Тамбур
 $Comp
-L sw:SW_Reed SW?
+L sw:SW_Reed SW4
 U 1 1 5E17D356
 P 7950 6700
-F 0 "SW?" H 7950 6800 50  0000 C CNN
+F 0 "SW4" H 7950 6800 50  0000 C CNN
 F 1 "Концевик железной двери" H 8000 6600 50  0000 C CNN
 F 2 "" H 7950 6700 50  0001 C CNN
 F 3 "~" H 7950 6700 50  0001 C CNN
@@ -274,10 +274,10 @@ F 3 "~" H 7950 6700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L sw:SW_Reed SW?
+L sw:SW_Reed SW5
 U 1 1 5E17D73B
 P 10450 1650
-F 0 "SW?" H 10450 1750 50  0000 C CNN
+F 0 "SW5" H 10450 1750 50  0000 C CNN
 F 1 "Концевик тамбурной двери" H 10500 1550 50  0000 C CNN
 F 2 "" H 10450 1650 50  0001 C CNN
 F 3 "~" H 10450 1650 50  0001 C CNN
@@ -285,10 +285,10 @@ F 3 "~" H 10450 1650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L sw:SW_SPST SW?
+L sw:SW_SPST SW6
 U 1 1 5E17DC84
 P 12000 6400
-F 0 "SW?" H 12000 6500 50  0000 C CNN
+F 0 "SW6" H 12000 6500 50  0000 C CNN
 F 1 "Выключатель света в аквариуме" H 12000 6300 50  0000 C CNN
 F 2 "" H 12000 6400 50  0001 C CNN
 F 3 "~" H 12000 6400 50  0001 C CNN
@@ -296,10 +296,10 @@ F 3 "~" H 12000 6400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:Lamp LA?
+L device:Lamp LA2
 U 1 1 5E17FAFA
 P 5450 2250
-F 0 "LA?" V 5578 2296 50  0000 L CNN
+F 0 "LA2" V 5578 2296 50  0000 L CNN
 F 1 "Lamp" V 5650 2250 50  0000 L CNN
 F 2 "" V 5450 2350 50  0001 C CNN
 F 3 "~" V 5450 2350 50  0001 C CNN
@@ -334,10 +334,10 @@ Wire Wire Line
 	6100 1600 5700 1600
 Connection ~ 5700 1600
 $Comp
-L sw:SW_SPST SW?
+L sw:SW_SPST SW3
 U 1 1 5E17EE22
 P 5450 1600
-F 0 "SW?" H 5450 1500 50  0000 C CNN
+F 0 "SW3" H 5450 1500 50  0000 C CNN
 F 1 "Выключатель света в тамбуре" H 5400 1900 50  0000 C CNN
 F 2 "" H 5450 1600 50  0001 C CNN
 F 3 "~" H 5450 1600 50  0001 C CNN
@@ -634,10 +634,10 @@ Wire Wire Line
 Wire Wire Line
 	20900 5300 20600 5300
 $Comp
-L device:Lamp LA?
+L device:Lamp LA3
 U 1 1 5E1D4AEC
 P 21350 5700
-F 0 "LA?" V 21450 5800 50  0000 L CNN
+F 0 "LA3" V 21450 5800 50  0000 L CNN
 F 1 "Красная лампа" V 21250 5800 50  0000 L CNN
 F 2 "" V 21350 5800 50  0001 C CNN
 F 3 "~" V 21350 5800 50  0001 C CNN
@@ -899,10 +899,10 @@ Wire Bus Line
 Wire Bus Line
 	7600 1200 9200 1200
 $Comp
-L device:CircuitBreaker_3P CB?
+L device:CircuitBreaker_3P CB1
 U 1 1 5E37DDB9
 P 5600 7850
-F 0 "CB?" H 5853 7896 50  0000 L CNN
+F 0 "CB1" H 5853 7896 50  0000 L CNN
 F 1 "Вводной автомат" H 5853 7805 50  0000 L CNN
 F 2 "" H 5900 7750 50  0001 C CNN
 F 3 "~" H 5850 7850 50  0001 C CNN
@@ -998,10 +998,10 @@ Connection ~ 5150 9150
 Wire Wire Line
 	4950 7400 4950 10250
 $Comp
-L device:CircuitBreaker_2P CB?
+L device:CircuitBreaker_2P CB2
 U 1 1 5E475859
 P 8150 7800
-F 0 "CB?" H 8302 7846 50  0000 L CNN
+F 0 "CB2" H 8302 7846 50  0000 L CNN
 F 1 "Розетки" H 8302 7755 50  0000 L CNN
 F 2 "" H 8050 7800 50  0001 C CNN
 F 3 "~" H 8050 7800 50  0001 C CNN
@@ -1009,10 +1009,10 @@ F 3 "~" H 8050 7800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:CircuitBreaker_1P CB?
+L device:CircuitBreaker_1P CB7
 U 1 1 5E47629A
 P 9850 7800
-F 0 "CB?" H 9903 7846 50  0000 L CNN
+F 0 "CB7" H 9903 7846 50  0000 L CNN
 F 1 "ПС+Серверная" H 9903 7755 50  0000 L CNN
 F 2 "" H 9850 7800 50  0001 C CNN
 F 3 "~" H 9850 7800 50  0001 C CNN
@@ -1020,10 +1020,10 @@ F 3 "~" H 9850 7800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:CircuitBreaker_1P CB?
+L device:CircuitBreaker_1P CB8
 U 1 1 5E4831FC
 P 10650 7800
-F 0 "CB?" H 10702 7846 50  0000 L CNN
+F 0 "CB8" H 10702 7846 50  0000 L CNN
 F 1 "Освещение 1" H 10702 7755 50  0000 L CNN
 F 2 "" H 10650 7800 50  0001 C CNN
 F 3 "~" H 10650 7800 50  0001 C CNN
@@ -1031,10 +1031,10 @@ F 3 "~" H 10650 7800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:CircuitBreaker_1P CB?
+L device:CircuitBreaker_1P CB9
 U 1 1 5E483655
 P 11250 7800
-F 0 "CB?" H 11302 7846 50  0000 L CNN
+F 0 "CB9" H 11302 7846 50  0000 L CNN
 F 1 "Освещение 2" H 11302 7755 50  0000 L CNN
 F 2 "" H 11250 7800 50  0001 C CNN
 F 3 "~" H 11250 7800 50  0001 C CNN
@@ -1042,10 +1042,10 @@ F 3 "~" H 11250 7800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L relay:DIPxx-2Axx-21x K?
+L relay:DIPxx-2Axx-21x K1
 U 1 1 5E4C3DF4
 P 8150 8750
-F 0 "K?" H 8630 8750 50  0000 L CNN
+F 0 "K1" H 8630 8750 50  0000 L CNN
 F 1 "DIPxx-2Axx-21x" H 8630 8705 50  0001 L CNN
 F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 8650 8700 50  0001 L CNN
 F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 8150 8750 50  0001 C CNN
@@ -1059,10 +1059,10 @@ Wire Wire Line
 Wire Wire Line
 	8250 8100 8250 8350
 $Comp
-L device:CircuitBreaker_1P CB?
+L device:CircuitBreaker_1P CB6
 U 1 1 5E47530D
 P 9400 7800
-F 0 "CB?" H 9453 7846 50  0000 L CNN
+F 0 "CB6" H 9453 7846 50  0000 L CNN
 F 1 "ОС" H 9453 7755 50  0000 L CNN
 F 2 "" H 9400 7800 50  0001 C CNN
 F 3 "~" H 9400 7800 50  0001 C CNN
@@ -1070,10 +1070,10 @@ F 3 "~" H 9400 7800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:CircuitBreaker_1P CB?
+L device:CircuitBreaker_1P CB5
 U 1 1 5E5323C5
 P 8900 8750
-F 0 "CB?" H 8952 8796 50  0000 L CNN
+F 0 "CB5" H 8952 8796 50  0000 L CNN
 F 1 "Bypass" H 8952 8705 50  0000 L CNN
 F 2 "" H 8900 8750 50  0001 C CNN
 F 3 "~" H 8900 8750 50  0001 C CNN
@@ -1100,10 +1100,10 @@ Wire Wire Line
 Wire Wire Line
 	8250 9150 8250 9050
 $Comp
-L device:CircuitBreaker_1P CB?
+L device:CircuitBreaker_1P CB4
 U 1 1 5E6D598F
 P 8750 9600
-F 0 "CB?" H 8802 9646 50  0000 L CNN
+F 0 "CB4" H 8802 9646 50  0000 L CNN
 F 1 "Правые" H 8802 9555 50  0000 L CNN
 F 2 "" H 8750 9600 50  0001 C CNN
 F 3 "~" H 8750 9600 50  0001 C CNN
@@ -1111,10 +1111,10 @@ F 3 "~" H 8750 9600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:CircuitBreaker_1P CB?
+L device:CircuitBreaker_1P CB3
 U 1 1 5E710602
 P 8250 9600
-F 0 "CB?" H 8302 9646 50  0000 L CNN
+F 0 "CB3" H 8302 9646 50  0000 L CNN
 F 1 "Левые" H 8302 9555 50  0000 L CNN
 F 2 "" H 8250 9600 50  0001 C CNN
 F 3 "~" H 8250 9600 50  0001 C CNN
@@ -1312,10 +1312,10 @@ L
 Entry Wire Line
 	11800 10550 11900 10450
 $Comp
-L device:CircuitBreaker_1P CB?
+L device:CircuitBreaker_1P CB10
 U 1 1 5E49D12D
 P 11900 7800
-F 0 "CB?" H 11952 7846 50  0000 L CNN
+F 0 "CB10" H 11952 7846 50  0000 L CNN
 F 1 "СКУД 230В" H 11952 7755 50  0000 L CNN
 F 2 "" H 11900 7800 50  0001 C CNN
 F 3 "~" H 11900 7800 50  0001 C CNN
@@ -1665,10 +1665,10 @@ Wire Bus Line
 Wire Bus Line
 	10250 10550 10250 11150
 $Comp
-L connector:Conn_WallSocket_Earth J?
+L connector:Conn_WallSocket_Earth J1
 U 1 1 5F46BC2E
 P 19250 2550
-F 0 "J?" H 19256 2884 50  0000 C CNN
+F 0 "J1" H 19256 2884 50  0000 C CNN
 F 1 "Conn_WallSocket_Earth" H 19256 2884 50  0001 C CNN
 F 2 "" H 18950 2650 50  0001 C CNN
 F 3 "~" H 18950 2650 50  0001 C CNN
@@ -1696,10 +1696,10 @@ N
 Text Label 19650 2750 0    50   ~ 0
 PE
 $Comp
-L connector:Conn_WallPlug P?
+L connector:Conn_WallPlug P1
 U 1 1 5F521195
 P 18500 2450
-F 0 "P?" H 18290 2450 50  0000 R CNN
+F 0 "P1" H 18290 2450 50  0000 R CNN
 F 1 "Conn_WallPlug" H 18290 2405 50  0001 R CNN
 F 2 "" H 18900 2450 50  0001 C CNN
 F 3 "~" H 18900 2450 50  0001 C CNN
@@ -1908,6 +1908,24 @@ Wire Wire Line
 	7300 6050 6900 6050
 Wire Wire Line
 	7300 6150 6900 6150
+Text Label 7050 6050 0    50   ~ 0
+yellow
+Text Label 7050 6150 0    50   ~ 0
+blue
+$Sheet
+S 5400 5050 1050 1200
+U 5E5861A6
+F0 "Sheet5E5861A5" 50
+F1 "intercom_controller.sch" 50
+F2 "gnd_1" I L 5400 5150 50 
+F3 "12V" I L 5400 5250 50 
+F4 "doorlock" I L 5400 5350 50 
+F5 "ext_led" I L 5400 5450 50 
+F6 "button" I L 5400 5550 50 
+F7 "gnd_2" I L 5400 5650 50 
+F8 "dallas" I L 5400 5750 50 
+F9 "buzzer" I L 5400 5850 50 
+$EndSheet
 Wire Bus Line
 	9500 1400 9500 5550
 Wire Bus Line
@@ -1980,22 +1998,4 @@ Wire Bus Line
 	4500 1200 4500 6000
 Wire Bus Line
 	7600 1200 7600 5950
-Text Label 7050 6050 0    50   ~ 0
-yellow
-Text Label 7050 6150 0    50   ~ 0
-blue
-$Sheet
-S 5400 5050 1050 1200
-U 5E5861A6
-F0 "Sheet5E5861A5" 50
-F1 "intercom_controller.sch" 50
-F2 "gnd_1" I L 5400 5150 50 
-F3 "12V" I L 5400 5250 50 
-F4 "doorlock" I L 5400 5350 50 
-F5 "ext_led" I L 5400 5450 50 
-F6 "button" I L 5400 5550 50 
-F7 "gnd_2" I L 5400 5650 50 
-F8 "dallas" I L 5400 5750 50 
-F9 "buzzer" I L 5400 5850 50 
-$EndSheet
 $EndSCHEMATC
