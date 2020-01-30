@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 13 14
+Sheet 14 14
 Title ""
 Date ""
 Rev ""
@@ -88,20 +88,32 @@ Text HLabel 5150 3300 0    50   BiDi ~ 0
 IO_8
 Text HLabel 5150 3400 0    50   Output ~ 0
 PWR_8_+12
-Text HLabel 5150 3800 0    50   BiDi ~ 0
+Text HLabel 5200 4650 0    50   BiDi ~ 0
 IO_13
-Text HLabel 5150 3900 0    50   UnSpc ~ 0
+Text HLabel 5200 4750 0    50   UnSpc ~ 0
 PWR_13_GND
-Text HLabel 5150 4100 0    50   BiDi ~ 0
+Text HLabel 5200 4950 0    50   BiDi ~ 0
 IO_14
-Text HLabel 5150 4200 0    50   UnSpc ~ 0
+Text HLabel 5200 5050 0    50   UnSpc ~ 0
 PWR_14_GND
-Text HLabel 5150 4350 0    50   BiDi ~ 0
+Text HLabel 5200 5200 0    50   BiDi ~ 0
 IO_15
-Text HLabel 5150 4450 0    50   UnSpc ~ 0
+Text HLabel 5200 5300 0    50   UnSpc ~ 0
 PWR_15_GND
-Text HLabel 5150 4600 0    50   BiDi ~ 0
+Text HLabel 5200 5450 0    50   BiDi ~ 0
 IO_16
-Text HLabel 5150 4700 0    50   UnSpc ~ 0
+Text HLabel 5200 5550 0    50   UnSpc ~ 0
 PWR_16_GND
+Text HLabel 5150 3650 0    50   BiDi ~ 0
+IO_9
+Text HLabel 5150 3750 0    50   UnSpc ~ 0
+PWR_9_
+Text HLabel 5150 4000 0    50   BiDi ~ 0
+IO_11
+Text HLabel 5150 4100 0    50   UnSpc ~ 0
+PWR_11_
+Text HLabel 5150 4300 0    50   BiDi ~ 0
+IO_12
+Text HLabel 5150 4400 0    50   UnSpc ~ 0
+PWR_12_
 $EndSCHEMATC
