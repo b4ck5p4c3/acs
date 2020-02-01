@@ -50,35 +50,39 @@
 # type, topic, slaveid, reference, size, functioncode, rate
 # type, topic, reference, rw, data type,        
 #
-poll,endpointpp,11,268,4,input_status,0.1
-ref,prescene_switch,268,r
+poll,endpointpp,11,256,16,input_status,0.2
+ref,portal_red_button,264,r
+ref,prescene_switch,266,r
 ref,aquarium_door_opened,269,r
 ref,red_door_opened,270,r
 ref,portal_door_opened,271,r
 
-poll,endpointpp,11,48,3,coil,0.1
+poll,endpointpp,11,48,3,coil,0.2
 ref,aquarium_light,48,rw
 ref,portal_light,49,rw
 ref,sockets,50,rw
 
-poll,endpointpp,11,16,1,coil,0.1
+poll,endpointpp,11,16,1,coil,0.2
 ref,aquarium_door_lock,16,rw
 
-poll,endpointpp,11,20,1,coil,0.1
-ref,aquarium_signage,20,rw
+poll,endpointpp,11,20,1,coil,0.2
+ref,aquarium_signage,20,w
 
-poll,endpointpp,11,23,1,coil,0.1
-ref,red_door_lock,23,rw
+poll,endpointpp,11,22,1,coil,0.5
+ref,portal_presence_alarm,22,w
 
-poll,rfid,2,768,10,input_register,0.1
+poll,endpointpp,11,23,1,coil,0.2
+ref,red_door_lock,23,w
+
+poll,rfid,2,768,10,input_register,0.2
 ref,uid,768,r,hex20
 
 poll,pauk,1,12293,1,input_register,0.5
 ref,btn,12293,r
 
 poll,pauk,1,8,5,coil,0.5
-ref,led1,8,rw
-ref,led2,9,rw
-ref,led3,10,rw
-ref,led4,11,rw
-ref,led5,12,rw
+ref,led1,8,w
+ref,led2,9,w
+ref,led3,10,w
+ref,led4,11,w
+ref,led5,12,w

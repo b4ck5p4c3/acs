@@ -4,8 +4,11 @@ const path = require('path');
 const mqtt = require('mqtt');
 const client  = mqtt.connect('mqtt://modbus-gateway:dbQbESxQ5X8Nk93WUUPMT@192.168.0.200')
 
+let paukBtnCounter = NaN;
+
 client.subscribe('modbus/rfid/state/uid');
 client.subscribe('bus/devices/pauk.btn/pressed/value');
+client.subscribe('modbus/endpointpp/state/portal_red_button');
 
 const tagToPerson = fs.readFileSync(path.resolve(__dirname, 'ids.txt'), 'utf8')
 	.split('\n')
@@ -33,9 +36,26 @@ function openTheDoors() {
 
 client.on('message', function (topic, message) {
   if (topic === 'bus/devices/pauk.btn/pressed/value') {
-    console.log("Opening by button");
-    openTheDoors();
-    console.log("Opened by button");
+    const counter = parseInt(message, 10);
+
+    if (paukBtnCounter < counter) {
+      console.log("Opening by pauk button");
+      openTheDoors();
+      console.log("Opened by pauk button");
+    }
+
+    paukBtnCounter = counter;
+
+    return;
+  }
+
+  if (topic === 'modbus/endpointpp/state/portal_red_button') {
+    const pressed = message.toString('ascii') === 'True';
+    if (pressed) {
+      console.log("Opening by portal red button");
+      openTheDoors();
+      console.log("Opened by portal red button");
+    }
     return;
   }
 

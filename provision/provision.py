@@ -60,11 +60,17 @@ def provision_endpoint():
   # OUTPUT - EL Wire power
   SIGN = 4
   
+  # OUTPUT - Prescene alarm
+  PRESCENE_ALARM = 6
+
   # OUTPUT - Red door lock
   RED_DOOR_LOCK = 7
 
+  # INPUT - Open door button
+  OPEN_DOOR_BUTTON = 8
+
   # INPUT - Prescene switch
-  PRESCENE_SWITCH = 12
+  PRESCENE_SWITCH = 10
 
   # INPUT - Aquarium (outside) door magnetic switch
   AQUARIUM_DOOR = 13
@@ -93,21 +99,32 @@ def provision_endpoint():
   pin_modes[DOOR_KEY] = 1
   pin_modes[SIGN] = 1
   pin_modes[RED_DOOR_LOCK] = 1
-  pin_modes[PRESCENE_SWITCH] = 0
+  
   pin_modes[AQUARIUM_DOOR] = 0
   pin_modes[RED_DOOR] = 0
   pin_modes[PORTAL_DOOR] = 0
+  pin_modes[PRESCENE_SWITCH] = 0
+  pin_modes[OPEN_DOOR_BUTTON] = 0
+  pin_modes[PRESCENE_ALARM] = 1
 
-  # Configure all pins states to LOW by default
+  pulls = [1] * ENDPOINTPP_GPIO_SIZE
+  pulls[PRESCENE_SWITCH] = 0
+  pulls[OPEN_DOOR_BUTTON] = 0
+
+    # Configure all pins states to LOW by default
+  
   pin_states = [0] * ENDPOINTPP_GPIO_SIZE
 
   # Provision GPIO mode configuration
   safeops.writes(endpoint_pp, ENDPOINTPP_GPIO_MODE_BASE, pin_modes)
   print('EndpointPP: GPIO mode provisioned successfully')
+  print('EndpointPP: GPIO mode ')
 
   # Provision GPIO pull configuration
-  safeops.writes(endpoint_pp, ENDPOINTPP_GPIO_PULL_BASE, [1 - x for x in pin_modes])
-  print('EndpointPP: GPIO pull configuration provisioned successfully')
+  safeops.writes(endpoint_pp, ENDPOINTPP_GPIO_PULL_BASE, pulls)
+
+  
+  print(ENDPOINTPP_GPIO_PULL_BASE)
 
   # Provision GPIO output states configuration
   safeops.writes(endpoint_pp, ENDPOINTPP_GPIO_WRITE_BASE, pin_states)
