@@ -1,0 +1,14 @@
+[Unit]
+Description=B4CKSP4CE Modbus-to-MQTT bridge
+After=mosquitto.service
+After=acs-endpoint-provisioning.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -u /home/acs/app/modbus2mqtt/mo2.py --rtu /dev/ttyS0 --rtu-baud 115200 --rtu-parity none --mqtt-host 127.0.0.1 --mqtt-port 1883 --mqtt-user %USER% --mqtt-pass %PASSWORD% --config /home/acs/app/modbus2mqtt/backspace.csv --verbosity 2
+User=acs
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+

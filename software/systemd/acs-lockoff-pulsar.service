@@ -1,0 +1,14 @@
+[Unit]
+Description=Switches off the door lock solenoid each second
+After=acs-modbus2mqtt.service
+
+[Service]
+Type=simple
+ExecStart=/home/acs/app/misc/off-lock-pulsar
+WorkingDirectory=/home/acs/app/misc
+User=acs
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+

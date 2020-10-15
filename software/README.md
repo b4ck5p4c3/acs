@@ -51,8 +51,12 @@ git clone https://github.com/b4ck5p4c3/acs-secrets config
 
 # ... иначе, используйте примеры конфигураций из каждого отдельного сервиса
 
-# Установите systemd-сервисы по инструкции из `software/systemd` этого репозитория
+# Установите systemd-сервисы из `software/systemd` этого репозитория
 cp acs/software/systemd/* /etc/systemd/system/
+
+# Исправьте креденшелы от MQTT-брокера в acs-modbus2mqtt.service
+nano /etc/systemd/system/acs-modbus2mqtt.service
+
 systemctl enable acs-endpoint-provisioning.service
 systemctl enable acs-lockoff-pulsar.service
 systemctl enable acs-modbus2mqtt.service

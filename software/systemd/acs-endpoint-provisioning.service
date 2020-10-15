@@ -1,0 +1,12 @@
+[Unit]
+Description=Provisioning Modbus devices configuration on startup
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/acs/app/provision/provision.py
+WorkingDirectory=/home/acs/app/provision             
+User=acs
+
+[Install]
+WantedBy=multi-user.target
+
