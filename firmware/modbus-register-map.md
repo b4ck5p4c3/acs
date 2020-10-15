@@ -1,6 +1,6 @@
-**Неполная, но выверенная карта регистров**
+# Частичная карта регистров
 
-# Endpoint++
+## Endpoint++
 ```
 Relay:
  - RELAY_1 - Addr 48 - Coil
@@ -25,7 +25,7 @@ Relays:
 
 ```
 
-# Pauk
+## Pauk/RemoteIO
 ```
  - tbd
 ```

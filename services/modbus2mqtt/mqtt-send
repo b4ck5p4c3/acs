@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-mosquitto_pub -h mqtt.internal.0x08.in -p 8883 --cafile /etc/mosquitto/ca_certificates/ca.pem -u modbus-gateway -P $@
