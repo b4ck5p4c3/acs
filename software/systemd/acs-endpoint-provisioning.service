@@ -3,8 +3,8 @@ Description=Provisioning Modbus devices configuration on startup
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python /home/acs/app/provision/provision.py
-WorkingDirectory=/home/acs/app/provision             
+ExecStart=/usr/bin/python /home/acs/app/acs/software/provision/provision.py
+WorkingDirectory=/home/acs/app/acs/software/provision/
 User=acs
 
 [Install]
