@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+DIR=`dirname $(realpath $0)`
 
 # Open aquarium door (magnetic lock via intercom)
 "$DIR/mqtt-send" -t 'modbus/endpointpp/set/aquarium_door_lock' -m '1'
