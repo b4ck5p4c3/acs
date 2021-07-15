@@ -1889,7 +1889,7 @@
         "name": "Write to bksp.log",
         "filename": "/home/acs/app/log/bksp.log",
         "appendNewline": true,
-        "createDir": false,
+        "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
         "x": 470,
