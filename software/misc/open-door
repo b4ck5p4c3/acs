@@ -2,15 +2,15 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # Open aquarium door (magnetic lock via intercom)
-"$DIR/mqtt-send" -t 'bus/devices/aquarium.door/lock/set' -m '1'
+"$DIR/mqtt-send" -t 'modbus/endpointpp/set/aquarium_door_lock' -m '1'
 
 # Power-up solenoid in red door lock mechanism for 1s
-"$DIR/mqtt-send" -t 'bus/devices/portal.reddoor/lock/set' -m '1'
+"$DIR/mqtt-send" -t 'modbus/endpointpp/set/red_door_lock' -m '1'
 sleep 1
-"$DIR/mqtt-send" -t 'bus/devices/portal.reddoor/lock/set' -m '0'
+"$DIR/mqtt-send" -t 'modbus/endpointpp/set/red_door_lock' -m '0'
 
 # KOZHANYE MESHKI need some time to move thru the doors
-sleep 10
+sleep 9
 
 # Lock aquarium door
-"$DIR/mqtt-send" -t 'bus/devices/aquarium.door/lock/set' -m '0'
+"$DIR/mqtt-send" -t 'modbus/endpointpp/set/aquarium_door_lock' -m '0'
