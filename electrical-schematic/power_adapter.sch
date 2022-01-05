@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:electrical-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 9 15
+Sheet 9 12
 Title ""
 Date ""
 Rev ""

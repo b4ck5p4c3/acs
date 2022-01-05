@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:electrical-cache
 EELAYER 30 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
-Sheet 1 15
+Sheet 1 12
 Title ""
 Date ""
 Rev ""
@@ -287,12 +286,12 @@ $EndComp
 $Comp
 L sw:SW_SPST SW6
 U 1 1 5E17DC84
-P 12000 6400
-F 0 "SW6" H 12000 6500 50  0000 C CNN
-F 1 "Выключатель света в аквариуме" H 12000 6300 50  0000 C CNN
-F 2 "" H 12000 6400 50  0001 C CNN
-F 3 "~" H 12000 6400 50  0001 C CNN
-	1    12000 6400
+P 12500 6400
+F 0 "SW6" H 12500 6500 50  0000 C CNN
+F 1 "Выключатель света в аквариуме" H 12500 6300 50  0000 C CNN
+F 2 "" H 12500 6400 50  0001 C CNN
+F 3 "~" H 12500 6400 50  0001 C CNN
+	1    12500 6400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -374,24 +373,18 @@ Entry Wire Line
 Entry Wire Line
 	4600 2700 4500 2800
 Entry Wire Line
-	6150 3200 6250 3300
+	6250 2250 6150 2350
 Entry Wire Line
-	6250 2500 6150 2600
-Entry Wire Line
-	6250 2200 6150 2300
-Entry Wire Line
-	6250 2400 6150 2500
+	6250 2950 6150 3050
 Text Label 5050 3550 2    50   ~ 0
 yellow+red
 Text Label 5100 3650 2    50   ~ 0
 violet+green
-Text Label 6750 2800 2    50   ~ 0
-green+brown
-Text Label 6700 2900 2    50   ~ 0
+Text Label 6700 2550 2    50   ~ 0
 green+white
-Text Label 6500 2400 2    50   ~ 0
+Text Label 6500 2950 2    50   ~ 0
 green
-Text Label 6450 2100 2    50   ~ 0
+Text Label 6500 2850 2    50   ~ 0
 white
 Text Label 4800 2700 2    50   ~ 0
 red
@@ -401,14 +394,10 @@ Text Label 4800 2900 2    50   ~ 0
 blue
 Text Label 4850 3000 2    50   ~ 0
 yellow
-Text Label 6700 2200 2    50   ~ 0
+Text Label 6700 2250 2    50   ~ 0
 white+brown
-Text Label 6650 2300 2    50   ~ 0
+Text Label 6650 2350 2    50   ~ 0
 white+blue
-Text Label 6650 3300 2    50   ~ 0
-white+red
-Text Label 6700 2500 2    50   ~ 0
-white+black
 Text Label 4600 3900 0    50   ~ 0
 blue+red
 Text Label 4600 3800 0    50   ~ 0
@@ -423,8 +412,6 @@ Text Label 4800 4200 2    50   ~ 0
 pink
 Wire Bus Line
 	2400 1200 4500 1200
-Wire Notes Line
-	4250 1100 4250 15850
 Wire Notes Line
 	16350 1200 21550 1200
 Wire Notes Line
@@ -455,32 +442,6 @@ F3 "GND" I L 17100 4400 50
 F4 "V+" I L 17100 4500 50 
 F5 "audio" I L 17100 4600 50 
 $EndSheet
-$Sheet
-S 19800 3850 800  2050
-U 5E188298
-F0 "Pauk" 50
-F1 "pauk.sch" 50
-F2 "+12" I L 19800 3950 50 
-F3 "GND" I L 19800 4050 50 
-F4 "A" I L 19800 4200 50 
-F5 "B" I L 19800 4300 50 
-F6 "1_IO" I R 20600 3950 50 
-F7 "1_PWR" I R 20600 4050 50 
-F8 "2_IO" I R 20600 4200 50 
-F9 "2_PWR" I R 20600 4300 50 
-F10 "3_IO" I R 20600 4450 50 
-F11 "3_PWR" I R 20600 4550 50 
-F12 "4_IO" I R 20600 4700 50 
-F13 "4_PWR" I R 20600 4800 50 
-F14 "5_IO" I R 20600 4950 50 
-F15 "5_PWR" I R 20600 5050 50 
-F16 "6_IO" I R 20600 5200 50 
-F17 "6_PWR" I R 20600 5300 50 
-F18 "7_IO" I R 20600 5450 50 
-F19 "7_PWR" I R 20600 5550 50 
-F20 "8_IO" I R 20600 5700 50 
-F21 "8_PWR" I R 20600 5800 50 
-$EndSheet
 Wire Bus Line
 	5850 1750 7500 1750
 Wire Bus Line
@@ -507,87 +468,6 @@ Wire Wire Line
 	17100 4500 16700 4500
 Wire Wire Line
 	16700 4600 17100 4600
-$Sheet
-S 21050 3850 750  1600
-U 5E1AFC9A
-F0 "Мигало" 50
-F1 "ledbox.sch" 50
-F2 "LED_COM" I L 21050 3950 50 
-F3 "LED_RED" I L 21050 4100 50 
-F4 "LED_WHITE" I L 21050 4200 50 
-F5 "LED_BLUE" I L 21050 4300 50 
-F6 "LED_YELLOW" I L 21050 4400 50 
-F7 "LED_GREEN" I L 21050 4500 50 
-F8 "BUTTON_P" I L 21050 4650 50 
-F9 "BUTTON_N" I L 21050 4750 50 
-$EndSheet
-Wire Wire Line
-	21050 3950 20850 3950
-Wire Wire Line
-	20850 3950 20850 4050
-Wire Wire Line
-	20850 4050 20600 4050
-Wire Wire Line
-	20600 3950 20700 3950
-Wire Wire Line
-	20700 3950 20700 4100
-Wire Wire Line
-	20700 4100 21050 4100
-Wire Wire Line
-	20600 4200 21050 4200
-Wire Wire Line
-	20600 4450 20700 4450
-Wire Wire Line
-	20700 4450 20700 4300
-Wire Wire Line
-	20700 4300 21050 4300
-Wire Wire Line
-	20600 4700 20750 4700
-Wire Wire Line
-	20750 4700 20750 4400
-Wire Wire Line
-	20750 4400 21050 4400
-Wire Wire Line
-	21050 4500 20800 4500
-Wire Wire Line
-	20800 4500 20800 4950
-Wire Wire Line
-	20800 4950 20600 4950
-Wire Wire Line
-	20600 5200 20850 5200
-Wire Wire Line
-	20850 5200 20850 4650
-Wire Wire Line
-	20850 4650 21050 4650
-Wire Wire Line
-	21050 4750 20900 4750
-Wire Wire Line
-	20900 4750 20900 5300
-Wire Wire Line
-	20900 5300 20600 5300
-$Comp
-L device:Lamp LA3
-U 1 1 5E1D4AEC
-P 21350 5700
-F 0 "LA3" V 21450 5800 50  0000 L CNN
-F 1 "Красная лампа" V 21250 5800 50  0000 L CNN
-F 2 "" V 21350 5800 50  0001 C CNN
-F 3 "~" V 21350 5800 50  0001 C CNN
-	1    21350 5700
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	21150 5700 20600 5700
-Wire Wire Line
-	21550 5700 21750 5700
-Wire Wire Line
-	21750 5700 21750 5900
-Wire Wire Line
-	21750 5900 21000 5900
-Wire Wire Line
-	21000 5900 21000 5800
-Wire Wire Line
-	21000 5800 20600 5800
 Wire Bus Line
 	19200 3600 16150 3600
 Wire Bus Line
@@ -595,25 +475,11 @@ Wire Bus Line
 Wire Bus Line
 	16150 800  9300 800 
 Entry Wire Line
-	19200 3950 19300 4050
-Entry Wire Line
 	19200 3850 19300 3950
-Entry Wire Line
-	19200 4100 19300 4200
-Entry Wire Line
-	19200 4200 19300 4300
 Wire Wire Line
 	19800 3950 19300 3950
-Wire Wire Line
-	19300 4050 19800 4050
-Wire Wire Line
-	19800 4200 19300 4200
-Wire Wire Line
-	19300 4300 19800 4300
 Text Label 19300 3950 0    50   ~ 0
 red
-Text Label 19300 4050 0    50   ~ 0
-black
 $Sheet
 S 17400 2350 600  350 
 U 5E214242
@@ -713,17 +579,15 @@ Wire Wire Line
 Wire Wire Line
 	5850 4800 5250 4800
 Entry Wire Line
-	8300 2100 8400 2200
+	8300 2650 8400 2750
 Entry Wire Line
-	8300 2000 8400 2100
+	8300 2550 8400 2650
 Entry Wire Line
 	5850 4100 5950 4200
 Entry Wire Line
 	5850 4200 5950 4300
 Entry Wire Line
 	8300 2250 8400 2350
-Wire Wire Line
-	8300 2250 7700 2250
 Entry Wire Line
 	8300 2350 8400 2450
 Entry Wire Line
@@ -740,11 +604,9 @@ Text Label 5400 4400 0    50   ~ 0
 green+white
 Text Label 5650 3550 0    50   ~ 0
 green
-Text Label 8100 2100 0    50   ~ 0
-white
 Text Label 5700 5300 0    50   ~ 0
 red
-Text Label 8100 2000 0    50   ~ 0
+Text Label 8100 2650 0    50   ~ 0
 black
 Text Label 5650 3800 0    50   ~ 0
 blue
@@ -768,506 +630,126 @@ Wire Bus Line
 	6200 750  8600 750 
 Wire Bus Line
 	4700 650  8700 650 
-$Comp
-L device:CircuitBreaker_3P CB1
-U 1 1 5E37DDB9
-P 5600 7850
-F 0 "CB1" H 5853 7896 50  0000 L CNN
-F 1 "Вводной автомат" H 5853 7805 50  0000 L CNN
-F 2 "" H 5900 7750 50  0001 C CNN
-F 3 "~" H 5850 7850 50  0001 C CNN
-	1    5600 7850
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	5300 7300 5400 7400
-Entry Wire Line
-	5500 7300 5600 7400
-Entry Wire Line
-	5700 7300 5800 7400
 Wire Wire Line
-	5400 7400 5400 7550
+	3400 9650 3400 7300
 Wire Wire Line
-	5600 7400 5600 7550
+	3350 9600 3350 7350
 Wire Wire Line
-	5800 7400 5800 7550
-Text Label 5400 7450 0    50   ~ 0
-A
-Text Label 5600 7450 0    50   ~ 0
-B
-Text Label 5800 7450 0    50   ~ 0
-C
-Entry Wire Line
-	5050 7300 5150 7400
-Entry Wire Line
-	4850 7300 4950 7400
-Text Label 4750 7300 0    50   ~ 0
-Ввод
-Text Label 5150 7450 0    50   ~ 0
-N
-Text Label 4950 7450 0    50   ~ 0
-PE
-$Sheet
-S 6000 8300 650  950 
-U 5E3D73F8
-F0 "Счетчик" 50
-F1 "meter.sch" 50
-F2 "A_in" I L 6000 8400 50 
-F3 "A_out" O L 6000 8500 50 
-F4 "B_in" I L 6000 8650 50 
-F5 "B_out" O L 6000 8750 50 
-F6 "C_in" I L 6000 8900 50 
-F7 "C_out" O L 6000 9000 50 
-F8 "N" U L 6000 9150 50 
-$EndSheet
-Wire Wire Line
-	5400 8150 5400 8400
-Wire Wire Line
-	5400 8400 6000 8400
-Wire Wire Line
-	5600 8150 5600 8650
-Wire Wire Line
-	5600 8650 6000 8650
-Wire Wire Line
-	5800 8150 5800 8900
-Wire Wire Line
-	5800 8900 6000 8900
-Wire Wire Line
-	5150 9150 6000 9150
-Wire Wire Line
-	5150 7400 5150 9150
-Wire Wire Line
-	6000 8500 5400 8500
-Wire Wire Line
-	5400 8500 5400 9650
-Wire Wire Line
-	5400 9650 6950 9650
-Wire Wire Line
-	6950 9650 6950 7300
-Wire Wire Line
-	6000 8750 5600 8750
-Wire Wire Line
-	5600 8750 5600 9600
-Wire Wire Line
-	6900 9600 6900 7350
-Wire Wire Line
-	5600 9600 6900 9600
-Wire Wire Line
-	6000 9000 5800 9000
-Wire Wire Line
-	5800 9000 5800 9550
-Wire Wire Line
-	5800 9550 6850 9550
-Wire Wire Line
-	6850 9550 6850 7400
-Wire Wire Line
-	5150 9150 5150 10200
-Wire Wire Line
-	5150 10200 7050 10200
-Connection ~ 5150 9150
-Wire Wire Line
-	4950 7400 4950 10250
+	3300 9550 3300 7400
 $Comp
 L device:CircuitBreaker_2P CB2
 U 1 1 5E475859
-P 8150 7800
-F 0 "CB2" H 8302 7846 50  0000 L CNN
-F 1 "Розетки" H 8302 7755 50  0000 L CNN
-F 2 "" H 8050 7800 50  0001 C CNN
-F 3 "~" H 8050 7800 50  0001 C CNN
-	1    8150 7800
-	1    0    0    -1  
-$EndComp
-$Comp
-L device:CircuitBreaker_1P CB7
-U 1 1 5E47629A
-P 9850 7800
-F 0 "CB7" H 9903 7846 50  0000 L CNN
-F 1 "ПС+Серверная" H 9903 7755 50  0000 L CNN
-F 2 "" H 9850 7800 50  0001 C CNN
-F 3 "~" H 9850 7800 50  0001 C CNN
-	1    9850 7800
-	1    0    0    -1  
-$EndComp
-$Comp
-L device:CircuitBreaker_1P CB8
-U 1 1 5E4831FC
-P 10650 7800
-F 0 "CB8" H 10702 7846 50  0000 L CNN
-F 1 "Освещение 1" H 10702 7755 50  0000 L CNN
-F 2 "" H 10650 7800 50  0001 C CNN
-F 3 "~" H 10650 7800 50  0001 C CNN
-	1    10650 7800
-	1    0    0    -1  
-$EndComp
-$Comp
-L device:CircuitBreaker_1P CB9
-U 1 1 5E483655
-P 11250 7800
-F 0 "CB9" H 11302 7846 50  0000 L CNN
-F 1 "Освещение 2" H 11302 7755 50  0000 L CNN
-F 2 "" H 11250 7800 50  0001 C CNN
-F 3 "~" H 11250 7800 50  0001 C CNN
-	1    11250 7800
+P 4750 7850
+F 0 "CB2" H 4902 7896 50  0000 L CNN
+F 1 "Розетки левые" H 4902 7805 50  0000 L CNN
+F 2 "" H 4650 7850 50  0001 C CNN
+F 3 "~" H 4650 7850 50  0001 C CNN
+	1    4750 7850
 	1    0    0    -1  
 $EndComp
 $Comp
 L relay:DIPxx-2Axx-21x K1
 U 1 1 5E4C3DF4
-P 8150 8750
-F 0 "K1" H 8630 8750 50  0000 L CNN
-F 1 "DIPxx-2Axx-21x" H 8630 8705 50  0001 L CNN
-F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 8650 8700 50  0001 L CNN
-F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 8150 8750 50  0001 C CNN
-	1    8150 8750
+P 4750 9500
+F 0 "K1" H 5230 9500 50  0000 L CNN
+F 1 "DIPxx-2Axx-21x" H 5230 9455 50  0001 L CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 5250 9450 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 4750 9500 50  0001 C CNN
+	1    4750 9500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7050 7500 7050 10200
-Wire Wire Line
-	7050 10200 7450 10200
-Wire Wire Line
-	8250 8100 8250 8350
-$Comp
-L device:CircuitBreaker_1P CB6
-U 1 1 5E47530D
-P 9400 7800
-F 0 "CB6" H 9453 7846 50  0000 L CNN
-F 1 "ОС" H 9453 7755 50  0000 L CNN
-F 2 "" H 9400 7800 50  0001 C CNN
-F 3 "~" H 9400 7800 50  0001 C CNN
-	1    9400 7800
-	1    0    0    -1  
-$EndComp
+	3500 7500 3500 10200
 $Comp
 L device:CircuitBreaker_1P CB5
 U 1 1 5E5323C5
-P 8900 8750
-F 0 "CB5" H 8952 8796 50  0000 L CNN
-F 1 "Bypass" H 8952 8705 50  0000 L CNN
-F 2 "" H 8900 8750 50  0001 C CNN
-F 3 "~" H 8900 8750 50  0001 C CNN
-	1    8900 8750
+P 5500 9500
+F 0 "CB5" H 5552 9546 50  0000 L CNN
+F 1 "Bypass" H 5552 9455 50  0000 L CNN
+F 2 "" H 5500 9500 50  0001 C CNN
+F 3 "~" H 5500 9500 50  0001 C CNN
+	1    5500 9500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6900 7350 11250 7350
+	3500 7500 4650 7500
 Wire Wire Line
-	6850 7400 8250 7400
+	5500 9100 5150 9100
+Connection ~ 4850 9100
 Wire Wire Line
-	7050 7500 8050 7500
+	4850 9100 4850 9200
 Wire Wire Line
-	8050 8100 7550 8100
+	5500 9200 5500 9100
 Wire Wire Line
-	8900 8350 8250 8350
-Connection ~ 8250 8350
+	5500 9800 5500 9900
 Wire Wire Line
-	8250 8350 8250 8450
+	4850 9900 4850 9800
 Wire Wire Line
-	8900 8450 8900 8350
-Wire Wire Line
-	8900 9050 8900 9150
-Wire Wire Line
-	8250 9150 8250 9050
-$Comp
-L device:CircuitBreaker_1P CB4
-U 1 1 5E6D598F
-P 8750 9600
-F 0 "CB4" H 8802 9646 50  0000 L CNN
-F 1 "Правые" H 8802 9555 50  0000 L CNN
-F 2 "" H 8750 9600 50  0001 C CNN
-F 3 "~" H 8750 9600 50  0001 C CNN
-	1    8750 9600
-	1    0    0    -1  
-$EndComp
-$Comp
-L device:CircuitBreaker_1P CB3
-U 1 1 5E710602
-P 8250 9600
-F 0 "CB3" H 8302 9646 50  0000 L CNN
-F 1 "Левые" H 8302 9555 50  0000 L CNN
-F 2 "" H 8250 9600 50  0001 C CNN
-F 3 "~" H 8250 9600 50  0001 C CNN
-	1    8250 9600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8900 9150 8250 9150
-Wire Wire Line
-	8250 9150 8250 9250
-Connection ~ 8250 9150
-Wire Wire Line
-	8750 9300 8750 9250
-Wire Wire Line
-	8750 9250 8250 9250
-Connection ~ 8250 9250
-Wire Wire Line
-	8250 9250 8250 9300
+	5500 9900 5150 9900
 Wire Bus Line
-	8250 10550 8250 10850
+	4850 10550 4850 10850
 Entry Wire Line
-	8150 10550 8250 10450
+	4750 10550 4850 10450
 Entry Wire Line
-	8050 10550 8150 10450
+	4650 10550 4750 10450
 Entry Wire Line
-	7900 10550 8000 10450
+	4500 10550 4600 10450
 Wire Wire Line
-	8250 10450 8250 9900
+	4750 10450 4750 10000
 Wire Wire Line
-	8150 10450 8150 10000
-Wire Wire Line
-	8150 10000 7550 10000
-Wire Wire Line
-	7550 8100 7550 10000
-Wire Wire Line
-	8000 10450 8000 10250
-Wire Wire Line
-	8000 10250 8500 10250
-Text Label 8250 10450 0    50   ~ 0
+	4600 10450 4600 10250
+Text Label 4850 10450 0    50   ~ 0
 L
-Text Label 8150 10450 0    50   ~ 0
+Text Label 4750 10450 0    50   ~ 0
 N
-Text Label 8000 10450 0    50   ~ 0
+Text Label 4600 10450 0    50   ~ 0
 PE
-Connection ~ 7050 10200
 Entry Wire Line
-	7200 9400 7300 9300
+	3600 8350 3700 8250
 Entry Wire Line
-	7200 9500 7300 9400
-Wire Wire Line
-	7850 9050 7850 9300
-Wire Wire Line
-	7850 9300 7300 9300
-Wire Wire Line
-	7300 9400 7450 9400
-Wire Wire Line
-	7450 9400 7450 10200
-Connection ~ 7450 10200
-Wire Wire Line
-	7450 10200 9300 10200
-Text Label 7300 9300 0    50   ~ 0
-L
-Text Label 7300 9400 0    50   ~ 0
-N
+	3600 9100 3700 9000
 Wire Bus Line
-	8750 10550 8750 10850
+	7100 10550 7100 10850
 Entry Wire Line
-	8650 10550 8750 10450
+	7000 10550 7100 10450
 Entry Wire Line
-	8550 10550 8650 10450
+	6900 10550 7000 10450
 Entry Wire Line
-	8400 10550 8500 10450
-Wire Wire Line
-	8750 10450 8750 9900
-Wire Wire Line
-	8650 10450 8650 10000
-Text Label 8750 10450 0    50   ~ 0
+	6750 10550 6850 10450
+Text Label 7100 10450 0    50   ~ 0
 L
-Text Label 8650 10450 0    50   ~ 0
+Text Label 7000 10450 0    50   ~ 0
 N
-Text Label 8500 10450 0    50   ~ 0
+Text Label 6850 10450 0    50   ~ 0
 PE
 Wire Wire Line
-	8500 10450 8500 10250
-Connection ~ 8500 10250
+	6850 10450 6850 10250
 Wire Wire Line
-	8500 10250 9150 10250
-Wire Wire Line
-	8650 10000 8150 10000
-Connection ~ 8150 10000
-Wire Bus Line
-	9400 10550 9400 10850
-Entry Wire Line
-	9300 10550 9400 10450
-Entry Wire Line
-	9200 10550 9300 10450
-Entry Wire Line
-	9050 10550 9150 10450
-Wire Wire Line
-	9300 10450 9300 10200
-Text Label 9400 10450 0    50   ~ 0
-L
-Text Label 9300 10450 0    50   ~ 0
-N
-Text Label 9150 10450 0    50   ~ 0
-PE
-Wire Wire Line
-	9150 10450 9150 10250
-Connection ~ 9150 10250
-Wire Wire Line
-	9150 10250 9600 10250
-Wire Wire Line
-	9400 8100 9400 10450
-Connection ~ 9300 10200
-Wire Wire Line
-	9300 10200 9750 10200
-Wire Bus Line
-	9850 10550 9850 10850
-Entry Wire Line
-	9750 10550 9850 10450
-Entry Wire Line
-	9650 10550 9750 10450
-Entry Wire Line
-	9500 10550 9600 10450
-Text Label 9850 10450 0    50   ~ 0
-L
-Text Label 9750 10450 0    50   ~ 0
-N
-Text Label 9600 10450 0    50   ~ 0
-PE
-Wire Wire Line
-	9850 8100 9850 10450
-Wire Wire Line
-	9600 10450 9600 10250
-Connection ~ 9600 10250
-Wire Wire Line
-	9750 10450 9750 10200
-Connection ~ 9750 10200
-Wire Bus Line
-	10650 10550 10650 10850
-Entry Wire Line
-	10550 10550 10650 10450
-Entry Wire Line
-	10450 10550 10550 10450
-Entry Wire Line
-	10300 10550 10400 10450
-Text Label 10650 10450 0    50   ~ 0
-L
-Text Label 10550 10450 0    50   ~ 0
-N
-Text Label 10400 10450 0    50   ~ 0
-PE
-Wire Wire Line
-	10650 8100 10650 10450
-Wire Wire Line
-	10550 10450 10550 10200
-Wire Wire Line
-	10400 10450 10400 10250
-Wire Bus Line
-	11250 10550 11250 10850
-Entry Wire Line
-	11150 10550 11250 10450
-Entry Wire Line
-	11050 10550 11150 10450
-Entry Wire Line
-	10900 10550 11000 10450
-Text Label 11250 10450 0    50   ~ 0
-L
-Text Label 11150 10450 0    50   ~ 0
-N
-Text Label 11000 10450 0    50   ~ 0
-PE
-Wire Wire Line
-	11250 8100 11250 8150
-Wire Wire Line
-	11150 10450 11150 10200
-Wire Wire Line
-	11000 10450 11000 10250
-Text Label 11800 10450 0    50   ~ 0
-N
-Text Label 11650 10450 0    50   ~ 0
-PE
-Wire Wire Line
-	11650 10450 11650 10250
-Wire Wire Line
-	11800 10450 11800 10200
-Wire Bus Line
-	11900 10550 11900 10850
-Entry Wire Line
-	11550 10550 11650 10450
-Entry Wire Line
-	11700 10550 11800 10450
-Text Label 11900 10450 0    50   ~ 0
-L
-Entry Wire Line
-	11800 10550 11900 10450
-$Comp
-L device:CircuitBreaker_1P CB10
-U 1 1 5E49D12D
-P 11900 7800
-F 0 "CB10" H 11952 7846 50  0000 L CNN
-F 1 "СКУД 230В" H 11952 7755 50  0000 L CNN
-F 2 "" H 11900 7800 50  0001 C CNN
-F 3 "~" H 11900 7800 50  0001 C CNN
-	1    11900 7800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7850 8250 7850 8450
-Wire Wire Line
-	11900 8100 11900 8250
-Wire Wire Line
-	11900 8250 7850 8250
-Connection ~ 11650 10250
-Wire Wire Line
-	11650 10250 12100 10250
-Connection ~ 11800 10200
-Wire Wire Line
-	11800 10200 12000 10200
-Connection ~ 11900 8250
-Wire Wire Line
-	11900 8250 11900 8750
+	4450 9000 4450 9200
 Wire Notes Line
-	14300 7050 14300 10950
+	14300 7050 14300 11200
 Wire Notes Line
-	4550 10950 4550 7050
+	1150 11200 1150 7050
 Text Notes 12100 10900 0    100  ~ 0
 ВРУ-1
-Wire Wire Line
-	4950 10250 8000 10250
-Connection ~ 8000 10250
-Wire Notes Line
-	4250 15850 14450 15850
 Wire Notes Line
 	14450 1100 14450 15850
 Wire Bus Line
-	7200 11100 5450 11100
-Wire Bus Line
-	5450 11100 5450 13800
-Wire Bus Line
-	5450 13800 6750 13800
+	5450 14150 6750 14150
 Entry Wire Line
-	6750 13850 6850 13950
+	6750 14200 6850 14300
 Entry Wire Line
-	6750 13950 6850 14050
-Wire Wire Line
-	7550 13950 6850 13950
-Wire Wire Line
-	6850 14050 7550 14050
-Text Label 6850 13950 0    50   ~ 0
+	6750 14300 6850 14400
+Text Label 6850 14300 0    50   ~ 0
 L
-Text Label 6850 14050 0    50   ~ 0
+Text Label 6850 14400 0    50   ~ 0
 N
-Text Notes 5750 13950 0    50   ~ 0
-Управление контактором
+Text Notes 5700 14300 0    50   ~ 0
+Контактор левых розеток
 Wire Bus Line
-	8700 6850 12550 6850
-Wire Bus Line
-	12550 6850 12550 9650
-Wire Bus Line
-	12550 9650 12300 9650
+	8700 6850 13050 6850
 Wire Bus Line
 	8700 650  8700 6850
-Entry Wire Line
-	12300 9750 12200 9850
-Entry Wire Line
-	12300 9900 12200 10000
-Wire Wire Line
-	12050 10200 12050 10000
-Wire Wire Line
-	12050 10000 12200 10000
-Connection ~ 12050 10200
-Wire Wire Line
-	12050 10200 12000 10200
-Wire Wire Line
-	12200 9850 11900 9850
-Connection ~ 11900 9850
-Wire Wire Line
-	11900 9850 11900 10450
-Text Label 12150 9850 0    50   ~ 0
-L
-Text Label 12150 10000 0    50   ~ 0
-N
 Wire Bus Line
 	8600 6950 13550 6950
 Wire Bus Line
@@ -1295,19 +777,11 @@ N
 Text Notes 6100 13600 0    50   ~ 0
 Свет в тамбуре
 Wire Bus Line
-	12300 8600 12800 8600
-Wire Bus Line
 	3800 550  8800 550 
 Wire Bus Line
 	8800 550  8800 6750
 Wire Bus Line
-	8800 6750 12750 6750
-Wire Bus Line
-	12750 8200 12300 8200
-Wire Bus Line
-	12750 6750 12750 8200
-Wire Bus Line
-	12300 9300 13600 9300
+	8800 6750 13250 6750
 Wire Bus Line
 	13600 9300 13600 11350
 Wire Bus Line
@@ -1317,73 +791,21 @@ Wire Bus Line
 Wire Bus Line
 	5750 13100 6750 13100
 Entry Wire Line
-	12300 9000 12200 9100
+	13300 6150 13200 6250
 Entry Wire Line
-	12300 9150 12200 9250
-Text Label 12150 9100 0    50   ~ 0
+	13300 6300 13200 6400
+Text Label 13150 6250 0    50   ~ 0
 L
-Text Label 12150 9250 0    50   ~ 0
+Text Label 13150 6400 0    50   ~ 0
 N
 Wire Wire Line
-	12200 9100 11900 9100
-Connection ~ 11900 9100
+	12700 6400 13200 6400
 Wire Wire Line
-	11900 9100 11900 9850
-Entry Wire Line
-	12300 8250 12200 8350
-Entry Wire Line
-	12300 8400 12200 8500
-Text Label 12150 8350 0    50   ~ 0
-L
-Text Label 12150 8500 0    50   ~ 0
-N
-Entry Wire Line
-	12300 8650 12200 8750
-Entry Wire Line
-	12300 8800 12200 8900
-Text Label 12150 8900 0    50   ~ 0
-N
-Entry Wire Line
-	12800 6150 12700 6250
-Entry Wire Line
-	12800 6300 12700 6400
-Text Label 12650 6250 0    50   ~ 0
-L
-Text Label 12650 6400 0    50   ~ 0
-N
+	12300 6400 12250 6400
 Wire Wire Line
-	12200 6400 12700 6400
+	12250 6400 12250 6250
 Wire Wire Line
-	11800 6400 11750 6400
-Wire Wire Line
-	11750 6400 11750 6250
-Wire Wire Line
-	11750 6250 12700 6250
-Text Label 12150 8750 0    50   ~ 0
-L
-Wire Wire Line
-	12200 8750 11900 8750
-Connection ~ 11900 8750
-Wire Wire Line
-	11900 8750 11900 9100
-Wire Wire Line
-	12200 8900 12050 8900
-Wire Wire Line
-	12050 8900 12050 8350
-Wire Wire Line
-	12050 8350 12200 8350
-Wire Wire Line
-	12200 8500 12000 8500
-Wire Wire Line
-	12000 8500 12000 10200
-Connection ~ 12000 10200
-Wire Wire Line
-	12050 10200 12100 10200
-Wire Wire Line
-	12200 9250 12050 9250
-Wire Wire Line
-	12050 9250 12050 8900
-Connection ~ 12050 8900
+	12250 6250 13200 6250
 Entry Wire Line
 	3800 3700 3700 3800
 Entry Wire Line
@@ -1429,60 +851,13 @@ Wire Bus Line
 Wire Bus Line
 	9500 5550 14100 5550
 Wire Bus Line
-	14100 5550 14100 11600
+	14100 5550 14100 9300
 Wire Notes Line
-	4550 7050 14300 7050
+	1150 7050 14300 7050
 Wire Notes Line
-	4550 10950 14300 10950
-Connection ~ 11000 10250
-Wire Wire Line
-	11000 10250 11650 10250
-Connection ~ 11150 10200
-Wire Wire Line
-	11150 10200 11800 10200
-Entry Wire Line
-	10150 10550 10250 10450
-Entry Wire Line
-	10050 10550 10150 10450
-Entry Wire Line
-	9900 10550 10000 10450
-Text Label 10250 10450 0    50   ~ 0
-L
-Text Label 10150 10450 0    50   ~ 0
-N
-Text Label 10000 10450 0    50   ~ 0
-PE
-Connection ~ 10400 10250
-Wire Wire Line
-	10400 10250 11000 10250
-Connection ~ 10550 10200
-Wire Wire Line
-	10550 10200 11150 10200
-Wire Wire Line
-	9600 10250 10000 10250
-Wire Wire Line
-	9750 10200 10150 10200
-Wire Wire Line
-	10250 10450 10250 8100
-Wire Wire Line
-	10250 8100 9850 8100
-Connection ~ 9850 8100
-Wire Wire Line
-	10150 10450 10150 10200
-Connection ~ 10150 10200
-Wire Wire Line
-	10150 10200 10550 10200
-Wire Wire Line
-	10000 10450 10000 10250
-Connection ~ 10000 10250
-Wire Wire Line
-	10000 10250 10400 10250
-Wire Bus Line
-	10250 11150 14950 11150
+	1150 11200 14300 11200
 Wire Bus Line
 	14950 11150 14950 3100
-Wire Bus Line
-	10250 10550 10250 11150
 $Comp
 L connector:Conn_WallSocket_Earth J1
 U 1 1 5F46BC2E
@@ -1619,7 +994,7 @@ Text Label 9400 15450 0    50   ~ 0
 green
 Text Notes 9850 11750 0    50   ~ 0
 Управление электромагнитным замком
-Text Notes 9850 12750 0    50   ~ 0
+Text Notes 10600 12750 0    50   ~ 0
 Управление вывеской
 Text Notes 9850 14900 0    50   ~ 0
 Дверь в аквариум
@@ -1631,46 +1006,6 @@ Text Label 16750 1750 0    50   ~ 0
 yellow
 Text Label 16750 1850 0    50   ~ 0
 green
-Text Label 19300 4200 0    50   ~ 0
-yellow
-Text Label 19300 4300 0    50   ~ 0
-green
-Wire Wire Line
-	10650 7500 10650 7300
-Connection ~ 10650 7300
-Wire Wire Line
-	10650 7300 12000 7300
-Wire Wire Line
-	9850 7500 9850 7300
-Connection ~ 9850 7300
-Wire Wire Line
-	9850 7300 10650 7300
-Wire Wire Line
-	11250 7500 11250 7350
-Connection ~ 11250 7350
-Wire Wire Line
-	11250 7350 12000 7350
-Wire Wire Line
-	8250 7500 8250 7400
-Connection ~ 8250 7400
-Wire Wire Line
-	8250 7400 9400 7400
-Wire Wire Line
-	11900 7500 11650 7500
-Wire Wire Line
-	11650 7500 11650 8150
-Wire Wire Line
-	11650 8150 11250 8150
-Connection ~ 11250 8150
-Wire Wire Line
-	11250 8150 11250 10450
-Wire Wire Line
-	6950 7300 9850 7300
-Wire Wire Line
-	9400 7500 9400 7400
-Connection ~ 9400 7400
-Wire Wire Line
-	9400 7400 12000 7400
 Entry Wire Line
 	4500 5400 4600 5300
 Entry Wire Line
@@ -1693,20 +1028,6 @@ Text Label 4600 5300 0    50   ~ 0
 yellow
 Text Label 4600 5400 0    50   ~ 0
 blue
-$Sheet
-S 7400 2600 1050 1200
-U 5E5861A6
-F0 "Sheet5E5861A5" 50
-F1 "intercom_controller.sch" 50
-F2 "gnd_1" I L 7400 2700 50 
-F3 "12V" I L 7400 2800 50 
-F4 "doorlock" I L 7400 2900 50 
-F5 "ext_led" I L 7400 3000 50 
-F6 "button" I L 7400 3100 50 
-F7 "gnd_2" I L 7400 3200 50 
-F8 "dallas" I L 7400 3300 50 
-F9 "buzzer" I L 7400 3400 50 
-$EndSheet
 Wire Bus Line
 	9650 11400 6650 11400
 Entry Wire Line
@@ -1745,73 +1066,12 @@ Wire Wire Line
 Connection ~ 7350 12450
 Wire Wire Line
 	7350 12450 7550 12450
-$Sheet
-S 7550 11600 1500 4000
-U 5EC3760C
-F0 "Endpoint++" 50
-F1 "endpointpp.sch" 50
-F2 "+12_0" B L 7550 11700 50 
-F3 "GND_0" U L 7550 11800 50 
-F4 "A_0" T L 7550 11900 50 
-F5 "B_0" T L 7550 12000 50 
-F6 "+12_1" B L 7550 12150 50 
-F7 "GND_1" U L 7550 12250 50 
-F8 "A_1" T L 7550 12350 50 
-F9 "B_1" T L 7550 12450 50 
-F10 "+12_PWR" B L 7550 12600 50 
-F11 "GND_PWR" U L 7550 12700 50 
-F12 "+5_LPWR" O L 7550 12850 50 
-F13 "GND_LPWR" U L 7550 12950 50 
-F14 "RELAY1_NC" U L 7550 13150 50 
-F15 "RELAY1_NO" U L 7550 13250 50 
-F16 "RELAY1_COM" U L 7550 13350 50 
-F17 "RELAY2_NC" U L 7550 13500 50 
-F18 "RELAY2_NO" U L 7550 13600 50 
-F19 "RELAY2_COM" U L 7550 13700 50 
-F20 "RELAY3_NC" U L 7550 13850 50 
-F21 "RELAY3_NO" U L 7550 13950 50 
-F22 "RELAY3_COM" U L 7550 14050 50 
-F23 "IO_1" B R 9050 11700 50 
-F24 "PWR_1_GND" U R 9050 11800 50 
-F25 "IO_2" B R 9050 11950 50 
-F26 "PWR_2_GND" U R 9050 12050 50 
-F27 "IO_3" B R 9050 12200 50 
-F28 "PWR_3_GND" U R 9050 12300 50 
-F29 "IO_4" B R 9050 12450 50 
-F30 "PWR_4_GND" U R 9050 12550 50 
-F31 "IO_5" B R 9050 12700 50 
-F32 "PWR_5_+12" O R 9050 12800 50 
-F33 "IO_6" B R 9050 12950 50 
-F34 "PWR_6_+12" O R 9050 13050 50 
-F35 "IO_7" B R 9050 13200 50 
-F36 "PWR_7_+12" O R 9050 13300 50 
-F37 "IO_8" B R 9050 13450 50 
-F38 "PWR_8_+12" O R 9050 13550 50 
-F39 "IO_13" B R 9050 14600 50 
-F40 "PWR_13_GND" U R 9050 14700 50 
-F41 "IO_14" B R 9050 14850 50 
-F42 "PWR_14_GND" U R 9050 14950 50 
-F43 "IO_15" B R 9050 15100 50 
-F44 "PWR_15_GND" U R 9050 15200 50 
-F45 "IO_16" B R 9050 15350 50 
-F46 "PWR_16_GND" U R 9050 15450 50 
-F47 "IO_9" I R 9050 13700 50 
-F48 "PWR_9_" I R 9050 13800 50 
-F49 "IO_11" I R 9050 13950 50 
-F50 "PWR_11_" I R 9050 14050 50 
-F51 "IO_12" I R 9050 14200 50 
-F52 "PWR_12_" I R 9050 14300 50 
-$EndSheet
 Wire Wire Line
 	9050 15100 9550 15100
 Wire Wire Line
 	9550 14950 9050 14950
 Wire Wire Line
 	9550 14850 9050 14850
-Wire Wire Line
-	9050 12800 9550 12800
-Wire Wire Line
-	9550 12700 9050 12700
 Wire Wire Line
 	9050 11800 9550 11800
 Wire Wire Line
@@ -1824,11 +1084,9 @@ Entry Wire Line
 Entry Wire Line
 	9650 14850 9550 14950
 Entry Wire Line
-	9650 14750 9550 14850
+	9650 12700 9750 12800
 Entry Wire Line
-	9650 12700 9550 12800
-Entry Wire Line
-	9650 12600 9550 12700
+	9650 12600 9750 12700
 Entry Wire Line
 	9650 11700 9550 11800
 Entry Wire Line
@@ -1839,31 +1097,6 @@ Wire Wire Line
 	9550 15200 9050 15200
 Entry Wire Line
 	9650 15100 9550 15200
-$Comp
-L device:CircuitBreaker_1P CB11
-U 1 1 5E9C156F
-P 12600 10250
-F 0 "CB11" H 12652 10296 50  0000 L CNN
-F 1 "Presence" H 12652 10205 50  0000 L CNN
-F 2 "" H 12600 10250 50  0001 C CNN
-F 3 "~" H 12600 10250 50  0001 C CNN
-	1    12600 10250
-	1    0    0    -1  
-$EndComp
-Wire Bus Line
-	13150 11250 11550 11250
-Entry Wire Line
-	13050 9950 13150 10050
-Entry Wire Line
-	13050 10550 13150 10650
-Wire Wire Line
-	13050 10550 12600 10550
-Wire Wire Line
-	12600 9950 13050 9950
-Text Label 13000 9950 0    50   ~ 0
-L
-Text Label 13000 10550 0    50   ~ 0
-N
 Wire Wire Line
 	12500 12850 11900 12850
 Wire Wire Line
@@ -1886,13 +1119,13 @@ Text Label 9500 15200 2    50   ~ 0
 red
 Text Label 9550 11800 2    50   ~ 0
 black
-Text Label 9550 12700 2    50   ~ 0
+Text Label 9900 12700 0    50   ~ 0
 blue
-Text Label 9550 12800 2    50   ~ 0
+Text Label 9900 12800 0    50   ~ 0
 yellow
-Text Label 10350 12050 2    50   ~ 0
+Text Label 9550 11950 2    50   ~ 0
 white+brown
-Text Label 10300 12150 2    50   ~ 0
+Text Label 9550 12050 2    50   ~ 0
 white+blue
 Text Label 7150 12650 2    50   ~ 0
 white+red
@@ -1908,16 +1141,6 @@ Text Label 6950 12850 2    50   ~ 0
 violet
 Text Label 9550 13550 2    50   ~ 0
 black+red
-Entry Wire Line
-	9400 14600 9500 14500
-Entry Wire Line
-	9400 14700 9500 14600
-Wire Wire Line
-	9050 14600 9400 14600
-Text Label 9350 14600 0    50   ~ 0
-L
-Text Label 9350 14700 0    50   ~ 0
-N
 Wire Bus Line
 	9650 5450 14200 5450
 Wire Bus Line
@@ -1930,12 +1153,8 @@ Wire Bus Line
 	11650 13150 10750 13150
 Entry Wire Line
 	10650 13200 10750 13300
-Wire Bus Line
-	9500 14450 11550 14450
 Entry Wire Line
 	10650 13300 10750 13400
-Text Notes 9850 14650 0    50   ~ 0
-Presence switch
 Wire Wire Line
 	10650 13200 9050 13200
 Wire Wire Line
@@ -1977,10 +1196,6 @@ Text Notes 10800 13350 0    50   ~ 0
 Индикатор панели
 Text Label 9500 14850 2    50   ~ 0
 pink
-Wire Wire Line
-	9400 14700 9050 14700
-Wire Bus Line
-	11550 11250 11550 14450
 Entry Wire Line
 	9550 13550 9650 13450
 Entry Wire Line
@@ -1999,8 +1214,8 @@ Text Label 6850 12350 0    50   ~ 0
 yellow
 Text Label 6850 12450 0    50   ~ 0
 green
-Text Notes 10600 12150 0    50   ~ 0
-Кнопка звонка
+Text Notes 9850 12000 0    50   ~ 0
+Кнопка выхода
 Text Label 12500 12950 2    50   ~ 0
 green+brown
 Connection ~ 12600 11550
@@ -2035,11 +1250,9 @@ Entry Wire Line
 Entry Wire Line
 	5850 3650 5950 3750
 Entry Wire Line
-	9650 11950 9750 12050
+	9550 11950 9650 11850
 Entry Wire Line
-	9650 12050 9750 12150
-NoConn ~ 10500 12150
-NoConn ~ 10500 12050
+	9650 11950 9550 12050
 Entry Wire Line
 	5850 3800 5950 3900
 Entry Wire Line
@@ -2069,9 +1282,7 @@ NoConn ~ 5250 4800
 NoConn ~ 5250 4900
 NoConn ~ 5250 5000
 Entry Wire Line
-	6250 2800 6150 2900
-Entry Wire Line
-	6250 2900 6150 3000
+	6250 2550 6150 2650
 Wire Wire Line
 	4600 2700 5750 2700
 Wire Wire Line
@@ -2112,33 +1323,6 @@ Wire Bus Line
 Wire Bus Line
 	4500 1200 4500 2400
 Connection ~ 4500 2400
-Wire Wire Line
-	7400 3200 7300 3200
-Wire Wire Line
-	7300 2700 7400 2700
-Wire Wire Line
-	6250 2500 6900 2500
-Wire Wire Line
-	6250 2800 6850 2800
-Wire Wire Line
-	7400 3400 7200 3400
-NoConn ~ 7200 3400
-Wire Wire Line
-	7400 3000 7200 3000
-NoConn ~ 7200 3000
-Wire Wire Line
-	6250 2300 6900 2300
-Wire Wire Line
-	6900 2300 6900 2400
-Wire Wire Line
-	6250 2200 7050 2200
-Wire Wire Line
-	7400 3100 7050 3100
-Wire Wire Line
-	7050 3100 7050 2200
-Connection ~ 7050 2200
-Wire Wire Line
-	7650 2350 8300 2350
 Text Notes 6200 6300 0    50   ~ 0
 К блоку питания домофона
 Entry Wire Line
@@ -2158,17 +1342,11 @@ blue
 Text Label 6250 4050 0    50   ~ 0
 black
 Wire Bus Line
-	6150 2100 6100 2100
+	6150 2000 6100 2000
 Wire Bus Line
-	6100 2100 6100 2400
+	6100 2000 6100 2400
 Entry Wire Line
-	6250 2100 6150 2200
-Entry Wire Line
-	6250 2300 6150 2400
-Wire Wire Line
-	7050 2100 7050 2200
-Wire Wire Line
-	6250 2100 7050 2100
+	6250 2350 6150 2450
 Text Label 5700 2700 2    50   ~ 0
 red
 Text Label 5700 2800 2    50   ~ 0
@@ -2309,72 +1487,798 @@ Wire Wire Line
 Wire Wire Line
 	9850 13350 9850 13600
 Wire Wire Line
-	9750 12050 10500 12050
-Wire Wire Line
-	10500 12150 9750 12150
-Wire Wire Line
-	7300 2700 7300 3200
-Wire Wire Line
-	6250 3950 6500 3950
-Wire Wire Line
-	6500 3950 6500 4050
-Wire Wire Line
-	6500 4050 6250 4050
-Connection ~ 6500 3950
-Connection ~ 7300 3200
-Wire Wire Line
-	6900 2300 6900 2000
-Connection ~ 6900 2300
-Wire Wire Line
 	6250 3800 6550 3800
+Text Label 6700 2050 2    50   ~ 0
+white+red
+Text Label 6700 1950 2    50   ~ 0
+white+black
 Wire Wire Line
-	6550 3800 6550 3700
+	6250 3700 6850 3700
+NoConn ~ 6550 3800
+Text Label 8100 2550 0    50   ~ 0
+white
+Entry Wire Line
+	6250 2650 6150 2750
+Text Label 6750 2650 2    50   ~ 0
+green+brown
+Entry Wire Line
+	6250 2850 6150 2950
 Wire Wire Line
-	6550 3700 6250 3700
-Connection ~ 6550 3700
+	6250 2250 8300 2250
 Wire Wire Line
-	6850 2800 7400 2800
+	6250 2350 8300 2350
+Entry Wire Line
+	6150 2150 6250 2050
+Entry Wire Line
+	6150 2050 6250 1950
 Wire Wire Line
-	6550 3700 6850 3700
-Connection ~ 6850 2800
+	6250 1950 6750 1950
 Wire Wire Line
-	6250 2900 7400 2900
+	6750 2050 6250 2050
+NoConn ~ 6750 1950
+NoConn ~ 6750 2050
 Wire Wire Line
-	6900 3950 6900 3200
+	8300 2550 6250 2550
 Wire Wire Line
-	6500 3950 6900 3950
+	6250 2650 6850 2650
 Wire Wire Line
-	7300 3200 6900 3200
-Connection ~ 6900 3200
+	6850 2650 6850 3700
 Wire Wire Line
-	6900 2000 7700 2000
+	6900 2650 8300 2650
 Wire Wire Line
-	7650 2100 8300 2100
+	6250 4050 6900 4050
 Wire Wire Line
-	7700 2250 7700 2000
-Connection ~ 7700 2000
+	6900 2650 6900 4050
 Wire Wire Line
-	7700 2000 8300 2000
+	6250 3950 6550 3950
+NoConn ~ 6550 3950
+Text Notes 6850 2050 0    50   ~ 0
+iButton
 Wire Wire Line
-	7650 2100 7650 2350
+	6250 2950 7150 2950
 Wire Wire Line
-	7650 2100 7050 2100
-Connection ~ 7650 2100
-Connection ~ 7050 2100
+	6250 2850 7150 2850
+Text Notes 7200 2950 0    50   ~ 0
+Сигнал открытия двери
+Text Notes 6100 3050 1    50   ~ 0
+из аквариума
+Text Notes 6100 4200 1    50   ~ 0
+от БП домофона
+Text Notes 8500 2700 1    50   ~ 0
+в щиток
+Entry Wire Line
+	6750 14500 6850 14600
+Entry Wire Line
+	6750 14600 6850 14700
+Text Label 6850 14600 0    50   ~ 0
+L
+Text Label 6850 14700 0    50   ~ 0
+N
+Text Notes 5700 14600 0    50   ~ 0
+Контактор правых розеток
+$Sheet
+S 7550 11600 1500 4000
+U 5EC3760C
+F0 "Endpoint++" 50
+F1 "endpointpp.sch" 50
+F2 "+12_0" B L 7550 11700 50 
+F3 "GND_0" U L 7550 11800 50 
+F4 "A_0" T L 7550 11900 50 
+F5 "B_0" T L 7550 12000 50 
+F6 "+12_1" B L 7550 12150 50 
+F7 "GND_1" U L 7550 12250 50 
+F8 "A_1" T L 7550 12350 50 
+F9 "B_1" T L 7550 12450 50 
+F10 "+12_PWR" B L 7550 12600 50 
+F11 "GND_PWR" U L 7550 12700 50 
+F12 "+5_LPWR" O L 7550 12850 50 
+F13 "GND_LPWR" U L 7550 12950 50 
+F14 "RELAY1_NC" U L 7550 13150 50 
+F15 "RELAY1_NO" U L 7550 13250 50 
+F16 "RELAY1_COM" U L 7550 13350 50 
+F17 "RELAY2_NC" U L 7550 13500 50 
+F18 "RELAY2_NO" U L 7550 13600 50 
+F19 "RELAY2_COM" U L 7550 13700 50 
+F20 "RELAY3_NC" U L 7550 13850 50 
+F21 "RELAY3_NO" U L 7550 13950 50 
+F22 "RELAY3_COM" U L 7550 14050 50 
+F23 "IO_1" B R 9050 11700 50 
+F24 "PWR_1_GND" U R 9050 11800 50 
+F25 "IO_2" B R 9050 11950 50 
+F26 "PWR_2_GND" U R 9050 12050 50 
+F27 "IO_3" B R 9050 12200 50 
+F28 "PWR_3_GND" U R 9050 12300 50 
+F29 "IO_4" B R 9050 12450 50 
+F30 "PWR_4_GND" U R 9050 12550 50 
+F31 "IO_5" B L 7550 14300 50 
+F32 "PWR_5_+12" O L 7550 14400 50 
+F33 "IO_6" B L 7550 14600 50 
+F34 "PWR_6_+12" O L 7550 14700 50 
+F35 "IO_7" B R 9050 13200 50 
+F36 "PWR_7_+12" O R 9050 13300 50 
+F37 "IO_8" B R 9050 13450 50 
+F38 "PWR_8_+12" O R 9050 13550 50 
+F39 "IO_13" B R 9050 14600 50 
+F40 "PWR_13_GND" U R 9050 14700 50 
+F41 "IO_14" B R 9050 14850 50 
+F42 "PWR_14_GND" U R 9050 14950 50 
+F43 "IO_15" B R 9050 15100 50 
+F44 "PWR_15_GND" U R 9050 15200 50 
+F45 "IO_16" B R 9050 15350 50 
+F46 "PWR_16_GND" U R 9050 15450 50 
+F47 "IO_9" I R 9050 13700 50 
+F48 "PWR_9_" I R 9050 13800 50 
+F49 "IO_11" I R 9050 13950 50 
+F50 "PWR_11_" I R 9050 14050 50 
+F51 "IO_12" I R 9050 14200 50 
+F52 "PWR_12_" I R 9050 14300 50 
+$EndSheet
+Wire Bus Line
+	5400 14450 6750 14450
 Wire Wire Line
-	6850 2800 6850 3700
+	10500 12700 9750 12700
 Wire Wire Line
-	6250 3300 7400 3300
+	10500 12800 9750 12800
+NoConn ~ 10500 12700
+NoConn ~ 10500 12800
 Wire Wire Line
-	6250 2400 6900 2400
-Connection ~ 6900 2400
+	9550 11950 9050 11950
 Wire Wire Line
-	6900 2400 6900 2500
-Connection ~ 6900 2500
+	9050 12050 9550 12050
 Wire Wire Line
-	6900 2500 6900 3200
+	6850 14600 7550 14600
+Wire Wire Line
+	6850 14300 7550 14300
+Wire Wire Line
+	7550 14400 6850 14400
+Wire Bus Line
+	5400 11100 5400 14450
+Wire Bus Line
+	5450 11050 5450 14150
+Entry Wire Line
+	9650 14750 9550 14850
+Text Notes 4800 10900 1    50   ~ 0
+Левые\nрозетки
+Text Notes 7050 10900 1    50   ~ 0
+Правые\nрозетки
+Connection ~ 12550 8900
+Wire Wire Line
+	12550 9250 12550 8900
+Wire Wire Line
+	12700 9250 12550 9250
+Connection ~ 12500 10200
+Wire Wire Line
+	12500 8500 12500 10200
+Wire Wire Line
+	12700 8500 12500 8500
+Wire Wire Line
+	12550 8350 12700 8350
+Wire Wire Line
+	12550 8900 12550 8350
+Wire Wire Line
+	12700 8900 12550 8900
+Wire Wire Line
+	12700 8750 12400 8750
+Text Label 12650 8750 0    50   ~ 0
+L
+Text Label 12650 8900 0    50   ~ 0
+N
+Entry Wire Line
+	12800 8800 12700 8900
+Entry Wire Line
+	12800 8650 12700 8750
+Text Label 12650 8500 0    50   ~ 0
+N
+Text Label 12650 8350 0    50   ~ 0
+L
+Entry Wire Line
+	12800 8400 12700 8500
+Entry Wire Line
+	12800 8250 12700 8350
+Wire Wire Line
+	12700 9100 12400 9100
+Text Label 12650 9250 0    50   ~ 0
+N
+Text Label 12650 9100 0    50   ~ 0
+L
+Entry Wire Line
+	12800 9150 12700 9250
+Entry Wire Line
+	12800 9000 12700 9100
+Wire Bus Line
+	12800 9300 13600 9300
+Wire Bus Line
+	13250 6750 13250 8200
+Wire Bus Line
+	13250 8200 12800 8200
+Wire Bus Line
+	12800 8600 13300 8600
+Text Label 12650 10000 0    50   ~ 0
+N
+Text Label 12650 9850 0    50   ~ 0
+L
+Wire Wire Line
+	12700 9850 12400 9850
+Wire Wire Line
+	12550 10200 12500 10200
+Wire Wire Line
+	12550 10000 12700 10000
+Wire Wire Line
+	12550 10200 12550 10000
+Entry Wire Line
+	12800 9900 12700 10000
+Entry Wire Line
+	12800 9750 12700 9850
+Wire Bus Line
+	13050 9650 12800 9650
+Wire Bus Line
+	13050 6850 13050 9650
+Connection ~ 13600 9300
+Wire Bus Line
+	13600 9300 14100 9300
+Connection ~ 14100 9300
+Wire Bus Line
+	14100 9300 14100 11600
+$Comp
+L device:CircuitBreaker_1P CB7
+U 1 1 5E47629A
+P 10350 7800
+F 0 "CB7" H 10403 7846 50  0000 L CNN
+F 1 "ПС+Серверная" H 10403 7755 50  0000 L CNN
+F 2 "" H 10350 7800 50  0001 C CNN
+F 3 "~" H 10350 7800 50  0001 C CNN
+	1    10350 7800
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:CircuitBreaker_1P CB8
+U 1 1 5E4831FC
+P 11150 7800
+F 0 "CB8" H 11202 7846 50  0000 L CNN
+F 1 "Освещение 1" H 11202 7755 50  0000 L CNN
+F 2 "" H 11150 7800 50  0001 C CNN
+F 3 "~" H 11150 7800 50  0001 C CNN
+	1    11150 7800
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:CircuitBreaker_1P CB9
+U 1 1 5E483655
+P 11750 7800
+F 0 "CB9" H 11802 7846 50  0000 L CNN
+F 1 "Освещение 2" H 11802 7755 50  0000 L CNN
+F 2 "" H 11750 7800 50  0001 C CNN
+F 3 "~" H 11750 7800 50  0001 C CNN
+	1    11750 7800
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:CircuitBreaker_1P CB6
+U 1 1 5E47530D
+P 9900 7800
+F 0 "CB6" H 9953 7846 50  0000 L CNN
+F 1 "Домофон" H 9953 7755 50  0000 L CNN
+F 2 "" H 9900 7800 50  0001 C CNN
+F 3 "~" H 9900 7800 50  0001 C CNN
+	1    9900 7800
+	1    0    0    -1  
+$EndComp
+Wire Bus Line
+	9900 10550 9900 10850
+Entry Wire Line
+	9800 10550 9900 10450
+Entry Wire Line
+	9700 10550 9800 10450
+Entry Wire Line
+	9550 10550 9650 10450
+Wire Wire Line
+	9800 10450 9800 10200
+Text Label 9900 10450 0    50   ~ 0
+L
+Text Label 9800 10450 0    50   ~ 0
+N
+Text Label 9650 10450 0    50   ~ 0
+PE
+Wire Wire Line
+	9650 10450 9650 10250
+Connection ~ 9650 10250
+Wire Wire Line
+	9650 10250 10100 10250
+Wire Wire Line
+	9900 8100 9900 10450
+Connection ~ 9800 10200
+Wire Wire Line
+	9800 10200 10250 10200
+Wire Bus Line
+	10350 10550 10350 10850
+Entry Wire Line
+	10250 10550 10350 10450
+Entry Wire Line
+	10150 10550 10250 10450
+Entry Wire Line
+	10000 10550 10100 10450
+Text Label 10350 10450 0    50   ~ 0
+L
+Text Label 10250 10450 0    50   ~ 0
+N
+Text Label 10100 10450 0    50   ~ 0
+PE
+Wire Wire Line
+	10350 8100 10350 10450
+Wire Wire Line
+	10100 10450 10100 10250
+Connection ~ 10100 10250
+Wire Wire Line
+	10250 10450 10250 10200
+Connection ~ 10250 10200
+Wire Bus Line
+	11150 10550 11150 10850
+Entry Wire Line
+	11050 10550 11150 10450
+Entry Wire Line
+	10950 10550 11050 10450
+Entry Wire Line
+	10800 10550 10900 10450
+Text Label 11150 10450 0    50   ~ 0
+L
+Text Label 11050 10450 0    50   ~ 0
+N
+Text Label 10900 10450 0    50   ~ 0
+PE
+Wire Wire Line
+	11150 8100 11150 10450
+Wire Wire Line
+	11050 10450 11050 10200
+Wire Wire Line
+	10900 10450 10900 10250
+Wire Bus Line
+	11750 10550 11750 10850
+Entry Wire Line
+	11650 10550 11750 10450
+Entry Wire Line
+	11550 10550 11650 10450
+Entry Wire Line
+	11400 10550 11500 10450
+Text Label 11750 10450 0    50   ~ 0
+L
+Text Label 11650 10450 0    50   ~ 0
+N
+Text Label 11500 10450 0    50   ~ 0
+PE
+Wire Wire Line
+	11650 10450 11650 10200
+Wire Wire Line
+	11500 10450 11500 10250
+$Comp
+L device:CircuitBreaker_1P CB10
+U 1 1 5E49D12D
+P 12400 7800
+F 0 "CB10" H 12452 7846 50  0000 L CNN
+F 1 "Автоматика" H 12452 7755 50  0000 L CNN
+F 2 "" H 12400 7800 50  0001 C CNN
+F 3 "~" H 12400 7800 50  0001 C CNN
+	1    12400 7800
+	1    0    0    -1  
+$EndComp
+Connection ~ 11650 10200
+Entry Wire Line
+	10650 10550 10750 10450
+Entry Wire Line
+	10550 10550 10650 10450
+Entry Wire Line
+	10400 10550 10500 10450
+Text Label 10750 10450 0    50   ~ 0
+L
+Text Label 10650 10450 0    50   ~ 0
+N
+Text Label 10500 10450 0    50   ~ 0
+PE
+Connection ~ 10900 10250
+Wire Wire Line
+	10900 10250 11500 10250
+Connection ~ 11050 10200
+Wire Wire Line
+	11050 10200 11650 10200
+Wire Wire Line
+	10100 10250 10500 10250
+Wire Wire Line
+	10250 10200 10650 10200
+Wire Wire Line
+	10750 10450 10750 8100
+Wire Wire Line
+	10750 8100 10350 8100
+Connection ~ 10350 8100
+Wire Wire Line
+	10650 10450 10650 10200
+Connection ~ 10650 10200
+Wire Wire Line
+	10650 10200 11050 10200
+Wire Wire Line
+	10500 10450 10500 10250
+Connection ~ 10500 10250
+Wire Wire Line
+	10500 10250 10900 10250
+Wire Bus Line
+	10750 10550 10750 11150
+Wire Wire Line
+	11150 7500 11150 7300
+Connection ~ 11150 7300
+Wire Wire Line
+	11150 7300 11750 7300
+Wire Wire Line
+	10350 7500 10350 7300
+Connection ~ 10350 7300
+Wire Wire Line
+	10350 7300 11150 7300
+Text Notes 9850 11000 1    50   ~ 0
+БП\nдомофона
+Wire Wire Line
+	11750 8100 11750 10450
+Wire Wire Line
+	11750 7500 11750 7300
+Connection ~ 11750 7300
+Wire Wire Line
+	11750 7300 12400 7300
+Wire Wire Line
+	9900 7500 9900 7300
+Connection ~ 9900 7300
+Wire Wire Line
+	9900 7300 10350 7300
+Wire Wire Line
+	12400 7500 12400 7300
+Connection ~ 12400 7300
+Wire Wire Line
+	12400 7300 12500 7300
+Text Notes 10300 11100 1    50   ~ 0
+БП\nпожарной\nсигнализации
+Wire Bus Line
+	10250 11150 10750 11150
+Wire Bus Line
+	10750 11150 14950 11150
+Connection ~ 10750 11150
+Wire Wire Line
+	12400 8100 12400 8250
+Connection ~ 12400 8750
+Wire Wire Line
+	12400 8750 12400 9100
+Connection ~ 12400 9100
+Wire Wire Line
+	12400 9100 12400 9850
+Wire Wire Line
+	12550 10200 13000 10200
+Connection ~ 12550 10200
+Wire Notes Line
+	4250 5250 1000 5250
+Wire Notes Line
+	1000 5250 1000 15850
+Wire Notes Line
+	1000 15850 14450 15850
+Wire Notes Line
+	4250 1100 4250 5250
+$Comp
+L device:CircuitBreaker_3P CB1
+U 1 1 5E37DDB9
+P 2150 7850
+F 0 "CB1" H 2403 7896 50  0000 L CNN
+F 1 "Вводной автомат" H 2403 7805 50  0000 L CNN
+F 2 "" H 2450 7750 50  0001 C CNN
+F 3 "~" H 2400 7850 50  0001 C CNN
+	1    2150 7850
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	1850 7300 1950 7400
+Entry Wire Line
+	2050 7300 2150 7400
+Entry Wire Line
+	2250 7300 2350 7400
+Wire Wire Line
+	1950 7400 1950 7550
+Wire Wire Line
+	2150 7400 2150 7550
+Wire Wire Line
+	2350 7400 2350 7550
+Text Label 1950 7450 0    50   ~ 0
+A
+Text Label 2150 7450 0    50   ~ 0
+B
+Text Label 2350 7450 0    50   ~ 0
+C
+Entry Wire Line
+	1600 7300 1700 7400
+Entry Wire Line
+	1400 7300 1500 7400
+Text Label 1300 7300 0    50   ~ 0
+Ввод
+Text Label 1700 7450 0    50   ~ 0
+N
+Text Label 1500 7450 0    50   ~ 0
+PE
+$Sheet
+S 2550 8300 650  950 
+U 5E3D73F8
+F0 "Счетчик" 50
+F1 "meter.sch" 50
+F2 "A_in" I L 2550 8400 50 
+F3 "A_out" O L 2550 8500 50 
+F4 "B_in" I L 2550 8650 50 
+F5 "B_out" O L 2550 8750 50 
+F6 "C_in" I L 2550 8900 50 
+F7 "C_out" O L 2550 9000 50 
+F8 "N" U L 2550 9150 50 
+$EndSheet
+Wire Wire Line
+	1950 8150 1950 8400
+Wire Wire Line
+	1950 8400 2550 8400
+Wire Wire Line
+	2150 8150 2150 8650
+Wire Wire Line
+	2150 8650 2550 8650
+Wire Wire Line
+	2350 8150 2350 8900
+Wire Wire Line
+	2350 8900 2550 8900
+Wire Wire Line
+	1700 9150 2550 9150
+Wire Wire Line
+	1700 7400 1700 9150
+Wire Wire Line
+	2550 8500 1950 8500
+Wire Wire Line
+	1950 8500 1950 9650
+Wire Wire Line
+	1950 9650 3400 9650
+Wire Wire Line
+	2550 8750 2150 8750
+Wire Wire Line
+	2150 8750 2150 9600
+Wire Wire Line
+	2150 9600 3350 9600
+Wire Wire Line
+	2550 9000 2350 9000
+Wire Wire Line
+	2350 9000 2350 9550
+Wire Wire Line
+	2350 9550 3300 9550
+Wire Wire Line
+	1700 9150 1700 10200
+Wire Wire Line
+	1700 10200 3500 10200
+Connection ~ 1700 9150
+Wire Wire Line
+	1500 7400 1500 10250
+Wire Wire Line
+	3400 7300 9900 7300
+Connection ~ 3500 10200
+Wire Wire Line
+	4650 7500 4650 7550
+Wire Wire Line
+	5150 9200 5150 9100
+Connection ~ 5150 9100
+Wire Wire Line
+	5150 9100 4850 9100
+Wire Wire Line
+	5150 9800 5150 9900
+Connection ~ 5150 9900
+Wire Wire Line
+	5150 9900 4850 9900
+Wire Wire Line
+	4850 9900 4850 10450
+Connection ~ 4850 9900
+Wire Wire Line
+	4450 9800 4450 10200
+$Comp
+L relay:DIPxx-1Cxx-51x K2
+U 1 1 62F8D47F
+P 4150 8650
+F 0 "K2" H 3750 8950 50  0000 L CNN
+F 1 "DIPxx-1Cxx-51x" H 4580 8605 50  0001 L CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 4600 8600 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 4150 8650 50  0001 C CNN
+	1    4150 8650
+	1    0    0    -1  
+$EndComp
+Connection ~ 4600 10250
+Wire Wire Line
+	1500 10250 4600 10250
+Wire Wire Line
+	4650 8150 4650 9150
+Wire Wire Line
+	4650 9150 4150 9150
+Wire Wire Line
+	4150 9150 4150 10000
+Wire Wire Line
+	4150 10000 4750 10000
+Wire Wire Line
+	4350 8950 4350 9000
+Wire Wire Line
+	4350 9000 4450 9000
+Connection ~ 4450 10200
+Wire Wire Line
+	4450 10200 9800 10200
+Wire Wire Line
+	3500 10200 4450 10200
+Wire Wire Line
+	3300 7400 7100 7400
+Wire Wire Line
+	3350 7350 4850 7350
+Wire Wire Line
+	4850 8150 4850 9100
+Wire Wire Line
+	4850 7550 4850 7350
+Connection ~ 4850 7350
+Wire Wire Line
+	4850 7350 12500 7350
+Wire Wire Line
+	3700 8250 3950 8250
+Wire Wire Line
+	3950 8250 3950 8350
+Wire Wire Line
+	3700 9000 3950 9000
+Wire Wire Line
+	3950 9000 3950 8950
+Wire Bus Line
+	5450 11050 3600 11050
+$Comp
+L device:CircuitBreaker_2P CB3
+U 1 1 63599FCD
+P 7000 7850
+F 0 "CB3" H 7152 7896 50  0000 L CNN
+F 1 "Розетки правые" H 7152 7805 50  0000 L CNN
+F 2 "" H 6900 7850 50  0001 C CNN
+F 3 "~" H 6900 7850 50  0001 C CNN
+	1    7000 7850
+	1    0    0    -1  
+$EndComp
+$Comp
+L relay:DIPxx-2Axx-21x K4
+U 1 1 63599FD3
+P 7000 9550
+F 0 "K4" H 7480 9550 50  0000 L CNN
+F 1 "DIPxx-2Axx-21x" H 7480 9505 50  0001 L CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 7500 9500 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 7000 9550 50  0001 C CNN
+	1    7000 9550
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:CircuitBreaker_1P CB4
+U 1 1 63599FD9
+P 7750 9550
+F 0 "CB4" H 7802 9596 50  0000 L CNN
+F 1 "Bypass" H 7802 9505 50  0000 L CNN
+F 2 "" H 7750 9550 50  0001 C CNN
+F 3 "~" H 7750 9550 50  0001 C CNN
+	1    7750 9550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 9150 7400 9150
+Connection ~ 7100 9150
+Wire Wire Line
+	7100 9150 7100 9250
+Wire Wire Line
+	7750 9250 7750 9150
+Wire Wire Line
+	7750 9850 7750 9950
+Wire Wire Line
+	7750 9950 7400 9950
+Wire Wire Line
+	7000 10450 7000 10050
+Entry Wire Line
+	5850 8400 5950 8300
+Entry Wire Line
+	5850 9150 5950 9050
+Wire Wire Line
+	6700 9050 6700 9250
+Wire Wire Line
+	7400 9250 7400 9150
+Connection ~ 7400 9150
+Wire Wire Line
+	7400 9150 7100 9150
+Wire Wire Line
+	7400 9850 7400 9950
+Connection ~ 7400 9950
+Wire Wire Line
+	7400 9950 7100 9950
+Connection ~ 7100 9950
+$Comp
+L relay:DIPxx-1Cxx-51x K3
+U 1 1 63599FF3
+P 6400 8700
+F 0 "K3" H 6000 9000 50  0000 L CNN
+F 1 "DIPxx-1Cxx-51x" H 6830 8655 50  0001 L CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 6850 8650 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 6400 8700 50  0001 C CNN
+	1    6400 8700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 8150 6900 9200
+Wire Wire Line
+	6900 9200 6400 9200
+Wire Wire Line
+	6400 9200 6400 10050
+Wire Wire Line
+	6400 10050 7000 10050
+Wire Wire Line
+	6600 9000 6600 9050
+Wire Wire Line
+	6600 9050 6700 9050
+Wire Wire Line
+	7100 8150 7100 9150
+Wire Wire Line
+	5950 8300 6200 8300
+Wire Wire Line
+	6200 8300 6200 8400
+Wire Wire Line
+	5950 9050 6200 9050
+Wire Wire Line
+	6200 9050 6200 9000
+Wire Wire Line
+	6900 7500 4650 7500
+Connection ~ 4650 7500
+Wire Wire Line
+	7100 7550 7100 7400
+Connection ~ 7100 7400
+Wire Wire Line
+	7100 7400 12500 7400
+Wire Wire Line
+	6900 7550 6900 7500
+Wire Wire Line
+	4600 10250 6850 10250
+Connection ~ 6850 10250
+Wire Wire Line
+	6850 10250 9650 10250
+Wire Wire Line
+	7100 9950 7100 10450
+Wire Wire Line
+	7100 9850 7100 9950
+Wire Bus Line
+	5850 11100 5400 11100
+Wire Wire Line
+	4450 8350 4450 8250
+Wire Wire Line
+	4450 8250 6700 8250
+Wire Wire Line
+	6700 8250 6700 8400
+Wire Wire Line
+	6700 8250 12400 8250
+Connection ~ 6700 8250
+Connection ~ 12400 8250
+Wire Wire Line
+	12400 8250 12400 8750
+Wire Wire Line
+	11650 10200 12500 10200
+NoConn ~ 7150 2850
+NoConn ~ 7150 2950
+Text Label 19300 4300 0    50   ~ 0
+green
+Text Label 19300 4200 0    50   ~ 0
+yellow
+Text Label 19300 4050 0    50   ~ 0
+black
+Wire Wire Line
+	19300 4050 19800 4050
+Entry Wire Line
+	19200 4200 19300 4300
+Entry Wire Line
+	19200 4100 19300 4200
+Entry Wire Line
+	19200 3950 19300 4050
+Wire Wire Line
+	19800 4200 19300 4200
+Wire Wire Line
+	19300 4300 19800 4300
+Wire Wire Line
+	6850 14700 7550 14700
+Wire Bus Line
+	5850 8400 5850 11100
 Wire Bus Line
 	9500 1400 9500 5550
+Wire Bus Line
+	3600 8350 3600 11050
 Wire Bus Line
 	6200 750  6200 1700
 Wire Bus Line
@@ -2384,47 +2288,41 @@ Wire Bus Line
 Wire Bus Line
 	4700 650  4700 1800
 Wire Bus Line
-	7900 10550 8250 10550
+	4500 10550 4850 10550
 Wire Bus Line
-	7200 9350 7200 11100
+	6750 10550 7100 10550
 Wire Bus Line
-	8400 10550 8750 10550
-Wire Bus Line
-	9050 10550 9400 10550
-Wire Bus Line
-	9500 10550 9850 10550
-Wire Bus Line
-	10300 10550 10650 10550
-Wire Bus Line
-	10900 10550 11250 10550
-Wire Bus Line
-	11550 10550 11900 10550
-Wire Bus Line
-	6750 13800 6750 14050
-Wire Bus Line
-	12300 9650 12300 10000
+	6750 14150 6750 14400
 Wire Bus Line
 	6750 13450 6750 13650
 Wire Bus Line
-	12300 8950 12300 9300
-Wire Bus Line
-	12300 8200 12300 8450
-Wire Bus Line
-	12300 8600 12300 8850
-Wire Bus Line
-	12800 6100 12800 8600
+	13300 6100 13300 8600
 Wire Bus Line
 	3800 550  3800 4300
-Wire Bus Line
-	9900 10550 10250 10550
 Wire Bus Line
 	6750 13100 6750 13300
 Wire Bus Line
 	9800 11600 9800 15450
 Wire Bus Line
-	13150 9900 13150 11250
+	6750 14450 6750 14700
 Wire Bus Line
-	9500 14450 9500 14700
+	12800 8600 12800 8850
+Wire Bus Line
+	12800 8200 12800 8450
+Wire Bus Line
+	12800 8950 12800 9300
+Wire Bus Line
+	12800 9650 12800 10000
+Wire Bus Line
+	9550 10550 9900 10550
+Wire Bus Line
+	10000 10550 10350 10550
+Wire Bus Line
+	10800 10550 11150 10550
+Wire Bus Line
+	11400 10550 11750 10550
+Wire Bus Line
+	10400 10550 10750 10550
 Wire Bus Line
 	9650 2100 9650 5450
 Wire Bus Line
@@ -2442,23 +2340,23 @@ Wire Bus Line
 Wire Bus Line
 	19800 2300 19800 3100
 Wire Bus Line
-	8400 1850 8400 2500
-Wire Bus Line
 	16650 700  16650 1900
-Wire Bus Line
-	19200 3600 19200 4350
 Wire Bus Line
 	16600 3850 16600 4950
 Wire Bus Line
-	4750 7300 5850 7300
+	8400 1850 8400 2800
 Wire Bus Line
 	5850 1750 5850 3400
 Wire Bus Line
-	6150 2100 6150 3350
+	6150 2000 6150 3350
 Wire Bus Line
-	4500 5400 4500 6900
+	1300 7300 2400 7300
+Wire Bus Line
+	19200 3600 19200 4350
 Wire Bus Line
 	9650 11550 9650 15150
+Wire Bus Line
+	4500 5400 4500 6900
 Wire Bus Line
 	4500 2400 4500 4550
 Wire Bus Line
