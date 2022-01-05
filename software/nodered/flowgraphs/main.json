@@ -107,32 +107,6 @@
         "color": "#DDAA99"
     },
     {
-        "id": "58c54541.215b4c",
-        "type": "subflow",
-        "name": "Control El-Wire Signage",
-        "info": "# Control El-Wire Signage\nControls el-wire logotype signage in aquarium\n\n# Input\nReceives a string with \"True\" or \"False\".\n\n    - **True** — turns signage on\n    - **False** — turns signage off",
-        "category": "",
-        "in": [
-            {
-                "x": 80,
-                "y": 240,
-                "wires": [
-                    {
-                        "id": "e6d2914f.cbfa68"
-                    }
-                ]
-            }
-        ],
-        "out": [],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99",
-        "inputLabels": [
-            "State"
-        ],
-        "icon": "node-red/light.svg"
-    },
-    {
         "id": "81da57ea.a83d2",
         "type": "subflow",
         "name": "Control Portal Panel Indicator",
@@ -212,6 +186,116 @@
         "color": "#DDAA99"
     },
     {
+        "id": "c071b0b7.e8c2c",
+        "type": "subflow",
+        "name": "Control Left Sockets",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "a3ab81a2.ae3b18"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "26622623.6fb4fa",
+        "type": "subflow",
+        "name": "Control Right Socket",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "374a8c7f.528bc4"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "665b57f6.ada5f8",
+        "type": "subflow",
+        "name": "0/1 to True/False",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "8fd799e1.dc2408"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 480,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "8fd799e1.dc2408",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "42ea986b.5d61d",
+        "type": "subflow",
+        "name": "True/False to 1/0",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "e55e5218.91d2f8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 480,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "e55e5218.91d2f8",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
         "id": "12539a43.97344e",
         "type": "mqtt-broker",
         "name": "Corleone",
@@ -252,146 +336,16 @@
         "y": 120,
         "wires": [
             [
-                "b029c600.d00af",
-                "1438a3ac.960e8c",
-                "4d66ed76.feec04"
+                "4d66ed76.feec04",
+                "39c830d.06693d",
+                "4cd18294.a52114",
+                "ce61abf7.03b408"
             ]
         ],
         "outputLabels": [
             "Presence"
         ],
         "icon": "font-awesome/fa-arrow-circle-right"
-    },
-    {
-        "id": "2e479e6a.815b22",
-        "type": "change",
-        "z": "3f4159ea.cdc276",
-        "name": "Turn Off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "False",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 700,
-        "y": 280,
-        "wires": [
-            [
-                "4cd18294.a52114"
-            ]
-        ]
-    },
-    {
-        "id": "f97efe8f.d2e788",
-        "type": "change",
-        "z": "3f4159ea.cdc276",
-        "name": "Turn On",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "True",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 700,
-        "y": 320,
-        "wires": [
-            [
-                "87bad167.ca4578",
-                "4cd18294.a52114"
-            ]
-        ]
-    },
-    {
-        "id": "87bad167.ca4578",
-        "type": "delay",
-        "z": "3f4159ea.cdc276",
-        "name": "Wait 100ms",
-        "pauseType": "delay",
-        "timeout": "100",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 870,
-        "y": 360,
-        "wires": [
-            [
-                "babe5d9a.6a4cf8"
-            ]
-        ]
-    },
-    {
-        "id": "b029c600.d00af",
-        "type": "trigger",
-        "z": "3f4159ea.cdc276",
-        "name": "Trigger each 2s while presence is ON",
-        "op1": "",
-        "op2": "1",
-        "op1type": "pay",
-        "op2type": "str",
-        "duration": "-2100",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "ms",
-        "reset": "False",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 430,
-        "y": 280,
-        "wires": [
-            [
-                "2e479e6a.815b22",
-                "f97efe8f.d2e788"
-            ]
-        ]
-    },
-    {
-        "id": "babe5d9a.6a4cf8",
-        "type": "change",
-        "z": "3f4159ea.cdc276",
-        "name": "Turn Off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "False",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1020,
-        "y": 360,
-        "wires": [
-            [
-                "4cd18294.a52114"
-            ]
-        ]
     },
     {
         "id": "825dfc66.622e08",
@@ -1165,16 +1119,6 @@
         "wires": []
     },
     {
-        "id": "a2076dd3.dd30c",
-        "type": "comment",
-        "z": "3f4159ea.cdc276",
-        "name": "Blink on portal panel indicator",
-        "info": "",
-        "x": 400,
-        "y": 240,
-        "wires": []
-    },
-    {
         "id": "92926308.5c06a8",
         "type": "switch",
         "z": "3f4159ea.cdc276",
@@ -1395,66 +1339,6 @@
         "wires": []
     },
     {
-        "id": "41ba4ece.605b88",
-        "type": "mqtt out",
-        "z": "58c54541.215b4c",
-        "name": "El-Wire Signage",
-        "topic": "modbus/endpointpp/set/aquarium_signage",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "12539a43.97344e",
-        "x": 520,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "e6d2914f.cbfa68",
-        "type": "switch",
-        "z": "58c54541.215b4c",
-        "name": "Filter only valid states",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "True",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "False",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 260,
-        "y": 240,
-        "wires": [
-            [
-                "41ba4ece.605b88"
-            ],
-            [
-                "41ba4ece.605b88"
-            ]
-        ]
-    },
-    {
-        "id": "1438a3ac.960e8c",
-        "type": "subflow:58c54541.215b4c",
-        "z": "3f4159ea.cdc276",
-        "name": "",
-        "x": 390,
-        "y": 120,
-        "wires": []
-    },
-    {
         "id": "95ba6848.7b6668",
         "type": "mqtt out",
         "z": "81da57ea.a83d2",
@@ -1510,8 +1394,9 @@
         "type": "subflow:81da57ea.a83d2",
         "z": "3f4159ea.cdc276",
         "name": "",
-        "x": 1260,
-        "y": 280,
+        "env": [],
+        "x": 490,
+        "y": 160,
         "wires": []
     },
     {
@@ -2052,42 +1937,6 @@
         "wires": []
     },
     {
-        "id": "4d66ed76.feec04",
-        "type": "change",
-        "z": "3f4159ea.cdc276",
-        "name": "Log Presence Switch change",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "'Changed Presence Switch to: ' & (payload = 'True' ? 'Open' : 'Closed' )",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 180,
-        "wires": [
-            [
-                "28cf8a6e.dacb06"
-            ]
-        ]
-    },
-    {
-        "id": "28cf8a6e.dacb06",
-        "type": "subflow:bd2beaba.a84ee8",
-        "z": "3f4159ea.cdc276",
-        "name": "",
-        "x": 680,
-        "y": 180,
-        "wires": []
-    },
-    {
         "id": "c2ac31f0.b686b8",
         "type": "change",
         "z": "3f4159ea.cdc276",
@@ -2165,6 +2014,298 @@
         "info": "",
         "x": 260,
         "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "4d66ed76.feec04",
+        "type": "change",
+        "z": "3f4159ea.cdc276",
+        "name": "Log Presence Switch change",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "'Changed Presence Switch to: ' & (payload = 'True' ? 'Open' : 'Closed' )",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 120,
+        "wires": [
+            [
+                "28cf8a6e.dacb06"
+            ]
+        ]
+    },
+    {
+        "id": "28cf8a6e.dacb06",
+        "type": "subflow:bd2beaba.a84ee8",
+        "z": "3f4159ea.cdc276",
+        "name": "",
+        "x": 760,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "7c22efbb.233fe",
+        "type": "mqtt out",
+        "z": "c071b0b7.e8c2c",
+        "name": "Left Sockets contactor",
+        "topic": "modbus/endpointpp/set/socket_left",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12539a43.97344e",
+        "x": 720,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "a3ab81a2.ae3b18",
+        "type": "switch",
+        "z": "c071b0b7.e8c2c",
+        "name": "Filter valid input values",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "True",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "False",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 260,
+        "y": 80,
+        "wires": [
+            [
+                "7c22efbb.233fe"
+            ],
+            [
+                "7c22efbb.233fe"
+            ]
+        ]
+    },
+    {
+        "id": "b3c06800.883a68",
+        "type": "comment",
+        "z": "c071b0b7.e8c2c",
+        "name": "Filtering only valid input values via this switch",
+        "info": "Currently, this block ",
+        "x": 330,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "1b41d897.3e055f",
+        "type": "mqtt out",
+        "z": "26622623.6fb4fa",
+        "name": "Right Sockets contactor",
+        "topic": "modbus/endpointpp/set/socket_right",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12539a43.97344e",
+        "x": 730,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "374a8c7f.528bc4",
+        "type": "switch",
+        "z": "26622623.6fb4fa",
+        "name": "Filter valid input values",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "True",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "False",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 260,
+        "y": 80,
+        "wires": [
+            [
+                "1b41d897.3e055f"
+            ],
+            [
+                "1b41d897.3e055f"
+            ]
+        ]
+    },
+    {
+        "id": "46c5f6e6.12c848",
+        "type": "comment",
+        "z": "26622623.6fb4fa",
+        "name": "Filtering only valid input values via this switch",
+        "info": "Currently, this block ",
+        "x": 330,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8fd799e1.dc2408",
+        "type": "change",
+        "z": "665b57f6.ada5f8",
+        "name": "Convert True to \"1\", everything else to \"0\"",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload = \"1\" ? \"True\" : \"False\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e55e5218.91d2f8",
+        "type": "change",
+        "z": "42ea986b.5d61d",
+        "name": "Convert \"1\" to True, everything else to \"0\"",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload = \"True\" ? \"1\" : \"0\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce61abf7.03b408",
+        "type": "subflow:c071b0b7.e8c2c",
+        "z": "3f4159ea.cdc276",
+        "name": "",
+        "x": 450,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "4529a4fc.0676bc",
+        "type": "subflow:26622623.6fb4fa",
+        "z": "3f4159ea.cdc276",
+        "name": "",
+        "x": 1030,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "39c830d.06693d",
+        "type": "switch",
+        "z": "3f4159ea.cdc276",
+        "name": "Route \"Right Contactor ON\" to delayed path",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "False",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "True",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 530,
+        "y": 300,
+        "wires": [
+            [
+                "4529a4fc.0676bc"
+            ],
+            [
+                "b654bd05.04b08"
+            ]
+        ]
+    },
+    {
+        "id": "b654bd05.04b08",
+        "type": "delay",
+        "z": "3f4159ea.cdc276",
+        "name": "Delay 2s",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "2",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 820,
+        "y": 340,
+        "wires": [
+            [
+                "4529a4fc.0676bc"
+            ]
+        ]
+    },
+    {
+        "id": "e64770b9.491ff8",
+        "type": "comment",
+        "z": "3f4159ea.cdc276",
+        "name": "Delay on right contactor to avoid overloading general circuit breaker",
+        "info": "",
+        "x": 600,
+        "y": 260,
         "wires": []
     }
 ]
