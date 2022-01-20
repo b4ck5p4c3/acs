@@ -6,7 +6,7 @@ import minimalmodbus
 import safeops;
 
 # TTY attached to Modbus
-MODBUS_TTY = '/dev/ttyS0'
+MODBUS_TTY = '/dev/ttyAMA0'
 
 # Modbus timeout in seconds
 MODBUS_TIMEOUT = 0.05
