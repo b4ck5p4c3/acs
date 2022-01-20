@@ -141,43 +141,7 @@ def provision_endpoint_int():
   # OUTPUT - Magnet aquarium lock
   RED_TRAFFIC = 0
   YELLOW_TRAFFIC = 1
-  GREEB_TRAFFIC = 2
-
-  # INPUT - Aquarium open button
-  AQUARIUM_BUTTON = 1
-
-  # OUTPUT - EL Wire power
-  SIGN = 4
-
-  # OUTPUT - Prescene alarm
-  PRESCENE_ALARM = 6
-
-  # OUTPUT - Red door lock
-  RED_DOOR_LOCK = 7
-
-  # INPUT - Open door button
-  OPEN_DOOR_BUTTON = 8
-
-  # INPUT - Prescene switch
-  PRESCENE_SWITCH = 10
-
-  # INPUT - Aquarium (outside) door magnetic switch
-  AQUARIUM_DOOR = 13
-
-  # INPUT - Red door magnetic switch
-  RED_DOOR = 14
-
-  # INPUT - Portal door magnetic switch
-  PORTAL_DOOR = 15
-
-  # RELAY - Aquarium lights
-  RELAY_AQUARIUM_LIGHTS = ENDPOINTPP_RELAY_BASE + 0
-
-  # RELAY - Portal lights
-  RELAY_PORTAL_LIGHTS = ENDPOINTPP_RELAY_BASE + 1
-
-  # RELAY - Hub sockets via contactor
-  RELAY_SOCKETS = ENDPOINTPP_RELAY_BASE + 2
+  GREEN_TRAFFIC = 2
 
   ###### END PINMAP ######
 
@@ -187,7 +151,7 @@ def provision_endpoint_int():
   # Apply specific configuration
   pin_modes[RED_TRAFFIC] = 1
   pin_modes[YELLOW_TRAFFIC] = 1
-  pin_modes[GREEB_TRAFFIC] = 1
+  pin_modes[GREEN_TRAFFIC] = 1
 
   pulls = [1] * ENDPOINTPP_GPIO_SIZE
 
