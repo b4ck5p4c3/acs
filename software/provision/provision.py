@@ -6,7 +6,7 @@ import minimalmodbus
 import safeops;
 
 # TTY attached to Modbus
-MODBUS_TTY = '/dev/ttyS0'
+MODBUS_TTY = '/dev/ttyAMA0'
 
 # Modbus timeout in seconds
 MODBUS_TIMEOUT = 0.05
@@ -159,19 +159,19 @@ def provision_endpoint_int():
   pin_states = [0] * ENDPOINTPP_GPIO_SIZE
 
   # Provision GPIO mode configuration
-  safeops.writes(endpoint_pp, ENDPOINTPP_GPIO_MODE_BASE, pin_modes)
+  safeops.writes(endpoint_pp_int, ENDPOINTPP_GPIO_MODE_BASE, pin_modes)
   print('EndpointPP int: GPIO mode provisioned successfully')
   # print('EndpointPP: GPIO mode ')
 
   # Provision GPIO pull configuration
-  safeops.writes(endpoint_pp, ENDPOINTPP_GPIO_PULL_BASE, pulls)
+  safeops.writes(endpoint_pp_int, ENDPOINTPP_GPIO_PULL_BASE, pulls)
 
   # Provision GPIO output states configuration
-  safeops.writes(endpoint_pp, ENDPOINTPP_GPIO_WRITE_BASE, pin_states)
+  safeops.writes(endpoint_pp_int, ENDPOINTPP_GPIO_WRITE_BASE, pin_states)
   print('EndpointPP int: GPIO states provisioned successfully')
 
   # Provision relays (OFF everything by default)
-  safeops.writes(endpoint_pp, ENDPOINTPP_RELAY_BASE, [0] * 3)
+  safeops.writes(endpoint_pp_int, ENDPOINTPP_RELAY_BASE, [0] * 3)
   print('EndpointPP int: Relay states provisioned successfully')
 
 provision_endpoint()
