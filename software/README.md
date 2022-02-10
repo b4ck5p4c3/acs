@@ -38,9 +38,8 @@ cd acs/software/provision
 pip3 install -r requirements.txt
 cd ~acs/app
 
-# Если вы из Бэкспейса — cклонируйте репозиторий с секретами и 
-# проследуйте инструкциям из INSTALL.md для применения конфигураций
-git clone https://github.com/b4ck5p4c3/acs-secrets config
+# Если вы из Бэкспейса — cклонируйте репозиторий с секретами в папку "config".
+# Следуйте инструкциям в https://github.com/b4ck5p4c3/acs-secrets
 
 # ... иначе, используйте примеры конфигураций из каждого отдельного сервиса
 

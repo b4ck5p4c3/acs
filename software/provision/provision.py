@@ -24,28 +24,33 @@ endpoint_pp.serial.timeout = MODBUS_TIMEOUT
 if not endpoint_pp.serial.is_open:
   endpoint_pp.serial.open()
 
+endpoint_pp_int = minimalmodbus.Instrument(MODBUS_TTY, 12, mode='rtu', debug = MMODBUS_DBG)
+endpoint_pp_int.serial.baudrate = MODBUS_BAUDRATE
+endpoint_pp_int.serial.timeout = MODBUS_TIMEOUT
+if not endpoint_pp_int.serial.is_open:
+  endpoint_pp_int.serial.open()
+
+# Base address for GPIO mode configuration & GPIO size
+ENDPOINTPP_GPIO_MODE_BASE = 0
+ENDPOINTPP_GPIO_SIZE = 16
+
+# Base address for GPIO write
+ENDPOINTPP_GPIO_WRITE_BASE = ENDPOINTPP_GPIO_MODE_BASE + ENDPOINTPP_GPIO_SIZE
+
+# Base address for GPIO pull configuration
+ENDPOINTPP_GPIO_PULL_BASE = ENDPOINTPP_GPIO_WRITE_BASE + ENDPOINTPP_GPIO_SIZE
+
+# Base address for GPIO read with "latch up" (I'm not sure what it is, pull-up maybe?)
+ENDPOINTPP_GPIO_READ_LUP_BASE = 0x100
+
+# Base address for GPIO write with "latch down" (still unsure about it's purpose)
+ENDPOINTPP_GPIO_READ_LDOWN_BASE = ENDPOINTPP_GPIO_READ_LUP_BASE + ENDPOINTPP_GPIO_SIZE
+
+# Relay addresses
+ENDPOINTPP_RELAY_BASE = ENDPOINTPP_GPIO_MODE_BASE + ENDPOINTPP_GPIO_WRITE_BASE + ENDPOINTPP_GPIO_PULL_BASE
+
 # Provision endpoint_pp
 def provision_endpoint():
-
-  # Base address for GPIO mode configuration & GPIO size
-  ENDPOINTPP_GPIO_MODE_BASE = 0
-  ENDPOINTPP_GPIO_SIZE = 16
-
-  # Base address for GPIO write
-  ENDPOINTPP_GPIO_WRITE_BASE = ENDPOINTPP_GPIO_MODE_BASE + ENDPOINTPP_GPIO_SIZE
-
-  # Base address for GPIO pull configuration
-  ENDPOINTPP_GPIO_PULL_BASE = ENDPOINTPP_GPIO_WRITE_BASE + ENDPOINTPP_GPIO_SIZE
-
-  # Base address for GPIO read with "latch up" (I'm not sure what it is, pull-up maybe?)
-  ENDPOINTPP_GPIO_READ_LUP_BASE = 0x100
-
-  # Base address for GPIO write with "latch down" (still unsure about it's purpose)
-  ENDPOINTPP_GPIO_READ_LDOWN_BASE = ENDPOINTPP_GPIO_READ_LUP_BASE + ENDPOINTPP_GPIO_SIZE
-
-  # Relay addresses
-  ENDPOINTPP_RELAY_BASE = ENDPOINTPP_GPIO_MODE_BASE + ENDPOINTPP_GPIO_WRITE_BASE + ENDPOINTPP_GPIO_PULL_BASE
-
   ###### BEGIN PINMAP ######
 
   # OUTPUT - Magnet aquarium lock
@@ -128,4 +133,46 @@ def provision_endpoint():
   safeops.writes(endpoint_pp, ENDPOINTPP_RELAY_BASE, [0] * 3)
   print('EndpointPP: Relay states provisioned successfully')
 
+
+# Provision endpoint_pp
+def provision_endpoint_int():
+  ###### BEGIN PINMAP ######
+
+  # OUTPUT - Magnet aquarium lock
+  RED_TRAFFIC = 0
+  YELLOW_TRAFFIC = 1
+  GREEN_TRAFFIC = 2
+
+  ###### END PINMAP ######
+
+  # Configure all pins to output by default
+  pin_modes = [1] * ENDPOINTPP_GPIO_SIZE
+
+  # Apply specific configuration
+  pin_modes[RED_TRAFFIC] = 1
+  pin_modes[YELLOW_TRAFFIC] = 1
+  pin_modes[GREEN_TRAFFIC] = 1
+
+  pulls = [1] * ENDPOINTPP_GPIO_SIZE
+
+  # Configure all pins states to LOW by default
+  pin_states = [0] * ENDPOINTPP_GPIO_SIZE
+
+  # Provision GPIO mode configuration
+  safeops.writes(endpoint_pp_int, ENDPOINTPP_GPIO_MODE_BASE, pin_modes)
+  print('EndpointPP int: GPIO mode provisioned successfully')
+  # print('EndpointPP: GPIO mode ')
+
+  # Provision GPIO pull configuration
+  safeops.writes(endpoint_pp_int, ENDPOINTPP_GPIO_PULL_BASE, pulls)
+
+  # Provision GPIO output states configuration
+  safeops.writes(endpoint_pp_int, ENDPOINTPP_GPIO_WRITE_BASE, pin_states)
+  print('EndpointPP int: GPIO states provisioned successfully')
+
+  # Provision relays (OFF everything by default)
+  safeops.writes(endpoint_pp_int, ENDPOINTPP_RELAY_BASE, [0] * 3)
+  print('EndpointPP int: Relay states provisioned successfully')
+
 provision_endpoint()
+provision_endpoint_int()
