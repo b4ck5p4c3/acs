@@ -2,12 +2,11 @@
 # Usage: ./mqtt-monitor
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-source "$DIR/../config/MQTT_CLI_CREDENTIALS"
+source "$DIR/../../../config/MQTT_CLI_CREDENTIALS"
 
 /usr/bin/mosquitto_sub \
   -t "#" -v \
-  -h mqtt.internal.0x08.in \
-  -p 8883 \
-  --cafile /etc/mosquitto/ca_certificates/ca.pem \
+  -h localhost \
+  -p 1883 \
   -u $MQTT_CLI_USER \
   -P $MQTT_CLI_PASSWORD
