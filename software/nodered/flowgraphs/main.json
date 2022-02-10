@@ -296,6 +296,51 @@
         "color": "#DDAA99"
     },
     {
+        "id": "98516876.753508",
+        "type": "subflow",
+        "name": "Routine: open doors for member",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "23d86dfc.1217aa"
+                    },
+                    {
+                        "id": "7ba1c964.59dc28"
+                    },
+                    {
+                        "id": "3d2ac0a1.5011c"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 860,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "52cbae91.521f88",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99",
+        "inputLabels": [
+            "Member's tag/card name"
+        ],
+        "outputLabels": [
+            "Triggered, after doors will be closed"
+        ]
+    },
+    {
         "id": "12539a43.97344e",
         "type": "mqtt-broker",
         "name": "Corleone",
@@ -309,14 +354,17 @@
         "cleansession": true,
         "birthTopic": "",
         "birthQos": "0",
+        "birthRetain": "false",
         "birthPayload": "",
         "birthMsg": {},
         "closeTopic": "",
         "closeQos": "0",
+        "closeRetain": "false",
         "closePayload": "",
         "closeMsg": {},
         "willTopic": "",
         "willQos": "0",
+        "willRetain": "false",
         "willPayload": "",
         "willMsg": {},
         "sessionExpiry": ""
@@ -332,6 +380,7 @@
         "broker": "12539a43.97344e",
         "nl": false,
         "rap": false,
+        "rh": "0",
         "x": 120,
         "y": 120,
         "wires": [
@@ -606,9 +655,9 @@
         "id": "9e4e4e8a.a8cf1",
         "type": "comment",
         "z": "b99cea79.040428",
-        "name": "Open doors when registerd RFID tag is bringed up to reader",
+        "name": "(Old reader) Open doors when registerd RFID tag is bringed up to reader",
         "info": "",
-        "x": 280,
+        "x": 320,
         "y": 300,
         "wires": []
     },
@@ -2306,6 +2355,397 @@
         "info": "",
         "x": 600,
         "y": 260,
+        "wires": []
+    },
+    {
+        "id": "14b5c899.62e24f",
+        "type": "mqtt in",
+        "z": "b99cea79.040428",
+        "name": "V2: Scanned UID",
+        "topic": "bus/devices/acs-reader/uid",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "12539a43.97344e",
+        "nl": false,
+        "rap": false,
+        "rh": "0",
+        "x": 140,
+        "y": 940,
+        "wires": [
+            [
+                "d1dd06c4.1e5778"
+            ]
+        ]
+    },
+    {
+        "id": "d1dd06c4.1e5778",
+        "type": "function",
+        "z": "b99cea79.040428",
+        "name": "V2: Verify UID across residents database",
+        "func": "/**\n * Normalize every UID to 7-byte upper case\n * @param {String} uid UID to normalize\n * @returns {String} Normalized UID\n */\nconst normalizeUid = uid => {\n    \n    if (uid.length === 0 || uid.length > 14)\n        return null;\n    \n    if (uid.length === 14)\n        return uid.toUpperCase();\n        \n    const paddingSize = 14 - uid.length;\n    return uid.toUpperCase().concat(('0').repeat(paddingSize));\n    \n};\n\n// Getting member name by UID from the flow's \"acs-uid\" index\nconst member = flow.get('acs-uid').get(normalizeUid(msg.payload));\n\n// Terminate flow if UID is not found in members database\nif (!member)\n    return null;\n    \n// Otherwise, return member name and continue the flow\nmsg.payload = member;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 940,
+        "wires": [
+            [
+                "887f9fa.667d2e"
+            ]
+        ]
+    },
+    {
+        "id": "7144b2c3.4408fc",
+        "type": "file in",
+        "z": "b99cea79.040428",
+        "name": "Read \"ids.new.txt.automation\"",
+        "filename": "/home/acs/app/config/ids.new.txt.automation",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "utf8",
+        "x": 510,
+        "y": 620,
+        "wires": [
+            [
+                "7c87fd78.ed0614",
+                "437f8bf6.0385ec"
+            ]
+        ]
+    },
+    {
+        "id": "58d17422.57ec54",
+        "type": "watch",
+        "z": "b99cea79.040428",
+        "name": "Detect UIDs database changes",
+        "files": "/home/acs/app/config/ids.new.txt.automation",
+        "recursive": "",
+        "x": 190,
+        "y": 620,
+        "wires": [
+            [
+                "7144b2c3.4408fc"
+            ]
+        ]
+    },
+    {
+        "id": "7c87fd78.ed0614",
+        "type": "function",
+        "z": "b99cea79.040428",
+        "name": "Update tags database",
+        "func": "/**\n * Normalize every UID to 7-byte upper case\n * @param {String} uid UID to normalize\n * @returns {String} Normalized UID\n */\nconst normalizeUid = uid => {\n    \n    if (uid.length === 0 || uid.length > 14)\n        return null;\n    \n    if (uid.length === 14)\n        return uid.toUpperCase();\n        \n    const paddingSize = 14 - uid.length;\n    return uid.toUpperCase().concat(('0').repeat(paddingSize));\n    \n};\n\n// Extract entries for payload\nconst uids = msg.payload\n\n    // Split CSV to lines\n    .split('\\n')\n    \n    // Filter empty lines\n    // Both UID and member name cannot be shorter than one character\n    .filter(entry => entry.length > 2)\n    \n    // Split each line into \"[UID, Member]\"\n    .map(entry => entry.split(','))\n    \n    // Normalize UID (7-byte HEX upper-case with '0' padding)\n    .map(([uid, name]) => [normalizeUid(uid), name]);\n\n// Create a map out of parsed UID-member pairs\n// Then, commit created Map to flow namespace as \"tags\"\nflow.set('acs-uid', new Map(uids));",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e3ed8146.c19cc",
+        "type": "comment",
+        "z": "b99cea79.040428",
+        "name": "Read and update tags database on change",
+        "info": "",
+        "x": 230,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "a376dc3e.306fb",
+        "type": "inject",
+        "z": "b99cea79.040428",
+        "name": "Trigger UID database fetch on load",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "x": 200,
+        "y": 660,
+        "wires": [
+            [
+                "7144b2c3.4408fc"
+            ]
+        ]
+    },
+    {
+        "id": "437f8bf6.0385ec",
+        "type": "debug",
+        "z": "b99cea79.040428",
+        "name": "Log database reload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "'Reloaded \"V2 UIDs\" database'",
+        "targetType": "jsonata",
+        "statusVal": "'Reloaded \"tags\" database'",
+        "statusType": "auto",
+        "x": 800,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "420e3acf.38890c",
+        "type": "comment",
+        "z": "b99cea79.040428",
+        "name": "Reader Gen 2: Indev Phase",
+        "info": "",
+        "x": 180,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "52cbae91.521f88",
+        "type": "subflow:66899f78.ccef5",
+        "z": "98516876.753508",
+        "name": "",
+        "env": [],
+        "x": 560,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7ba1c964.59dc28",
+        "type": "debug",
+        "z": "98516876.753508",
+        "name": "Log door open for member",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "'Opening doors for: ' & payload",
+        "targetType": "jsonata",
+        "statusVal": "'Opening doors for: ' & payload",
+        "statusType": "auto",
+        "x": 300,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "23d86dfc.1217aa",
+        "type": "subflow:aefaaeba.b6c3e",
+        "z": "98516876.753508",
+        "name": "",
+        "x": 290,
+        "y": 60,
+        "wires": [
+            [
+                "52cbae91.521f88"
+            ]
+        ]
+    },
+    {
+        "id": "3d2ac0a1.5011c",
+        "type": "change",
+        "z": "98516876.753508",
+        "name": "Log RFID identification",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "'Opening doors for: ' & payload",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 140,
+        "wires": [
+            [
+                "dcb7eb7.534bc18"
+            ]
+        ]
+    },
+    {
+        "id": "dcb7eb7.534bc18",
+        "type": "subflow:bd2beaba.a84ee8",
+        "z": "98516876.753508",
+        "name": "",
+        "x": 540,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "887f9fa.667d2e",
+        "type": "subflow:98516876.753508",
+        "z": "b99cea79.040428",
+        "name": "",
+        "x": 810,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f58306c.271eb",
+        "type": "comment",
+        "z": "b99cea79.040428",
+        "name": "Handle detected UID tags",
+        "info": "",
+        "x": 170,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "9c5f1e1a.02c14",
+        "type": "mqtt in",
+        "z": "b99cea79.040428",
+        "name": "V2: Scanned PAN",
+        "topic": "bus/devices/acs-reader/pan",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "12539a43.97344e",
+        "nl": false,
+        "rap": false,
+        "rh": "0",
+        "x": 150,
+        "y": 1060,
+        "wires": [
+            [
+                "8f3f89c5.2ab46"
+            ]
+        ]
+    },
+    {
+        "id": "8f3f89c5.2ab46",
+        "type": "function",
+        "z": "b99cea79.040428",
+        "name": "V2: Verify PAN across residents database",
+        "func": "// Fetching member from flow's \"acs-pan\" index by PAN\nconst member = flow.get('acs-pan').get(msg.payload);\n\n// Terminate flow if UID is not found in members database\nif (!member)\n    return null;\n    \n// Otherwise, return member name and continue the flow\nmsg.payload = member;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1060,
+        "wires": [
+            [
+                "887f9fa.667d2e"
+            ]
+        ]
+    },
+    {
+        "id": "57c5ed16.2e57b4",
+        "type": "comment",
+        "z": "b99cea79.040428",
+        "name": "Handle detected cards PANs",
+        "info": "",
+        "x": 180,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "6285e2ff.c3b874",
+        "type": "file in",
+        "z": "b99cea79.040428",
+        "name": "Read \"pan.txt.automation\"",
+        "filename": "/home/acs/app/config/pan.txt.automation",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "utf8",
+        "x": 500,
+        "y": 760,
+        "wires": [
+            [
+                "499453ba.636894",
+                "4ef045c4.c5102c"
+            ]
+        ]
+    },
+    {
+        "id": "2e741baf.0dcb94",
+        "type": "watch",
+        "z": "b99cea79.040428",
+        "name": "Detect PANs database changes",
+        "files": "/home/acs/app/config/pan.txt.automation",
+        "recursive": "",
+        "x": 190,
+        "y": 760,
+        "wires": [
+            [
+                "6285e2ff.c3b874"
+            ]
+        ]
+    },
+    {
+        "id": "499453ba.636894",
+        "type": "function",
+        "z": "b99cea79.040428",
+        "name": "Update PANs database",
+        "func": "const uids = msg.payload\n\n    // Split CSV to lines\n    .split('\\n')\n    \n    // Filter empty lines\n    // Both PAN and member name cannot be shorter than one character\n    .filter(entry => entry.length > 2)\n    \n    // Split each line into \"[PAN, Member]\"\n    .map(entry => entry.split(','));\n\n// Create a map out of parsed UID-member pairs\n// Then, commit created Map to flow namespace as \"tags\"\nflow.set('acs-pan', new Map(uids));",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d9548f2.da8418",
+        "type": "comment",
+        "z": "b99cea79.040428",
+        "name": "Read and update cards database on change",
+        "info": "",
+        "x": 230,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "d1c8ea19.5d061",
+        "type": "inject",
+        "z": "b99cea79.040428",
+        "name": "Trigger PAN database fetch on load",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "x": 200,
+        "y": 800,
+        "wires": [
+            [
+                "6285e2ff.c3b874"
+            ]
+        ]
+    },
+    {
+        "id": "4ef045c4.c5102c",
+        "type": "debug",
+        "z": "b99cea79.040428",
+        "name": "Log database reload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "'Reloaded \"V2 PANs\" database'",
+        "targetType": "jsonata",
+        "statusVal": "'Reloaded \"tags\" database'",
+        "statusType": "auto",
+        "x": 800,
+        "y": 800,
         "wires": []
     }
 ]

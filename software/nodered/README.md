@@ -1,15 +1,17 @@
 ## Деплой
 Будем исходить из того, что остальные сервисы автоматизации уже развёрнуты.
 
+### Списки доступов
+Если вы не используете репозиторий acs-secrets Бэкспейса, скопируйте вручную следующие файлы:
+```
+examples/ids.txt.automation      =>  /home/acs/app/config/ids.txt.automation
+examples/ids.new.txt.automation  =>  /home/acs/app/config/ids.new.txt.automation
+examples/pan.txt.automation      =>  /home/acs/app/config/pan.txt.automation
+```
+
+### Деплой NodeRED
 1. Установите Node-RED и автозапуск сервиса.
-
-2. Импортируйте в него `flowgraphs/main.json`.
-
-3. Если вы не из Бэкспейса (или не используете репозиторий acs-secrets), то 
-скопируйте файл `examples/ids.txt.example` в `/home/acs/app/config/ids.txt.automation`
-
-4. Если вы из Бэкспейса, слинкуйте файл `settings.js` согласно `INSTALL.md` в `acs-secrets`.
-
-4. Проверьте настройки доступа к MQTT-брокеру
-
-5. Вы прекрасны!
+2. Если вы из Бэкспейса, слинкуйте файл `settings.js` согласно `INSTALL.md` в `acs-secrets`.
+   Если нет, настройте вручную подключение к MQTT-брокеру.
+3. Импортируйте `flowgraphs/main.json`.
+4. Вы прекрасны!
