@@ -1,0 +1,29 @@
+{
+  "name": "@0x08/swynca",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "reformat": "prettier -w src/**/*.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "The B4CKSP4CE hackerspace community <reg@0x08.in>",
+  "license": "MIT",
+  "dependencies": {
+    "auth0": "2.40.0",
+    "micro": "9.3.4",
+    "yargs": "17.3.1"
+  },
+  "devDependencies": {
+    "@types/auth0": "2.34.13",
+    "@types/micro": "7.3.6",
+    "@types/yargs": "17.0.8",
+    "prettier": "2.5.1",
+    "typescript": "4.5.5"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 4
+  }
+}
