@@ -1,8 +1,11 @@
 import yargs from "yargs";
 import { UsersDatabase } from "./users";
 import { serve } from "./server";
+import dotenv from "dotenv";
 
 async function main(): Promise<void> {
+    dotenv.config();
+
     const args = yargs
         .env("SWYNCA")
         .option("users-file", {

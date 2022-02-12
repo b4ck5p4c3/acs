@@ -21,3 +21,14 @@ node ./build \
     --listen-port 9090 \
     --listen-address 127.0.0.1
 ```
+
+### config
+
+Опции можно также передать через переменные окружения с префиксом `SWYNCA`:
+
+```
+--listen-port 9090              => SWYNCA_LISTEN_PORT=9090
+--users-file users-file.json    => SWYNCA_LISTEN_PORT=users-file.json
+```
+
+Можно подложить файл `.env` в рабочую директорию.
