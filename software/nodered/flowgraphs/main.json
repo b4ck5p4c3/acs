@@ -760,6 +760,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 880,
         "y": 140,
         "wires": [
@@ -2747,5 +2748,291 @@
         "x": 800,
         "y": 800,
         "wires": []
+    },
+    {
+        "id": "a9cfd4a3.314eb8",
+        "type": "http request",
+        "z": "b99cea79.040428",
+        "name": "Get \"ids.new.txt.automation\" from swynca",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:19090/v0/ids.txt",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 620,
+        "y": 1180,
+        "wires": [
+            [
+                "3f214401.6611ec"
+            ]
+        ]
+    },
+    {
+        "id": "9b656eab.ab1018",
+        "type": "http request",
+        "z": "b99cea79.040428",
+        "name": "Get \"ids.txt.automation\" from swynca",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:19090/v0/legacy_ids.txt",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 1360,
+        "wires": [
+            [
+                "d1e163dd.32894"
+            ]
+        ]
+    },
+    {
+        "id": "85e2e608.d8eb8",
+        "type": "http request",
+        "z": "b99cea79.040428",
+        "name": "Get \"pan.txt.automation\" from swynca",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:19090/v0/pan.txt",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 590,
+        "y": 1560,
+        "wires": [
+            [
+                "2a835e9d.e5e3e2"
+            ]
+        ]
+    },
+    {
+        "id": "3f214401.6611ec",
+        "type": "switch",
+        "z": "b99cea79.040428",
+        "name": "Not empty",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 1240,
+        "wires": [
+            [
+                "49817248.9d3104"
+            ]
+        ]
+    },
+    {
+        "id": "d1e163dd.32894",
+        "type": "switch",
+        "z": "b99cea79.040428",
+        "name": "Not empty",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 690,
+        "y": 1420,
+        "wires": [
+            [
+                "8a313dad.14a31"
+            ]
+        ]
+    },
+    {
+        "id": "2a835e9d.e5e3e2",
+        "type": "switch",
+        "z": "b99cea79.040428",
+        "name": "Not empty",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 690,
+        "y": 1620,
+        "wires": [
+            [
+                "2023237b.dae91c"
+            ]
+        ]
+    },
+    {
+        "id": "25e85cea.a0d01c",
+        "type": "file",
+        "z": "b99cea79.040428",
+        "name": "Save \"ids.new.txt.automation\"",
+        "filename": "/home/acs/app/config/ids.new.txt.automation",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 970,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3dd915b9.50e6ca",
+        "type": "file",
+        "z": "b99cea79.040428",
+        "name": "Save \"pan.txt.automation\"",
+        "filename": "/home/acs/app/config/pan.txt.automation",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 950,
+        "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f4aa133b.b8c208",
+        "type": "file",
+        "z": "b99cea79.040428",
+        "name": "Save \"ids.txt.automation\"",
+        "filename": "/home/acs/app/config/ids.txt.automation",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 950,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e2025ccc.8644d",
+        "type": "inject",
+        "z": "b99cea79.040428",
+        "name": "Trigger UIDs update every 30 seconds",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "x",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 1180,
+        "wires": [
+            [
+                "a9cfd4a3.314eb8",
+                "9b656eab.ab1018",
+                "85e2e608.d8eb8"
+            ]
+        ]
+    },
+    {
+        "id": "49817248.9d3104",
+        "type": "switch",
+        "z": "b99cea79.040428",
+        "name": "Response status code is 200",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 660,
+        "y": 1300,
+        "wires": [
+            [
+                "25e85cea.a0d01c"
+            ]
+        ]
+    },
+    {
+        "id": "8a313dad.14a31",
+        "type": "switch",
+        "z": "b99cea79.040428",
+        "name": "Response status code is 200",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 640,
+        "y": 1480,
+        "wires": [
+            [
+                "f4aa133b.b8c208"
+            ]
+        ]
+    },
+    {
+        "id": "2023237b.dae91c",
+        "type": "switch",
+        "z": "b99cea79.040428",
+        "name": "Response status code is 200",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 640,
+        "y": 1680,
+        "wires": [
+            [
+                "3dd915b9.50e6ca"
+            ]
+        ]
     }
 ]
