@@ -101,21 +101,21 @@ export class UsersDatabase {
     getPANListText(): string {
         return this.users
             .filter((u) => u.pan.length > 0)
-            .map((u) => `${u.pan},${u.a0nickname}|${u.a0id}`)
+            .map((u) => `${u.pan},${u.a0nickname} ${u.a0id} ${u.comment}`)
             .join("\n");
     }
 
     getUIDListText(): string {
         return this.users
             .filter((u) => u.uid.length > 0)
-            .map((u) => `${u.uid},${u.a0nickname}|${u.a0id}`)
+            .map((u) => `${u.uid},${u.a0nickname} ${u.a0id} ${u.comment}`)
             .join("\n");
     }
 
     getLegacyUIDListText(): string {
         return this.users
             .filter((u) => u.legacyUid.length > 0)
-            .map((u) => `${u.legacyUid},${u.a0nickname}|${u.a0id}`)
+            .map((u) => `${u.legacyUid},${u.a0nickname} ${u.a0id} ${u.comment}`)
             .join("\n");
     }
 }
