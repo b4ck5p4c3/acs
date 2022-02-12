@@ -7,6 +7,8 @@ type User = {
     pan: string;
     legacyUid: string;
     uid: string;
+    comment: string;
+    updatedAt: string;
     blocked: boolean;
 };
 
@@ -52,6 +54,8 @@ export class UsersDatabase {
                     uid: u.uid ?? "",
                     legacyUid: u.legacyUid ?? "",
                     blocked: u.blocked ?? false,
+                    comment: u.comment ?? "",
+                    updatedAt: u.updatedAt ?? "",
                 };
             })
             .filter((u) => u !== null);
@@ -64,6 +68,7 @@ export class UsersDatabase {
 
     async updateFromAuth0(): Promise<void> {
         const a0users = await this.client.getUsers({ per_page: 100, fields: "user_id,blocked,nickname" });
+        const now = new Date().toISOString();
         for (const a0user of a0users) {
             const idx = this.users.findIndex((u) => u.a0id === a0user.user_id);
 
@@ -75,6 +80,8 @@ export class UsersDatabase {
                     uid: "",
                     pan: "",
                     legacyUid: "",
+                    comment: `Added from Auth0 by swynca at ${now}`,
+                    updatedAt: new Date().toISOString(),
                 });
                 continue;
             }
@@ -84,6 +91,7 @@ export class UsersDatabase {
                     user.a0id = a0user.user_id ?? "";
                     user.a0nickname = a0user.nickname ?? "";
                     user.blocked = a0user.blocked === true;
+                    user.updatedAt = new Date().toISOString();
                 }
             }
         }
