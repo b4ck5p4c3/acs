@@ -4,6 +4,7 @@ import { serve } from "./server";
 
 async function main(): Promise<void> {
     const args = yargs
+        .env("SWYNCA")
         .option("users-file", {
             type: "string",
             demandOption: true,
