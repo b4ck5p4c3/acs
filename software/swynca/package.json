@@ -11,6 +11,7 @@
   "author": "The B4CKSP4CE hackerspace community <reg@0x08.in>",
   "license": "MIT",
   "dependencies": {
+    "ajv": "^8.10.0",
     "auth0": "2.40.0",
     "dotenv": "^16.0.0",
     "micro": "9.3.4",
