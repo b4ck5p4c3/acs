@@ -1,456 +1,10 @@
 [
     {
-        "id": "3f4159ea.cdc276",
-        "type": "tab",
-        "label": "Door & Presence",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "8d261cdd.c349c8",
         "type": "tab",
         "label": "Lights",
         "disabled": false,
         "info": ""
-    },
-    {
-        "id": "b99cea79.040428",
-        "type": "tab",
-        "label": "Access Control",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "235c2ad5.2abe8e",
-        "type": "tab",
-        "label": "Telegram Bot",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "66899f78.ccef5",
-        "type": "subflow",
-        "name": "Open doors for 10 seconds",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 60,
-                "y": 120,
-                "wires": [
-                    {
-                        "id": "14395c5c.ef7a44"
-                    }
-                ]
-            }
-        ],
-        "out": [
-            {
-                "x": 840,
-                "y": 360,
-                "wires": [
-                    {
-                        "id": "db1f52f8.2b3318",
-                        "port": 0
-                    }
-                ]
-            }
-        ],
-        "env": [],
-        "color": "#DDAA99"
-    },
-    {
-        "id": "5fdbdfda.c7682",
-        "type": "subflow",
-        "name": "Control Aquarium Lock",
-        "info": "# Control Aquarium Lock\nThis subflow controls the aquarium lock state (magnetic lock on the external door).\n\n## Input\nReceives \"True\" and \"False\" as strings.\n\n    - **True** — Locks the door\n    - **False** — Unlocks the door",
-        "category": "",
-        "in": [
-            {
-                "x": 100,
-                "y": 220,
-                "wires": [
-                    {
-                        "id": "1c258d13.43e2c3"
-                    }
-                ]
-            }
-        ],
-        "out": [],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99",
-        "inputLabels": [
-            "State"
-        ]
-    },
-    {
-        "id": "b3eeeca4.5051b",
-        "type": "subflow",
-        "name": "Open Red Door",
-        "info": "Open Red Door\n=====\nThis subflows unlocks the Red Door's electromechanical lock.\n\n**Notice:** due to the architecture of this lock, it canno't be closed without direct physical iteraction, i.e. you can close it only IRL.",
-        "category": "",
-        "in": [
-            {
-                "x": 120,
-                "y": 160,
-                "wires": [
-                    {
-                        "id": "9e0a2bca.d844b8"
-                    }
-                ]
-            }
-        ],
-        "out": [],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99"
-    },
-    {
-        "id": "81da57ea.a83d2",
-        "type": "subflow",
-        "name": "Control Portal Panel Indicator",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 60,
-                "y": 260,
-                "wires": [
-                    {
-                        "id": "486e7e18.6e66b"
-                    }
-                ]
-            }
-        ],
-        "out": [],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99",
-        "icon": "node-red/light.svg"
-    },
-    {
-        "id": "aefaaeba.b6c3e",
-        "type": "subflow",
-        "name": "Blink Aquarium Spotlight",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 80,
-                "y": 180,
-                "wires": [
-                    {
-                        "id": "38ae88a6.eb3738"
-                    }
-                ]
-            }
-        ],
-        "out": [
-            {
-                "x": 780,
-                "y": 180,
-                "wires": [
-                    {
-                        "id": "7fb187b8.40afc",
-                        "port": 0
-                    }
-                ]
-            }
-        ],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99",
-        "icon": "node-red/light.svg"
-    },
-    {
-        "id": "bd2beaba.a84ee8",
-        "type": "subflow",
-        "name": "Log payload into BKSP logfile",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 60,
-                "y": 160,
-                "wires": [
-                    {
-                        "id": "e5a81c05.c8f1e"
-                    }
-                ]
-            }
-        ],
-        "out": [],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99"
-    },
-    {
-        "id": "c071b0b7.e8c2c",
-        "type": "subflow",
-        "name": "Control Left Sockets",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 40,
-                "y": 80,
-                "wires": [
-                    {
-                        "id": "a3ab81a2.ae3b18"
-                    }
-                ]
-            }
-        ],
-        "out": [],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99"
-    },
-    {
-        "id": "26622623.6fb4fa",
-        "type": "subflow",
-        "name": "Control Right Socket",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 40,
-                "y": 80,
-                "wires": [
-                    {
-                        "id": "374a8c7f.528bc4"
-                    }
-                ]
-            }
-        ],
-        "out": [],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99"
-    },
-    {
-        "id": "665b57f6.ada5f8",
-        "type": "subflow",
-        "name": "0/1 to True/False",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 40,
-                "y": 40,
-                "wires": [
-                    {
-                        "id": "8fd799e1.dc2408"
-                    }
-                ]
-            }
-        ],
-        "out": [
-            {
-                "x": 480,
-                "y": 40,
-                "wires": [
-                    {
-                        "id": "8fd799e1.dc2408",
-                        "port": 0
-                    }
-                ]
-            }
-        ],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99"
-    },
-    {
-        "id": "42ea986b.5d61d",
-        "type": "subflow",
-        "name": "True/False to 1/0",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 40,
-                "y": 40,
-                "wires": [
-                    {
-                        "id": "e55e5218.91d2f8"
-                    }
-                ]
-            }
-        ],
-        "out": [
-            {
-                "x": 480,
-                "y": 40,
-                "wires": [
-                    {
-                        "id": "e55e5218.91d2f8",
-                        "port": 0
-                    }
-                ]
-            }
-        ],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99"
-    },
-    {
-        "id": "98516876.753508",
-        "type": "subflow",
-        "name": "Routine: open doors for member",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 60,
-                "y": 60,
-                "wires": [
-                    {
-                        "id": "23d86dfc.1217aa"
-                    },
-                    {
-                        "id": "7ba1c964.59dc28"
-                    },
-                    {
-                        "id": "3d2ac0a1.5011c"
-                    }
-                ]
-            }
-        ],
-        "out": [
-            {
-                "x": 860,
-                "y": 60,
-                "wires": [
-                    {
-                        "id": "52cbae91.521f88",
-                        "port": 0
-                    }
-                ]
-            }
-        ],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99",
-        "inputLabels": [
-            "Member's tag/card name"
-        ],
-        "outputLabels": [
-            "Triggered, after doors will be closed"
-        ]
-    },
-    {
-        "id": "12539a43.97344e",
-        "type": "mqtt-broker",
-        "name": "Corleone",
-        "broker": "127.0.0.1",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "sessionExpiry": ""
-    },
-    {
-        "id": "a06f06f2.159d08",
-        "type": "mqtt in",
-        "z": "3f4159ea.cdc276",
-        "name": "Presence Switch",
-        "topic": "modbus/endpointpp/state/presence_switch",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "12539a43.97344e",
-        "nl": false,
-        "rap": false,
-        "rh": "0",
-        "x": 120,
-        "y": 120,
-        "wires": [
-            [
-                "4d66ed76.feec04",
-                "39c830d.06693d",
-                "4cd18294.a52114",
-                "ce61abf7.03b408"
-            ]
-        ],
-        "outputLabels": [
-            "Presence"
-        ],
-        "icon": "font-awesome/fa-arrow-circle-right"
-    },
-    {
-        "id": "825dfc66.622e08",
-        "type": "mqtt in",
-        "z": "3f4159ea.cdc276",
-        "name": "Portal Red Button",
-        "topic": "modbus/endpointpp/state/portal_red_button",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "12539a43.97344e",
-        "nl": false,
-        "rap": false,
-        "x": 120,
-        "y": 460,
-        "wires": [
-            [
-                "4b3547e5.2a7f4"
-            ]
-        ],
-        "icon": "font-awesome/fa-arrow-circle-right"
-    },
-    {
-        "id": "a971a3df.581b18",
-        "type": "comment",
-        "z": "3f4159ea.cdc276",
-        "name": "Opening doors with red button",
-        "info": "",
-        "x": 160,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "4b3547e5.2a7f4",
-        "type": "switch",
-        "z": "3f4159ea.cdc276",
-        "name": "Filter button press event",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "True",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 370,
-        "y": 460,
-        "wires": [
-            [
-                "56d79bcc.7ed6c4",
-                "1d7d9c6f.939adc"
-            ]
-        ]
     },
     {
         "id": "623c46d.386b9b8",
@@ -535,429 +89,6 @@
         "info": "",
         "x": 140,
         "y": 60,
-        "wires": []
-    },
-    {
-        "id": "ad721374.d2f5",
-        "type": "mqtt in",
-        "z": "b99cea79.040428",
-        "name": "Scanned tag UID",
-        "topic": "modbus/rfid/state/uid",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "12539a43.97344e",
-        "nl": false,
-        "rap": false,
-        "x": 140,
-        "y": 340,
-        "wires": [
-            [
-                "6e538027.bba2b8"
-            ]
-        ]
-    },
-    {
-        "id": "a3a6a1bd.05c3e8",
-        "type": "function",
-        "z": "b99cea79.040428",
-        "name": "Verify UID across members database",
-        "func": "// Getting member name by UID from the flow's \"tags\" map\nconst member = flow.get('tags').get(msg.payload.toLowerCase());\n\n// Terminate flow if UID is not found in members database\nif (!member)\n    return null;\n    \n// Otherwise, return member name and continue the flow\nmsg.payload = member;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 670,
-        "y": 340,
-        "wires": [
-            [
-                "b869eea7.e76288",
-                "7d1145e1.4e491c",
-                "e682e85c.3552a8"
-            ]
-        ]
-    },
-    {
-        "id": "6f816413.c1f19c",
-        "type": "mqtt out",
-        "z": "66899f78.ccef5",
-        "name": "Opening entrance door lock",
-        "topic": "bus/devices/portal.reddoor/lock/set",
-        "qos": "",
-        "retain": "",
-        "broker": "12539a43.97344e",
-        "x": 520,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "db1f52f8.2b3318",
-        "type": "change",
-        "z": "66899f78.ccef5",
-        "name": "Set state to \"Close\"",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "True",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 670,
-        "y": 300,
-        "wires": [
-            [
-                "74f0e7d9.8028e8"
-            ]
-        ]
-    },
-    {
-        "id": "f3ba5c83.673888",
-        "type": "delay",
-        "z": "66899f78.ccef5",
-        "name": "Wait 10s",
-        "pauseType": "delay",
-        "timeout": "10",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 460,
-        "y": 300,
-        "wires": [
-            [
-                "db1f52f8.2b3318"
-            ]
-        ]
-    },
-    {
-        "id": "56d79bcc.7ed6c4",
-        "type": "subflow:66899f78.ccef5",
-        "z": "3f4159ea.cdc276",
-        "name": "",
-        "env": [],
-        "x": 700,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9e4e4e8a.a8cf1",
-        "type": "comment",
-        "z": "b99cea79.040428",
-        "name": "(Old reader) Open doors when registerd RFID tag is bringed up to reader",
-        "info": "",
-        "x": 320,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "50e518a7.cc392",
-        "type": "subflow:66899f78.ccef5",
-        "z": "b99cea79.040428",
-        "name": "",
-        "env": [],
-        "x": 1280,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b869eea7.e76288",
-        "type": "debug",
-        "z": "b99cea79.040428",
-        "name": "Log door open for member",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "'Opening doors for: ' & payload",
-        "targetType": "jsonata",
-        "statusVal": "'Opening doors for: ' & payload",
-        "statusType": "auto",
-        "x": 1020,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "6e538027.bba2b8",
-        "type": "switch",
-        "z": "b99cea79.040428",
-        "name": "Filter \"No Card\" value",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "0000000000000000000000000000000000000000",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 370,
-        "y": 340,
-        "wires": [
-            [
-                "a3a6a1bd.05c3e8",
-                "23a549.19e202b8"
-            ]
-        ]
-    },
-    {
-        "id": "685e059a.7586f4",
-        "type": "file in",
-        "z": "b99cea79.040428",
-        "name": "Read ids.txt.automation file",
-        "filename": "/home/acs/app/config/ids.txt.automation",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "utf8",
-        "x": 620,
-        "y": 140,
-        "wires": [
-            [
-                "38f512e1.ef8af6",
-                "31e8533f.3ca60c"
-            ]
-        ]
-    },
-    {
-        "id": "d73748ac.683bb",
-        "type": "watch",
-        "z": "b99cea79.040428",
-        "name": "Watch ids.txt.automation for changes",
-        "files": "/home/acs/app/config/ids.txt.automation",
-        "recursive": "",
-        "x": 200,
-        "y": 140,
-        "wires": [
-            [
-                "685e059a.7586f4"
-            ]
-        ]
-    },
-    {
-        "id": "38f512e1.ef8af6",
-        "type": "function",
-        "z": "b99cea79.040428",
-        "name": "Update tags database",
-        "func": "// Extract entries for payload\nconst uids = msg.payload\n\n    // Split CSV to lines\n    .split('\\n')\n    \n    // Filter empty lines\n    // Both UID and member name cannot be shorter than one character\n    .filter(entry => entry.length > 2)\n    \n    // Split each line into \"[UID, Member]\"\n    .map(entry => entry.toLowerCase().split(','));\n\n// Create a map out of parsed UID-member pairs\n// Then, commit created Map to flow namespace as \"tags\"\nflow.set('tags', new Map(uids));",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 880,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f8a0d2ca.0bbba",
-        "type": "comment",
-        "z": "b99cea79.040428",
-        "name": "Read and update tags database on change",
-        "info": "",
-        "x": 220,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "6206fc20.58509c",
-        "type": "inject",
-        "z": "b99cea79.040428",
-        "name": "Forcefully trigger ids.txt.automation file read on start",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "",
-        "topic": "",
-        "x": 260,
-        "y": 180,
-        "wires": [
-            [
-                "685e059a.7586f4"
-            ]
-        ]
-    },
-    {
-        "id": "14395c5c.ef7a44",
-        "type": "change",
-        "z": "66899f78.ccef5",
-        "name": "Set state to \"Open\"",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "False",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 210,
-        "y": 120,
-        "wires": [
-            [
-                "6f816413.c1f19c",
-                "f3ba5c83.673888",
-                "8696204a.b59328",
-                "64db87ef.287cc8"
-            ]
-        ]
-    },
-    {
-        "id": "19363649.6bc252",
-        "type": "comment",
-        "z": "66899f78.ccef5",
-        "name": "Open entrace doors, then closes them in 10 seconds",
-        "info": "",
-        "x": 230,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "14c881ab.baf806",
-        "type": "mqtt in",
-        "z": "235c2ad5.2abe8e",
-        "name": "Command from Telegram",
-        "topic": "bus/telegram/command",
-        "qos": "0",
-        "datatype": "utf8",
-        "broker": "12539a43.97344e",
-        "nl": false,
-        "rap": false,
-        "x": 170,
-        "y": 100,
-        "wires": [
-            [
-                "a2226804.106bc"
-            ]
-        ]
-    },
-    {
-        "id": "262f997a.be69fe",
-        "type": "switch",
-        "z": "235c2ad5.2abe8e",
-        "name": "Routing different commands",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "open_doors",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 660,
-        "y": 100,
-        "wires": [
-            [
-                "c154721b.a582c",
-                "e0fdfecd.7ebf2",
-                "2d7770a0.57c22"
-            ]
-        ],
-        "inputLabels": [
-            "Message"
-        ],
-        "outputLabels": [
-            "Open entrance doors (open_doors)"
-        ]
-    },
-    {
-        "id": "fae64045.000328",
-        "type": "subflow:66899f78.ccef5",
-        "z": "235c2ad5.2abe8e",
-        "name": "",
-        "x": 1240,
-        "y": 100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "abddaab6.ade1f",
-        "type": "comment",
-        "z": "235c2ad5.2abe8e",
-        "name": "Open doors",
-        "info": "",
-        "x": 930,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "c154721b.a582c",
-        "type": "debug",
-        "z": "235c2ad5.2abe8e",
-        "name": "Log entry",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "'Doors opening initiated from Telegram'",
-        "targetType": "jsonata",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 920,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "23a549.19e202b8",
-        "type": "debug",
-        "z": "b99cea79.040428",
-        "name": "Log UID",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "'Tag found: ' & payload",
-        "targetType": "jsonata",
-        "statusVal": "'Tag found: ' & payload",
-        "statusType": "auto",
-        "x": 580,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "31e8533f.3ca60c",
-        "type": "debug",
-        "z": "b99cea79.040428",
-        "name": "Log database reload",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "'Reloaded \"tags\" database'",
-        "targetType": "jsonata",
-        "statusVal": "'Reloaded \"tags\" database'",
-        "statusType": "auto",
-        "x": 880,
-        "y": 180,
         "wires": []
     },
     {
@@ -1139,498 +270,6 @@
         ]
     },
     {
-        "id": "209f0a34.afb0b6",
-        "type": "mqtt in",
-        "z": "3f4159ea.cdc276",
-        "name": "Portable Button event",
-        "topic": "bus/devices/opener.button/event",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "12539a43.97344e",
-        "nl": false,
-        "rap": false,
-        "x": 140,
-        "y": 660,
-        "wires": [
-            [
-                "92926308.5c06a8"
-            ]
-        ],
-        "icon": "font-awesome/fa-arrow-circle-right"
-    },
-    {
-        "id": "37e2034b.da8c5c",
-        "type": "comment",
-        "z": "3f4159ea.cdc276",
-        "name": "Opening doors by portable button",
-        "info": "",
-        "x": 170,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "92926308.5c06a8",
-        "type": "switch",
-        "z": "3f4159ea.cdc276",
-        "name": "Filter button press event",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "down",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 370,
-        "y": 660,
-        "wires": [
-            [
-                "56d79bcc.7ed6c4",
-                "b79bfebd.ed9ec"
-            ]
-        ]
-    },
-    {
-        "id": "1f75c478.f7abfc",
-        "type": "mqtt out",
-        "z": "5fdbdfda.c7682",
-        "name": "Aquarium Lock",
-        "topic": "modbus/endpointpp/set/aquarium_door_lock",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "12539a43.97344e",
-        "x": 700,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "1c258d13.43e2c3",
-        "type": "switch",
-        "z": "5fdbdfda.c7682",
-        "name": "Filter valid input values",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "True",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "False",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 260,
-        "y": 220,
-        "wires": [
-            [
-                "1f75c478.f7abfc"
-            ],
-            [
-                "1f75c478.f7abfc"
-            ]
-        ]
-    },
-    {
-        "id": "aa6f77ce.e75eb",
-        "type": "comment",
-        "z": "5fdbdfda.c7682",
-        "name": "Filtering only valid input values via this switch",
-        "info": "Currently, this block ",
-        "x": 330,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "8696204a.b59328",
-        "type": "subflow:5fdbdfda.c7682",
-        "z": "66899f78.ccef5",
-        "name": "",
-        "x": 500,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "74f0e7d9.8028e8",
-        "type": "subflow:5fdbdfda.c7682",
-        "z": "66899f78.ccef5",
-        "name": "",
-        "x": 920,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "d9fe22d2.fa203",
-        "type": "delay",
-        "z": "b3eeeca4.5051b",
-        "name": "Waiting 500ms for solenoid to open",
-        "pauseType": "delay",
-        "timeout": "500",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 520,
-        "y": 200,
-        "wires": [
-            [
-                "c1e75d7.fba932"
-            ]
-        ]
-    },
-    {
-        "id": "c1e75d7.fba932",
-        "type": "change",
-        "z": "b3eeeca4.5051b",
-        "name": "Turn Off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "False",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 740,
-        "y": 200,
-        "wires": [
-            [
-                "9ca4187d.8d7ca"
-            ]
-        ]
-    },
-    {
-        "id": "9ca4187d.8d7ca",
-        "type": "mqtt out",
-        "z": "b3eeeca4.5051b",
-        "name": "Solenoid",
-        "topic": "modbus/endpointpp/set/red_door_lock",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "12539a43.97344e",
-        "x": 900,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "9e0a2bca.d844b8",
-        "type": "change",
-        "z": "b3eeeca4.5051b",
-        "name": "Set state to \"Open\"",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "True",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 250,
-        "y": 160,
-        "wires": [
-            [
-                "d9fe22d2.fa203",
-                "9ca4187d.8d7ca"
-            ]
-        ]
-    },
-    {
-        "id": "681b0b28.6eede4",
-        "type": "comment",
-        "z": "b3eeeca4.5051b",
-        "name": "Mechanical lock opens by powering the unlocking solenoid for 500ms",
-        "info": "",
-        "x": 400,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "64db87ef.287cc8",
-        "type": "subflow:b3eeeca4.5051b",
-        "z": "66899f78.ccef5",
-        "name": "",
-        "x": 480,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "95ba6848.7b6668",
-        "type": "mqtt out",
-        "z": "81da57ea.a83d2",
-        "name": "Portal Indicator",
-        "topic": "modbus/endpointpp/set/portal_red_indicator",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "12539a43.97344e",
-        "x": 500,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "486e7e18.6e66b",
-        "type": "switch",
-        "z": "81da57ea.a83d2",
-        "name": "Filter only valid states",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "True",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "False",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 240,
-        "y": 260,
-        "wires": [
-            [
-                "95ba6848.7b6668"
-            ],
-            [
-                "95ba6848.7b6668"
-            ]
-        ]
-    },
-    {
-        "id": "4cd18294.a52114",
-        "type": "subflow:81da57ea.a83d2",
-        "z": "3f4159ea.cdc276",
-        "name": "",
-        "env": [],
-        "x": 490,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "a2226804.106bc",
-        "type": "function",
-        "z": "235c2ad5.2abe8e",
-        "name": "Empty retained messages",
-        "func": "/**\n * Функция зануляет (опустошает) msg.payload\n * если пакет был принят раньше чем через тридцать секунд\n * после запуска флоу\n */\nif ((Date.now() - context.get('startedAt')) < 30000)\n    msg.payload = '';\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "context.set('startedAt', Date.now());",
-        "finalize": "",
-        "libs": [],
-        "x": 410,
-        "y": 100,
-        "wires": [
-            [
-                "262f997a.be69fe"
-            ]
-        ]
-    },
-    {
-        "id": "f8c0dffa.dec4a8",
-        "type": "comment",
-        "z": "3f4159ea.cdc276",
-        "name": "Handle the presence switch",
-        "info": "",
-        "x": 160,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "c22df96d.7675a",
-        "type": "comment",
-        "z": "3f4159ea.cdc276",
-        "name": "Open aquarium door by aquarium button",
-        "info": "",
-        "x": 200,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "b5f61a3.a34a668",
-        "type": "mqtt in",
-        "z": "3f4159ea.cdc276",
-        "name": "Aquarium Button",
-        "topic": "modbus/endpointpp/state/aquarium_button",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "12539a43.97344e",
-        "nl": false,
-        "rap": false,
-        "x": 120,
-        "y": 800,
-        "wires": [
-            [
-                "1066c953.09fb87"
-            ]
-        ],
-        "icon": "font-awesome/fa-arrow-circle-right"
-    },
-    {
-        "id": "1066c953.09fb87",
-        "type": "switch",
-        "z": "3f4159ea.cdc276",
-        "name": "Filter button press event",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "False",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 370,
-        "y": 800,
-        "wires": [
-            [
-                "647495b2.e17cec",
-                "91949850.5c06f",
-                "a257c60d.e106f"
-            ]
-        ]
-    },
-    {
-        "id": "ad625aa5.95546",
-        "type": "subflow:5fdbdfda.c7682",
-        "z": "3f4159ea.cdc276",
-        "name": "",
-        "x": 780,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "647495b2.e17cec",
-        "type": "change",
-        "z": "3f4159ea.cdc276",
-        "name": "Open",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "False",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 590,
-        "y": 800,
-        "wires": [
-            [
-                "ad625aa5.95546"
-            ]
-        ]
-    },
-    {
-        "id": "91949850.5c06f",
-        "type": "delay",
-        "z": "3f4159ea.cdc276",
-        "name": "Wait for 5s",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 610,
-        "y": 860,
-        "wires": [
-            [
-                "318f6342.f1aabc"
-            ]
-        ]
-    },
-    {
-        "id": "318f6342.f1aabc",
-        "type": "change",
-        "z": "3f4159ea.cdc276",
-        "name": "Close",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "True",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 770,
-        "y": 860,
-        "wires": [
-            [
-                "9b352ba8.1d4168"
-            ]
-        ]
-    },
-    {
-        "id": "9b352ba8.1d4168",
-        "type": "subflow:5fdbdfda.c7682",
-        "z": "3f4159ea.cdc276",
-        "name": "",
-        "x": 960,
-        "y": 860,
-        "wires": []
-    },
-    {
         "id": "7e78b9f9.6e8ab",
         "type": "mqtt in",
         "z": "8d261cdd.c349c8",
@@ -1650,11 +289,37 @@
         ]
     },
     {
-        "id": "d944584b.2fb688",
+        "id": "f7d8ebe2.7bcf58",
+        "type": "mqtt in",
+        "z": "8d261cdd.c349c8",
+        "name": "",
+        "topic": "modbus/endpointint/state/hack_light_switch",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "12539a43.97344e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 270,
+        "y": 600,
+        "wires": [
+            [
+                "ed941f22.8f23c",
+                "363385d8.80fbca",
+                "30cc856a.728f2a",
+                "ed24f9e9.90c4c8",
+                "dc644ca5.48a56",
+                "5cba3660.6d1378",
+                "d8afd16e.33b86"
+            ]
+        ]
+    },
+    {
+        "id": "ed941f22.8f23c",
         "type": "mqtt out",
-        "z": "aefaaeba.b6c3e",
-        "name": "Spotlight in Aquarium",
-        "topic": "modbus/endpointpp/set/aquarium_light",
+        "z": "8d261cdd.c349c8",
+        "name": "Hack light",
+        "topic": "modbus/endpointint/set/hack_light",
         "qos": "",
         "retain": "",
         "respTopic": "",
@@ -1663,1376 +328,337 @@
         "correl": "",
         "expiry": "",
         "broker": "12539a43.97344e",
-        "x": 620,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "38ae88a6.eb3738",
-        "type": "change",
-        "z": "aefaaeba.b6c3e",
-        "name": "Turn ON",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "True",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 180,
-        "y": 180,
-        "wires": [
-            [
-                "d944584b.2fb688",
-                "f714bff0.601f68"
-            ]
-        ]
-    },
-    {
-        "id": "f714bff0.601f68",
-        "type": "delay",
-        "z": "aefaaeba.b6c3e",
-        "name": "Wait 0.35s",
-        "pauseType": "delay",
-        "timeout": "350",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 390,
-        "y": 180,
-        "wires": [
-            [
-                "7fb187b8.40afc"
-            ]
-        ]
-    },
-    {
-        "id": "7fb187b8.40afc",
-        "type": "change",
-        "z": "aefaaeba.b6c3e",
-        "name": "Turn OFF",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "False",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 540,
-        "y": 180,
-        "wires": [
-            [
-                "d944584b.2fb688"
-            ]
-        ]
-    },
-    {
-        "id": "7d1145e1.4e491c",
-        "type": "subflow:aefaaeba.b6c3e",
-        "z": "b99cea79.040428",
-        "name": "",
-        "x": 1010,
-        "y": 340,
-        "wires": [
-            [
-                "50e518a7.cc392"
-            ]
-        ]
-    },
-    {
-        "id": "e0fdfecd.7ebf2",
-        "type": "subflow:aefaaeba.b6c3e",
-        "z": "235c2ad5.2abe8e",
-        "name": "",
-        "x": 970,
-        "y": 100,
-        "wires": [
-            [
-                "fae64045.000328"
-            ]
-        ]
-    },
-    {
-        "id": "e682e85c.3552a8",
-        "type": "change",
-        "z": "b99cea79.040428",
-        "name": "Log RFID identification",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "'Opening doors for: ' & payload",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1000,
-        "y": 420,
-        "wires": [
-            [
-                "749958ee.36b67"
-            ]
-        ]
-    },
-    {
-        "id": "e5a81c05.c8f1e",
-        "type": "function",
-        "z": "bd2beaba.a84ee8",
-        "name": "Add timestamp to payload",
-        "func": "msg.payload = `[${new Date().toISOString()}] ${msg.payload}`;\nreturn msg",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 230,
-        "y": 160,
-        "wires": [
-            [
-                "eb0ee375.eb6208"
-            ]
-        ]
-    },
-    {
-        "id": "eb0ee375.eb6208",
-        "type": "file",
-        "z": "bd2beaba.a84ee8",
-        "name": "Write to bksp.log",
-        "filename": "/home/acs/app/log/bksp.log",
-        "appendNewline": true,
-        "createDir": true,
-        "overwriteFile": "false",
-        "encoding": "none",
-        "x": 470,
-        "y": 160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "749958ee.36b67",
-        "type": "subflow:bd2beaba.a84ee8",
-        "z": "b99cea79.040428",
-        "name": "",
-        "x": 1260,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "2d7770a0.57c22",
-        "type": "change",
-        "z": "235c2ad5.2abe8e",
-        "name": "Log Marvin action",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Opening doors via Telegram",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 950,
-        "y": 220,
-        "wires": [
-            [
-                "7457758b.137014"
-            ]
-        ]
-    },
-    {
-        "id": "7457758b.137014",
-        "type": "subflow:bd2beaba.a84ee8",
-        "z": "235c2ad5.2abe8e",
-        "name": "",
-        "x": 1200,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "a257c60d.e106f",
-        "type": "change",
-        "z": "3f4159ea.cdc276",
-        "name": "Log aquarium door action",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Opening Aquarium door by Aquarium button",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 650,
-        "y": 920,
-        "wires": [
-            [
-                "57e85406.1dfadc"
-            ]
-        ]
-    },
-    {
-        "id": "57e85406.1dfadc",
-        "type": "subflow:bd2beaba.a84ee8",
-        "z": "3f4159ea.cdc276",
-        "name": "",
-        "x": 920,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "b79bfebd.ed9ec",
-        "type": "change",
-        "z": "3f4159ea.cdc276",
-        "name": "Log Portable Button usage",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Opening doors by Portable Button",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 700,
-        "y": 660,
-        "wires": [
-            [
-                "1d55ff38.339ba9"
-            ]
-        ]
-    },
-    {
-        "id": "1d55ff38.339ba9",
-        "type": "subflow:bd2beaba.a84ee8",
-        "z": "3f4159ea.cdc276",
-        "name": "",
-        "x": 980,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "1d7d9c6f.939adc",
-        "type": "change",
-        "z": "3f4159ea.cdc276",
-        "name": "Log Red Button usage",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Opening doors by Red Button",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 680,
-        "y": 520,
-        "wires": [
-            [
-                "70b27c84.3061ec"
-            ]
-        ]
-    },
-    {
-        "id": "70b27c84.3061ec",
-        "type": "subflow:bd2beaba.a84ee8",
-        "z": "3f4159ea.cdc276",
-        "name": "",
-        "x": 980,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "c2ac31f0.b686b8",
-        "type": "change",
-        "z": "3f4159ea.cdc276",
-        "name": "Turn Off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "False",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 320,
-        "y": 1060,
-        "wires": [
-            [
-                "4fd2723c.3ca984"
-            ]
-        ]
-    },
-    {
-        "id": "4fd2723c.3ca984",
-        "type": "mqtt out",
-        "z": "3f4159ea.cdc276",
-        "name": "Solenoid",
-        "topic": "modbus/endpointpp/set/red_door_lock",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "12539a43.97344e",
-        "x": 480,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "fb6109a7.b19348",
-        "type": "inject",
-        "z": "3f4159ea.cdc276",
-        "name": "Trigger each 1s",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "0",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 1060,
-        "wires": [
-            [
-                "c2ac31f0.b686b8"
-            ]
-        ]
-    },
-    {
-        "id": "680eb360.cba7ac",
-        "type": "comment",
-        "z": "3f4159ea.cdc276",
-        "name": "Disengage unlock pin solenoid each 1s to avoid overheating",
-        "info": "",
-        "x": 260,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "4d66ed76.feec04",
-        "type": "change",
-        "z": "3f4159ea.cdc276",
-        "name": "Log Presence Switch change",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "'Changed Presence Switch to: ' & (payload = 'True' ? 'Open' : 'Closed' )",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 480,
-        "y": 120,
-        "wires": [
-            [
-                "28cf8a6e.dacb06"
-            ]
-        ]
-    },
-    {
-        "id": "28cf8a6e.dacb06",
-        "type": "subflow:bd2beaba.a84ee8",
-        "z": "3f4159ea.cdc276",
-        "name": "",
-        "x": 760,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "7c22efbb.233fe",
-        "type": "mqtt out",
-        "z": "c071b0b7.e8c2c",
-        "name": "Left Sockets contactor",
-        "topic": "modbus/endpointpp/set/socket_left",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "12539a43.97344e",
-        "x": 720,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "a3ab81a2.ae3b18",
-        "type": "switch",
-        "z": "c071b0b7.e8c2c",
-        "name": "Filter valid input values",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "True",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "False",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 260,
-        "y": 80,
-        "wires": [
-            [
-                "7c22efbb.233fe"
-            ],
-            [
-                "7c22efbb.233fe"
-            ]
-        ]
-    },
-    {
-        "id": "b3c06800.883a68",
-        "type": "comment",
-        "z": "c071b0b7.e8c2c",
-        "name": "Filtering only valid input values via this switch",
-        "info": "Currently, this block ",
-        "x": 330,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "1b41d897.3e055f",
-        "type": "mqtt out",
-        "z": "26622623.6fb4fa",
-        "name": "Right Sockets contactor",
-        "topic": "modbus/endpointpp/set/socket_right",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "12539a43.97344e",
-        "x": 730,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "374a8c7f.528bc4",
-        "type": "switch",
-        "z": "26622623.6fb4fa",
-        "name": "Filter valid input values",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "True",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "False",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 260,
-        "y": 80,
-        "wires": [
-            [
-                "1b41d897.3e055f"
-            ],
-            [
-                "1b41d897.3e055f"
-            ]
-        ]
-    },
-    {
-        "id": "46c5f6e6.12c848",
-        "type": "comment",
-        "z": "26622623.6fb4fa",
-        "name": "Filtering only valid input values via this switch",
-        "info": "Currently, this block ",
-        "x": 330,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "8fd799e1.dc2408",
-        "type": "change",
-        "z": "665b57f6.ada5f8",
-        "name": "Convert True to \"1\", everything else to \"0\"",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "msg.payload = \"1\" ? \"True\" : \"False\"",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 260,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e55e5218.91d2f8",
-        "type": "change",
-        "z": "42ea986b.5d61d",
-        "name": "Convert \"1\" to True, everything else to \"0\"",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "msg.payload = \"True\" ? \"1\" : \"0\"",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 260,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ce61abf7.03b408",
-        "type": "subflow:c071b0b7.e8c2c",
-        "z": "3f4159ea.cdc276",
-        "name": "",
-        "x": 450,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "4529a4fc.0676bc",
-        "type": "subflow:26622623.6fb4fa",
-        "z": "3f4159ea.cdc276",
-        "name": "",
-        "x": 1030,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "39c830d.06693d",
-        "type": "switch",
-        "z": "3f4159ea.cdc276",
-        "name": "Route \"Right Contactor ON\" to delayed path",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "False",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "True",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 530,
-        "y": 300,
-        "wires": [
-            [
-                "4529a4fc.0676bc"
-            ],
-            [
-                "b654bd05.04b08"
-            ]
-        ]
-    },
-    {
-        "id": "b654bd05.04b08",
-        "type": "delay",
-        "z": "3f4159ea.cdc276",
-        "name": "Delay 2s",
-        "pauseType": "delay",
-        "timeout": "2",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "2",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 820,
-        "y": 340,
-        "wires": [
-            [
-                "4529a4fc.0676bc"
-            ]
-        ]
-    },
-    {
-        "id": "e64770b9.491ff8",
-        "type": "comment",
-        "z": "3f4159ea.cdc276",
-        "name": "Delay on right contactor to avoid overloading general circuit breaker",
-        "info": "",
         "x": 600,
-        "y": 260,
+        "y": 680,
         "wires": []
     },
     {
-        "id": "14b5c899.62e24f",
-        "type": "mqtt in",
-        "z": "b99cea79.040428",
-        "name": "V2: Scanned UID",
-        "topic": "bus/devices/acs-reader/uid",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "12539a43.97344e",
-        "nl": false,
-        "rap": false,
-        "rh": "0",
-        "x": 140,
-        "y": 940,
-        "wires": [
-            [
-                "d1dd06c4.1e5778"
-            ]
-        ]
-    },
-    {
-        "id": "d1dd06c4.1e5778",
-        "type": "function",
-        "z": "b99cea79.040428",
-        "name": "V2: Verify UID across residents database",
-        "func": "/**\n * Normalize every UID to 7-byte upper case\n * @param {String} uid UID to normalize\n * @returns {String} Normalized UID\n */\nconst normalizeUid = uid => {\n    \n    if (uid.length === 0 || uid.length > 14)\n        return null;\n    \n    if (uid.length === 14)\n        return uid.toUpperCase();\n        \n    const paddingSize = 14 - uid.length;\n    return uid.toUpperCase().concat(('0').repeat(paddingSize));\n    \n};\n\n// Getting member name by UID from the flow's \"acs-uid\" index\nconst member = flow.get('acs-uid').get(normalizeUid(msg.payload));\n\n// Terminate flow if UID is not found in members database\nif (!member)\n    return null;\n    \n// Otherwise, return member name and continue the flow\nmsg.payload = member;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 420,
-        "y": 940,
-        "wires": [
-            [
-                "887f9fa.667d2e"
-            ]
-        ]
-    },
-    {
-        "id": "7144b2c3.4408fc",
-        "type": "file in",
-        "z": "b99cea79.040428",
-        "name": "Read \"ids.new.txt.automation\"",
-        "filename": "/home/acs/app/config/ids.new.txt.automation",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "utf8",
-        "x": 510,
-        "y": 620,
-        "wires": [
-            [
-                "7c87fd78.ed0614",
-                "437f8bf6.0385ec"
-            ]
-        ]
-    },
-    {
-        "id": "58d17422.57ec54",
-        "type": "watch",
-        "z": "b99cea79.040428",
-        "name": "Detect UIDs database changes",
-        "files": "/home/acs/app/config/ids.new.txt.automation",
-        "recursive": "",
-        "x": 190,
-        "y": 620,
-        "wires": [
-            [
-                "7144b2c3.4408fc"
-            ]
-        ]
-    },
-    {
-        "id": "7c87fd78.ed0614",
-        "type": "function",
-        "z": "b99cea79.040428",
-        "name": "Update tags database",
-        "func": "/**\n * Normalize every UID to 7-byte upper case\n * @param {String} uid UID to normalize\n * @returns {String} Normalized UID\n */\nconst normalizeUid = uid => {\n    \n    if (uid.length === 0 || uid.length > 14)\n        return null;\n    \n    if (uid.length === 14)\n        return uid.toUpperCase();\n        \n    const paddingSize = 14 - uid.length;\n    return uid.toUpperCase().concat(('0').repeat(paddingSize));\n    \n};\n\n// Extract entries for payload\nconst uids = msg.payload\n\n    // Split CSV to lines\n    .split('\\n')\n    \n    // Filter empty lines\n    // Both UID and member name cannot be shorter than one character\n    .filter(entry => entry.length > 2)\n    \n    // Split each line into \"[UID, Member]\"\n    .map(entry => entry.split(','))\n    \n    // Normalize UID (7-byte HEX upper-case with '0' padding)\n    .map(([uid, name]) => [normalizeUid(uid), name]);\n\n// Create a map out of parsed UID-member pairs\n// Then, commit created Map to flow namespace as \"tags\"\nflow.set('acs-uid', new Map(uids));",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 800,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e3ed8146.c19cc",
-        "type": "comment",
-        "z": "b99cea79.040428",
-        "name": "Read and update tags database on change",
-        "info": "",
-        "x": 230,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "a376dc3e.306fb",
-        "type": "inject",
-        "z": "b99cea79.040428",
-        "name": "Trigger UID database fetch on load",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "",
-        "topic": "",
-        "x": 200,
-        "y": 660,
-        "wires": [
-            [
-                "7144b2c3.4408fc"
-            ]
-        ]
-    },
-    {
-        "id": "437f8bf6.0385ec",
+        "id": "cf9b3211.ab41b",
         "type": "debug",
-        "z": "b99cea79.040428",
-        "name": "Log database reload",
+        "z": "8d261cdd.c349c8",
+        "name": "",
         "active": true,
         "tosidebar": true,
         "console": false,
-        "tostatus": true,
-        "complete": "'Reloaded \"V2 UIDs\" database'",
-        "targetType": "jsonata",
-        "statusVal": "'Reloaded \"tags\" database'",
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "420e3acf.38890c",
-        "type": "comment",
-        "z": "b99cea79.040428",
-        "name": "Reader Gen 2: Indev Phase",
-        "info": "",
-        "x": 180,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "52cbae91.521f88",
-        "type": "subflow:66899f78.ccef5",
-        "z": "98516876.753508",
-        "name": "",
-        "env": [],
-        "x": 560,
-        "y": 60,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7ba1c964.59dc28",
-        "type": "debug",
-        "z": "98516876.753508",
-        "name": "Log door open for member",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "'Opening doors for: ' & payload",
-        "targetType": "jsonata",
-        "statusVal": "'Opening doors for: ' & payload",
-        "statusType": "auto",
-        "x": 300,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "23d86dfc.1217aa",
-        "type": "subflow:aefaaeba.b6c3e",
-        "z": "98516876.753508",
-        "name": "",
-        "x": 290,
-        "y": 60,
-        "wires": [
-            [
-                "52cbae91.521f88"
-            ]
-        ]
-    },
-    {
-        "id": "3d2ac0a1.5011c",
-        "type": "change",
-        "z": "98516876.753508",
-        "name": "Log RFID identification",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "'Opening doors for: ' & payload",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 280,
-        "y": 140,
-        "wires": [
-            [
-                "dcb7eb7.534bc18"
-            ]
-        ]
-    },
-    {
-        "id": "dcb7eb7.534bc18",
-        "type": "subflow:bd2beaba.a84ee8",
-        "z": "98516876.753508",
-        "name": "",
-        "x": 540,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "887f9fa.667d2e",
-        "type": "subflow:98516876.753508",
-        "z": "b99cea79.040428",
-        "name": "",
-        "x": 810,
-        "y": 1000,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4f58306c.271eb",
-        "type": "comment",
-        "z": "b99cea79.040428",
-        "name": "Handle detected UID tags",
-        "info": "",
-        "x": 170,
-        "y": 900,
-        "wires": []
-    },
-    {
-        "id": "9c5f1e1a.02c14",
-        "type": "mqtt in",
-        "z": "b99cea79.040428",
-        "name": "V2: Scanned PAN",
-        "topic": "bus/devices/acs-reader/pan",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "12539a43.97344e",
-        "nl": false,
-        "rap": false,
-        "rh": "0",
-        "x": 150,
-        "y": 1060,
-        "wires": [
-            [
-                "8f3f89c5.2ab46"
-            ]
-        ]
-    },
-    {
-        "id": "8f3f89c5.2ab46",
-        "type": "function",
-        "z": "b99cea79.040428",
-        "name": "V2: Verify PAN across residents database",
-        "func": "// Fetching member from flow's \"acs-pan\" index by PAN\nconst member = flow.get('acs-pan').get(msg.payload);\n\n// Terminate flow if UID is not found in members database\nif (!member)\n    return null;\n    \n// Otherwise, return member name and continue the flow\nmsg.payload = member;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 420,
-        "y": 1060,
-        "wires": [
-            [
-                "887f9fa.667d2e"
-            ]
-        ]
-    },
-    {
-        "id": "57c5ed16.2e57b4",
-        "type": "comment",
-        "z": "b99cea79.040428",
-        "name": "Handle detected cards PANs",
-        "info": "",
-        "x": 180,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "6285e2ff.c3b874",
-        "type": "file in",
-        "z": "b99cea79.040428",
-        "name": "Read \"pan.txt.automation\"",
-        "filename": "/home/acs/app/config/pan.txt.automation",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "utf8",
-        "x": 500,
-        "y": 760,
-        "wires": [
-            [
-                "499453ba.636894",
-                "4ef045c4.c5102c"
-            ]
-        ]
-    },
-    {
-        "id": "2e741baf.0dcb94",
-        "type": "watch",
-        "z": "b99cea79.040428",
-        "name": "Detect PANs database changes",
-        "files": "/home/acs/app/config/pan.txt.automation",
-        "recursive": "",
-        "x": 190,
-        "y": 760,
-        "wires": [
-            [
-                "6285e2ff.c3b874"
-            ]
-        ]
-    },
-    {
-        "id": "499453ba.636894",
-        "type": "function",
-        "z": "b99cea79.040428",
-        "name": "Update PANs database",
-        "func": "const uids = msg.payload\n\n    // Split CSV to lines\n    .split('\\n')\n    \n    // Filter empty lines\n    // Both PAN and member name cannot be shorter than one character\n    .filter(entry => entry.length > 2)\n    \n    // Split each line into \"[PAN, Member]\"\n    .map(entry => entry.split(','));\n\n// Create a map out of parsed UID-member pairs\n// Then, commit created Map to flow namespace as \"tags\"\nflow.set('acs-pan', new Map(uids));",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 810,
-        "y": 760,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3d9548f2.da8418",
-        "type": "comment",
-        "z": "b99cea79.040428",
-        "name": "Read and update cards database on change",
-        "info": "",
-        "x": 230,
+        "x": 1250,
         "y": 720,
         "wires": []
     },
     {
-        "id": "d1c8ea19.5d061",
-        "type": "inject",
-        "z": "b99cea79.040428",
-        "name": "Trigger PAN database fetch on load",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "",
-        "topic": "",
-        "x": 200,
-        "y": 800,
-        "wires": [
-            [
-                "6285e2ff.c3b874"
-            ]
-        ]
+        "id": "ed24f9e9.90c4c8",
+        "type": "mqtt out",
+        "z": "8d261cdd.c349c8",
+        "name": "Yellow traffic",
+        "topic": "modbus/endpointint/set/yellow_traffic",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12539a43.97344e",
+        "x": 610,
+        "y": 580,
+        "wires": []
     },
     {
-        "id": "4ef045c4.c5102c",
-        "type": "debug",
-        "z": "b99cea79.040428",
-        "name": "Log database reload",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "'Reloaded \"V2 PANs\" database'",
-        "targetType": "jsonata",
-        "statusVal": "'Reloaded \"tags\" database'",
-        "statusType": "auto",
-        "x": 800,
+        "id": "30cc856a.728f2a",
+        "type": "mqtt out",
+        "z": "8d261cdd.c349c8",
+        "name": "Red traffic",
+        "topic": "modbus/endpointint/set/red_traffic",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12539a43.97344e",
+        "x": 600,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "363385d8.80fbca",
+        "type": "mqtt out",
+        "z": "8d261cdd.c349c8",
+        "name": "Red light",
+        "topic": "modbus/endpointint/set/red_space_light",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12539a43.97344e",
+        "x": 600,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "7e221e90.61f9c",
+        "type": "mqtt out",
+        "z": "8d261cdd.c349c8",
+        "name": "Microtraffic red",
+        "topic": "bus/devices/traffic-light/green",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12539a43.97344e",
+        "x": 980,
         "y": 800,
         "wires": []
     },
     {
-        "id": "a9cfd4a3.314eb8",
-        "type": "http request",
-        "z": "b99cea79.040428",
-        "name": "Get \"ids.new.txt.automation\" from swynca",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://localhost:19090/v0/ids.txt",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 620,
-        "y": 1180,
+        "id": "dc644ca5.48a56",
+        "type": "change",
+        "z": "8d261cdd.c349c8",
+        "name": "Convert True to \"on\", everything else to \"off\"",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload = \"True\" ? \"on\" : \"off\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 800,
         "wires": [
             [
-                "3f214401.6611ec"
+                "7e221e90.61f9c"
             ]
         ]
     },
     {
-        "id": "9b656eab.ab1018",
-        "type": "http request",
-        "z": "b99cea79.040428",
-        "name": "Get \"ids.txt.automation\" from swynca",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://localhost:19090/v0/legacy_ids.txt",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
+        "id": "5cba3660.6d1378",
+        "type": "mqtt out",
+        "z": "8d261cdd.c349c8",
+        "name": "Green traffic",
+        "topic": "modbus/endpointint/set/green_traffic",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12539a43.97344e",
         "x": 610,
-        "y": 1360,
-        "wires": [
-            [
-                "d1e163dd.32894"
-            ]
-        ]
+        "y": 620,
+        "wires": []
     },
     {
-        "id": "85e2e608.d8eb8",
-        "type": "http request",
-        "z": "b99cea79.040428",
-        "name": "Get \"pan.txt.automation\" from swynca",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://localhost:19090/v0/pan.txt",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 590,
-        "y": 1560,
-        "wires": [
-            [
-                "2a835e9d.e5e3e2"
-            ]
-        ]
-    },
-    {
-        "id": "3f214401.6611ec",
-        "type": "switch",
-        "z": "b99cea79.040428",
-        "name": "Not empty",
-        "property": "payload",
-        "propertyType": "msg",
+        "id": "d8afd16e.33b86",
+        "type": "change",
+        "z": "8d261cdd.c349c8",
+        "name": "Convert True to \"on\", everything else to \"off\"",
         "rules": [
             {
-                "t": "nempty"
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload = \"True\" ? \"on\" : \"off\"",
+                "tot": "jsonata"
             }
         ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 710,
-        "y": 1240,
-        "wires": [
-            [
-                "49817248.9d3104"
-            ]
-        ]
-    },
-    {
-        "id": "d1e163dd.32894",
-        "type": "switch",
-        "z": "b99cea79.040428",
-        "name": "Not empty",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nempty"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
         "x": 690,
-        "y": 1420,
+        "y": 760,
         "wires": [
             [
-                "8a313dad.14a31"
+                "a80c7d00.163e2"
             ]
         ]
     },
     {
-        "id": "2a835e9d.e5e3e2",
-        "type": "switch",
-        "z": "b99cea79.040428",
-        "name": "Not empty",
-        "property": "payload",
-        "propertyType": "msg",
+        "id": "a80c7d00.163e2",
+        "type": "mqtt out",
+        "z": "8d261cdd.c349c8",
+        "name": "Microtraffic Red",
+        "topic": "bus/devices/traffic-light/red",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12539a43.97344e",
+        "x": 980,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "41d852.9aa777b",
+        "type": "mqtt out",
+        "z": "8d261cdd.c349c8",
+        "name": "Projector master",
+        "topic": "bus/dmx/0/1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12539a43.97344e",
+        "x": 1160,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "898a85fb.3d71e8",
+        "type": "change",
+        "z": "8d261cdd.c349c8",
+        "name": "Convert True to \"255\", everything else to \"0\"",
         "rules": [
             {
-                "t": "nempty"
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload = \"True\" ? 255 : 0",
+                "tot": "jsonata"
             }
         ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 690,
-        "y": 1620,
-        "wires": [
-            [
-                "2023237b.dae91c"
-            ]
-        ]
-    },
-    {
-        "id": "25e85cea.a0d01c",
-        "type": "file",
-        "z": "b99cea79.040428",
-        "name": "Save \"ids.new.txt.automation\"",
-        "filename": "/home/acs/app/config/ids.new.txt.automation",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 970,
-        "y": 1300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3dd915b9.50e6ca",
-        "type": "file",
-        "z": "b99cea79.040428",
-        "name": "Save \"pan.txt.automation\"",
-        "filename": "/home/acs/app/config/pan.txt.automation",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
         "x": 950,
-        "y": 1680,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f4aa133b.b8c208",
-        "type": "file",
-        "z": "b99cea79.040428",
-        "name": "Save \"ids.txt.automation\"",
-        "filename": "/home/acs/app/config/ids.txt.automation",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 950,
-        "y": 1480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e2025ccc.8644d",
-        "type": "inject",
-        "z": "b99cea79.040428",
-        "name": "Trigger UIDs update every 30 seconds",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "30",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "x",
-        "payload": "",
-        "payloadType": "date",
-        "x": 220,
-        "y": 1180,
+        "y": 680,
         "wires": [
             [
-                "a9cfd4a3.314eb8",
-                "9b656eab.ab1018",
-                "85e2e608.d8eb8"
+                "41d852.9aa777b",
+                "53a1e427.9d1eac",
+                "b1d107c6.fe5288",
+                "a984fe98.3f53c",
+                "6c8ce7f1.3cbf28",
+                "cf9b3211.ab41b"
             ]
         ]
     },
     {
-        "id": "49817248.9d3104",
-        "type": "switch",
-        "z": "b99cea79.040428",
-        "name": "Response status code is 200",
-        "property": "statusCode",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "200",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 660,
-        "y": 1300,
-        "wires": [
-            [
-                "25e85cea.a0d01c"
-            ]
-        ]
+        "id": "53a1e427.9d1eac",
+        "type": "mqtt out",
+        "z": "8d261cdd.c349c8",
+        "name": "Projector Red",
+        "topic": "bus/dmx/0/2",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12539a43.97344e",
+        "x": 1160,
+        "y": 520,
+        "wires": []
     },
     {
-        "id": "8a313dad.14a31",
-        "type": "switch",
-        "z": "b99cea79.040428",
-        "name": "Response status code is 200",
-        "property": "statusCode",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "200",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 640,
-        "y": 1480,
-        "wires": [
-            [
-                "f4aa133b.b8c208"
-            ]
-        ]
+        "id": "b1d107c6.fe5288",
+        "type": "mqtt out",
+        "z": "8d261cdd.c349c8",
+        "name": "Projector Green",
+        "topic": "bus/dmx/0/3",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12539a43.97344e",
+        "x": 1160,
+        "y": 560,
+        "wires": []
     },
     {
-        "id": "2023237b.dae91c",
-        "type": "switch",
-        "z": "b99cea79.040428",
-        "name": "Response status code is 200",
-        "property": "statusCode",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "200",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 640,
-        "y": 1680,
-        "wires": [
-            [
-                "3dd915b9.50e6ca"
-            ]
-        ]
+        "id": "a984fe98.3f53c",
+        "type": "mqtt out",
+        "z": "8d261cdd.c349c8",
+        "name": "Projector Blue",
+        "topic": "bus/dmx/0/4",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12539a43.97344e",
+        "x": 1160,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "6c8ce7f1.3cbf28",
+        "type": "mqtt out",
+        "z": "8d261cdd.c349c8",
+        "name": "Projector White",
+        "topic": "bus/dmx/0/5",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12539a43.97344e",
+        "x": 1160,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "12539a43.97344e",
+        "type": "mqtt-broker",
+        "name": "Corleone",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
     }
 ]
