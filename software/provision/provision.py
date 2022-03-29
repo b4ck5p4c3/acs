@@ -160,7 +160,7 @@ def provision_endpoint_int():
   pin_modes[HACK_LIGHT] = 1
 
   pulls = [1] * ENDPOINTPP_GPIO_SIZE
-  pull[HACK_LIGHT_SWITCH] = 0
+  pulls[HACK_LIGHT_SWITCH] = 0
 
   # Configure all pins states to LOW by default
   pin_states = [0] * ENDPOINTPP_GPIO_SIZE
