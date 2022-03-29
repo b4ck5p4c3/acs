@@ -143,6 +143,9 @@ def provision_endpoint_int():
   YELLOW_TRAFFIC = 1
   GREEN_TRAFFIC = 2
 
+  HACK_LIGHT = 5
+  HACK_LIGHT_SWITCH = 4
+
   ###### END PINMAP ######
 
   # Configure all pins to output by default
@@ -153,7 +156,11 @@ def provision_endpoint_int():
   pin_modes[YELLOW_TRAFFIC] = 1
   pin_modes[GREEN_TRAFFIC] = 1
 
+  pin_modes[HACK_LIGHT_SWITCH] = 0
+  pin_modes[HACK_LIGHT] = 1
+
   pulls = [1] * ENDPOINTPP_GPIO_SIZE
+  pull[HACK_LIGHT_SWITCH] = 0
 
   # Configure all pins states to LOW by default
   pin_states = [0] * ENDPOINTPP_GPIO_SIZE
