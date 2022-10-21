@@ -4,8 +4,7 @@
 ### Списки доступов
 Если вы не используете репозиторий acs-secrets Бэкспейса, скопируйте вручную следующие файлы:
 ```
-examples/ids.txt.automation      =>  /home/acs/app/config/ids.txt.automation
-examples/ids.new.txt.automation  =>  /home/acs/app/config/ids.new.txt.automation
+examples/uid.txt.automation      =>  /home/acs/app/config/uid.txt.automation
 examples/pan.txt.automation      =>  /home/acs/app/config/pan.txt.automation
 ```
 
