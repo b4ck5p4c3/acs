@@ -12,7 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "ajv": "^8.10.0",
-    "auth0": "2.40.0",
+    "auth0": "3.0.1",
     "dotenv": "^16.0.0",
     "micro": "9.3.4",
     "yargs": "17.3.1"
