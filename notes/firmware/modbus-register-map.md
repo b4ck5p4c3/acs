@@ -1,31 +1,24 @@
 # Частичная карта регистров
 
 ## Endpoint++
-```
-Relay:
- - RELAY_1 - Addr 48 - Coil
- - RELAY_2 - Addr 49 - Coil
- - RELAY_3 - Addr 50 - Coil
-
-GPIO Mode:
- - Coil
- - Output is 1, Input is 0
- - Addr: 0...15
-
-GPIO Set:
- - Coil
- - High is 1, Low is 0
- - Addr: 16...31
-
-Relays:
- - Coil
- - High is 1, Low is 0
- - Normally Open
- - Addr: 48...50
 
 ```
+coils:
+  0 - 16: set pin type (state == 1 ? Output : Input)
+  16 - 32: set pin
+  32 - 48: set push/pull
+  48, 49, 50: relay
 
-## Pauk/RemoteIO
-```
- - tbd
+input_state:
+  256 - 272: read pin value
+  272 - 288: read previous pin value
+
+holding:
+  512 - 522: read/write holding regs
+
+input_register:
+  768: read temperature
+  770: read humidity
+  772: read pressure
+  774: read gas ?!
 ```
